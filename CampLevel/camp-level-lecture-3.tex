@@ -1,0 +1,97 @@
+% chktex-file 3
+\documentclass{article}
+\usepackage[inline]{asymptote}
+\usepackage{enumitem,amsmath,amsfonts,amssymb,geometry,parskip}
+\def\asydir{asy}
+\title{$\mathbb Z_n$ and Diophantine equations}
+\author{Andres Buritica}
+\date{April 30, 2022}
+\begin{document}
+\maketitle
+\section{The integers modulo an integer}
+  Let $n$ be a positive integer.
+
+  We define $\mathbb Z_n$ (the integers mod $n$) using an equivalence relation
+  \[a\equiv b\pmod n\iff n\mid b-a\]
+  over the integers.
+
+  This gives us $n$ equivalence classes corresponding to the least residues mod
+  $n$: \[\{0,1,2,\ldots,n-1\}.\]
+  \begin{itemize}
+    \item Prove that addition, subtraction, multiplication and exponentiation
+      are consistently defined: that
+      is, if $a,b,c,d$ are integers with $a\equiv b\pmod n$ and $c\equiv d\pmod
+      n$ then \[a+c\equiv b+d\pmod n,\quad a-c\equiv b-d\pmod n,\quad ac\equiv
+        bd\pmod n,\quad a^m\equiv b^m\pmod n.\]
+    \item Prove that for any integer $a$ with $\gcd(n,a)=1$ there is an integer $b$
+      with $0\le b<n$ such that $ab\equiv 1\pmod n$. We call $b$ the inverse of
+      $a$ in mod $n$, notated $a^{-1}$.
+    \item We may define fractions in mod $n$ as \[\frac ab\equiv ab^{-1}\pmod n,\]
+      assuming $\gcd(b,n)=1$. Prove that addition, subtraction, and
+      multiplication still work.
+    \item Let's say you have integers $a,b,c,n$ such that $ab\equiv ac\pmod n$.
+      What can you say about $c-b$?
+    \item Let $\mathbb Z_n^*$ be the set of nonzero residues mod $n$ that are
+      coprime to $n$, and let $a$ be an
+      element of $\mathbb Z_n^*$. Prove that the function $f(x)=ax$ is a
+      bijection from $\mathbb Z_n^*$ to $\mathbb Z_n^*$. Deduce that $n\mid
+      a^{\varphi(n)}-1$.
+    \item Prove that if $a^x\equiv 1\pmod n$ and $a^y\equiv 1\pmod n$ then
+      $a^{\gcd(x,y)}\equiv 1\pmod n$.
+    \item Let $m$ and $n$ be coprime positive integers. For any integers $a$ and
+      $b$, prove that there is a unique residue $c$ mod $mn$ such that $a\equiv
+      c\pmod m,\ b\equiv c\pmod n$.
+    \item What is the product of the elements of $\mathbb Z_n^*$ mod $n$?
+  \end{itemize}
+  \newpage
+\section{Choosing good mods}
+  Prove that:
+  \begin{itemize}
+    \item Squares are 0, 1 or 4 mod each of \{5,8\}, and 0 or 1 mod 3.
+    \item Cubes are 0, 1 or $-1$ mod each of \{7,9\}.
+  \end{itemize}
+  In general, for $n$th powers, try looking mod $m$ where $\varphi(m)$ is a
+  small multiple of $n$.
+
+  Also, of course, try choosing a mod which divides a bunch of terms.
+\section{Diophantine equation tricks}
+  \begin{itemize}
+    \item Factoring expressions
+    \item Using mods to find contradictions or get conditions on the variables
+    \item Choosing a prime that divides some number or expression
+    \item Reducing expressions mod other expressions
+    \item Quadratic discriminant trick: if $a,b,c,n$ are positive integers such
+      that $an^2+bn+c=0$ then $b^2-4ac$ is a perfect square.
+    \item (for later lectures) Bounding arguments, descent, $\nu_p$
+      considerations
+  \end{itemize}
+\section{Problems}
+\begin{enumerate}
+  \item Find all positive integers $n$ such that $2^n+7^n$ is a perfect square.
+  \item Show that for any fixed integers $n$ and $a$, the sequence
+    $a,a^a,a^{a^a},\ldots$ is eventually constant mod $n$.
+  \item Prove that for each positive integer $n$ there exist $n$ consecutive
+    positive integers, none of which is a prime power.
+  \item Let $m$ and $n$ be positive integers. Show that $4mn-m-n$ can never be a
+    perfect square.
+  \item Find all positive integer solutions to $3^x+4^y=5^z$.
+  \item Let $n>1$ be a positive integer and let $p$ be a prime. Given that
+    $n\mid p-1$ and $p\mid n^3-1$, prove that $4p-3$ is a perfect square.
+  \item Let $a,b,c,d$ be distinct positive integers such that
+    \[\frac a{a+b}+\frac b{b+c}+\frac c{c+d}+\frac d{d+a}\] is an integer.
+    Prove that $a+b+c+d$ is not prime.
+  \item Find all positive integers $a$ and $b$ and primes $p$ such that
+    \[p=\frac b4\sqrt{\frac{2a-b}{2a+b}}\]
+\end{enumerate}
+\newpage
+\section{Homework}
+\begin{enumerate}
+  \item Let $n>1$ be an odd positive integer and let $S$ be the set of integers
+    $x$, with $1\le x\le n$, such that both $x$ and $x+1$ are coprime to $n$.
+    Find the product of the elements of $S$ mod $n$.
+  \item What is the smallest positive integer $n$ such that there exist positive
+    integers $x_1,x_2,\ldots,x_n$ such that
+    \[x_1^3+x_2^3+\cdots+x_n^3=2002^{2002}?\]
+  \item Find all integers $x,y$ such that $(x^2+y)(x+y^2)=(x-y)^3$.
+\end{enumerate}
+\end{document}

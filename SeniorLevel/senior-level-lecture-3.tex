@@ -1,0 +1,99 @@
+% chktex-file 3
+\documentclass{article}
+\usepackage[inline]{asymptote}
+\usepackage{enumitem,amsmath,amsfonts,amssymb,geometry,parskip}
+\def\asydir{asy}
+\newcommand\lcm{\text{lcm}}
+\title{Prime factorisations and Arithmetic Functions}
+\author{Andres Buritica}
+\date{June 5, 2022}
+\begin{document}
+\maketitle
+\section{Prime factorisations}
+  From last time:
+  \begin{itemize}
+    \item Assume that $p_1,\ldots,p_m,\ q_1,\ldots,q_n$ are primes such that
+      \[p_1p_2\cdots p_m=q_1q_2\cdots q_n.\]
+      Prove that the $q_i$s are a permutation of the $p_i$s.
+  \end{itemize}
+  Therefore, each positive integer has a unique prime factorisation (the
+  Fundamental Theorem of Arithmetic).
+  In particular we can write a positive integer $n$ uniquely as
+  \[n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k},\]
+  where $p_i$ are all prime and $e_i$ are all positive integers.
+
+  Prime factorisations allow us to view statements about divisibility and
+  multiplication in terms of the exponents $e_i$.
+
+  In what follows, let 
+  \[a=p_1^{e_1}p_2^{e_2}\cdots p_m^{e_m},\
+        b=q_1^{f_1}q_2^{f_2}\cdots q_k^{e_k}.\]
+  \begin{itemize}
+    \item $a\mid b$ if and only if for each $i$ we have that $p_i=q_j$
+      for some $j$, and that $e_i\le f_j$.
+    \item $a$ is a perfect $k$th power if and only if $k\mid e_i$ for all $i$.
+    \item The lcm is found by taking the maximum power of each prime that
+      divides either $a$ or $b$; the gcd is found by taking the minimum power of
+      each prime that divides both $a$ and $b$.
+    \item $\gcd(a,b)\times\lcm(a,b)=ab$.
+  \end{itemize}
+  \newpage
+\section{Arithmetic functions}
+  We define:
+  \begin{itemize}
+    \item The number of positive divisors function $d(n)$.
+    \item The sum of positive divisors function $\sigma(n)$.
+    \item The totient function $\varphi(n)$: the number of positive integers
+      which are at most $n$ and coprime to $n$.
+  \end{itemize}
+  A function $f:\mathbb N\to\mathbb R$ is called multiplicative if for any
+  coprime positive integers $a$ and $b$, we have
+  \[f(a)f(b)=f(ab).\]
+  It's called completely multiplicative if this equation holds for \emph{any}
+  positive integers $a$ and $b$
+  \begin{itemize}
+    \item Prove that the values at the primes of a completely multiplicative
+      function completely define the function (unless these values are all 0, in
+      which case $f(1)$ can be 0 or 1).
+    \item Prove that the values at prime powers of a multiplicative function
+      completely define it (once again, unless these values are all 0).
+    \item Prove that $d$ and $\sigma$ are multiplicative. ($\varphi$ is also
+      multiplicative, but we will prove this next term.)
+    \item
+      Find formulae for $d(n),\sigma(n),\varphi(n)$ where
+      $n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}$.
+  \end{itemize}
+\section{Problems}
+\begin{enumerate}
+  \item Prove that $d(n)\le 2\sqrt n$.
+  \item Let $a,b,p$ be positive integers such that $p$ is prime and
+    $\lcm(a,a+p)=\lcm(b,b+p)$. Prove that $a=b$.
+  \item Prove that for all $n$,
+    \[\sigma(1)+\sigma(2)+\cdots+\sigma(n)\le n^2.\]
+  \item Prove that if $ab$ is a perfect square, then so are $\frac a{\gcd(a,b)}$ and
+      $\frac b{\gcd(a,b)}$.
+  \item Prove that for all composite $n$ apart from 6,
+    \[\sqrt n\le\varphi(n)\le n-\sqrt n.\]
+  \item Let $n$ be an even positive integer such that $\sigma(n)=2n$. Prove that
+    $n=2^{p-1}\left(2^p-1\right)$, where $p$ is a prime.
+  \item For any positive integer $n$, prove that $\displaystyle\sum_{d\mid
+    n}\varphi(d)=n$.
+\end{enumerate}
+\newpage
+\section{Homework}
+\begin{enumerate}
+  \item The cells in a jail are numbered from 1 to 100, and there are 100
+    buttons also numbered from 1 to 100. For each $i$, the $i$th button opens a
+    closed cell and closes an open cell, affecting only the multiples of $i$. 
+
+    For example, if the 47th cell is open and the 94th cell is closed, then
+    pressing the 47th button will close the 47th cell and open the 94th cell.
+
+    Initially all cells are closed.
+    The warden presses the first button, then the second, and so on, for all
+    100 buttons. Which cells are open at the end?
+  \item Find all primes $p$ such that $p^{2022}+p^{2023}$ is a perfect square.
+  \item Prove that for any positive integer $n$ we have $\sigma(n)\ge d(n)\sqrt
+    n$.
+\end{enumerate}
+\end{document}

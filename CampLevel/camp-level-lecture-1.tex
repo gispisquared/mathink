@@ -1,0 +1,113 @@
+\documentclass{article}
+\usepackage[inline]{asymptote}
+\usepackage{enumitem,amsmath,amsfonts,geometry,parskip,amssymb}
+\def\asydir{asy}
+\title{Induction and Divisibility}
+\author{Andres Buritica}
+\date{April 16, 2022}
+\begin{document}
+\maketitle
+\section{Induction and variants}
+  Arguably, the defining property of the integers is the \textbf{Principle of
+    Mathematical Induction}: if we have a set $S\subseteq\mathbb N$ such that
+    $\forall a\in S,\ a+1\in S$ then $S=\mathbb N$.
+  
+  To prove that some sentence $P(n)$ is true for all positive integers $n$, we
+  follow the following structure.
+  \begin{itemize}
+    \item Prove that $P(1)$ is true.
+    \item Prove that if $P(n)$ is true, then $P(n+1)$ is true.
+  \end{itemize}
+  If we've done both of those things, why can we conclude that $P(a)$ is true
+  for all $a\in\mathbb N$?
+
+  We may use induction to prove some foundational results about the integers:
+  \begin{itemize}
+    \item For all positive integers $n$, $n\ge 1$.
+    \item If $S$ is a nonempty set of positive integers, there is some $a\in
+      S$ such that for any $b\in S$ we have $a\le b$.
+      This is known as the \textbf{Well-Ordering Principle}.
+  \end{itemize}
+
+  The final addition to our induction toolkit will be \textbf{strong induction}:
+  if $S$ is a set of positive integers such that $1\in S$ and
+      \[\forall a\in \mathbb N,\ (\forall b\in\mathbb N,\ b\le a\implies b\in
+        S)\implies a+1\in S,\]
+        then $\mathbb N=S$.
+\section{Divisibility}
+  For integers $a$ and $b$, we say $a\mid b$ (read ``$a$ divides
+  $b$'') if there is some integer $c$ with $b=a\times c$.
+  \begin{itemize}
+    \item Prove that if $a\mid b$ and $a\mid c$, then for any integers $m$ and
+      $n$, $a\mid bm+cn$.
+    \item Prove that if $a$ and $b$ are positive integers with $a\mid b$ then
+      $a\le b$.
+  \end{itemize}
+
+  We define a \emph{prime} as a positive integer larger than 1 which is not
+  divisible by any positive integer other than 1 and itself.
+  \begin{itemize}
+    \item Prove that every positive integer larger than 1 has a prime factor.
+    \item Prove that there are infinitely many primes.
+  \end{itemize}
+
+  We define the \emph{greatest common divisor} of two integers $a$ and $b$, not
+  both of which are 0, as the largest positive integer $d$ such that $d\mid a$
+  and $d\mid b$. We notate it by $\gcd(a,b)$.
+  \begin{itemize}
+    \item Let $a$ and $b$ be integers. Prove that $\gcd(a,b)=\gcd(a-b,b)=
+      \gcd(a,b-a)$.
+    \item Let $a$ be an integer and let $b$ be a positive integer. Prove that
+      there is exactly one pair of integers $(c,d)$ with $0\le d<b$ such that
+      $a=bc+d$.
+    \item Let $a$ and $b$ be integers. Prove that there are integers $c$ and $d$
+      such that $ac+bd=\gcd(a,b)$.
+    \item Let $a$ and $b$ be integers with $\gcd(a,b)=1$, and let $c$ be an
+      integer. Prove that if $a\mid c$ and $b\mid c$ then $ab\mid c$.
+    \item Assume that $p_1,\ldots,p_m,\ q_1,\ldots,q_n$ are primes such that
+      \[p_1p_2\cdots p_m=q_1q_2\cdots q_n.\]
+      Prove that the $q_i$s are a permutation of the $p_i$s.
+  \end{itemize}
+\section{Problems}
+  \begin{enumerate}
+    \item Given positive integers $n>1$ and $k$, prove that there are unique
+      nonnegative integers $m,a_0,a_1,\ldots,a_m$ such that $a_m>0,\ 0\le
+      a_i<n$ for all $i$, and
+      \[k=\sum_{i=0}^m a_i n^i.\]
+    \item Find all integers $n$ such that $n^2+1$ divides $n^3+n^2-n-15$.
+    \item Find all right-angled triangles with positive integer sides 
+      such that their area and perimeter are equal.
+    \item Let $a,m,n$ be positive integers with $a>1$.
+      Prove that $\gcd(a^m-1,a^n-1)=a^{\gcd(m,n)}-1$.
+    \item Prove that $1^k+2^k+\cdots+n^k$ is divisible by $1+2+\cdots+n$ for
+      all positive integers $n$ and odd positive integers $k$.
+    \item Let $a,b,c,d$ be positive integers with $ab=cd$. Prove that there
+      exist positive integers $p,q,r,s$ such that \(a=pq,b=rs,a=pr,d=qs\).
+    \item Let $p$ be a prime with $p>3$. Prove that there are positive integers
+      $a<b<\sqrt p$ such that $p-b^2\mid p-a^2$.
+    \item Find all pairs of positive integers $a,b$ such that \[b^2-a\mid
+        a^2+b\quad\text{and}\quad a^2-b\mid b^2+a.\]
+    \item Find all pairs of positive integers $x,y$ such that $xy^2+y+7\mid
+      x^2y+x+y$.
+    \item Prove that for any nonnegative integer $n$, the number $7^{7^n}+1$ is
+      the product of at least $2n+3$ (not necessarily distinct) primes.
+  \end{enumerate}
+\newpage
+\section{Homework}
+  \begin{enumerate}
+    \item Prove that every positive integer can be uniquely represented as a sum
+      of one or more Fibonacci numbers such that the sum does not include two
+      consecutive Fibonacci numbers.
+    \item Let $a, b, c$ be positive integers with $a^2+b^2=c^2$, such that no
+      positive integer larger than 1 divides all of them. Prove that
+      there exist positive integers $x,y,z$ such that $a,b,c$ equal
+      $x^2-y^2,2xy,x^2+y^2$ in some order.
+    \item
+      \begin{enumerate}
+        \item Find all integers $a,b,c$ with $1<a<b<c$ such that $(a-1)(b-1)(c-1)$
+          divides $abc-1$.
+        \item Do there exist distinct prime numbers $a,b,c$ such that
+          \[a\mid bc+b+c,\ b\mid ac+a+c,\ c\mid ab+a+b?\]
+      \end{enumerate}
+  \end{enumerate}
+\end{document}
