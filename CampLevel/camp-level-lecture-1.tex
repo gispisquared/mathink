@@ -50,16 +50,21 @@
     \item Prove that every positive integer larger than 1 has a prime factor.
     \item Prove that there are infinitely many primes.
   \end{itemize}
-
+\section{GCD, Euclid, Bezout}
   We define the \emph{greatest common divisor} of two integers $a$ and $b$, not
   both of which are 0, as the largest positive integer $d$ such that $d\mid a$
-  and $d\mid b$. We notate it by $\gcd(a,b)$.
+  and $d\mid b$. We notate it by $\gcd(a,b)$. For convenience we also define
+  $\gcd(0,0)=0$.
+
+  Similarly, the \emph{least common multiple} $\mathrm{lcm}(a,b)$ is the
+  smallest positive integer $l$ such that $a\mid l$ and $b\mid l$. For
+  convenience we also define $\gcd(0,a)=0$.
   \begin{itemize}
-    \item Let $a$ and $b$ be integers. Prove that $\gcd(a,b)=\gcd(a-b,b)=
-      \gcd(a,b-a)$.
     \item Let $a$ be an integer and let $b$ be a positive integer. Prove that
-      there is exactly one pair of integers $(c,d)$ with $0\le d<b$ such that
-      $a=bc+d$.
+      there is exactly one pair of integers $(q,r)$ with $0\le r<b$ such that
+      $a=qb+r$.
+    \item Prove that for any integers $a,b,q,r$, if $a=qb+r$ then
+      $\gcd(a,b)=\gcd(b,r)$.
     \item Let $a$ and $b$ be integers. Prove that there are integers $c$ and $d$
       such that $ac+bd=\gcd(a,b)$.
     \item Let $a$ and $b$ be integers with $\gcd(a,b)=1$, and let $c$ be an
@@ -67,6 +72,38 @@
     \item Assume that $p_1,\ldots,p_m,\ q_1,\ldots,q_n$ are primes such that
       \[p_1p_2\cdots p_m=q_1q_2\cdots q_n.\]
       Prove that the $q_i$s are a permutation of the $p_i$s.
+  \end{itemize}
+\section{Prime Factorisations}
+  Therefore, each positive integer has a unique prime factorisation (the
+  Fundamental Theorem of Arithmetic).
+  In particular we can write a positive integer $n$ uniquely as
+  \[n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k},\]
+  where $p_i$ are all prime and $e_i$ are all positive integers.
+
+  Prime factorisations allow us to view statements about divisibility and
+  multiplication in terms of the exponents $e_i$.
+
+  In what follows, let 
+  \[a=p_1^{e_1}p_2^{e_2}\cdots p_m^{e_m},\
+        b=q_1^{f_1}q_2^{f_2}\cdots q_k^{e_k}.\]
+  \begin{itemize}
+    \item Prove that $a\mid b$ if and only if for each $i$ we have that $p_i=q_j$
+      for some $j$, and that $e_i\le f_j$.
+    \item Prove that $a$ is a perfect $k$th power if and only if $k\mid e_i$ for all $i$.
+    \item Prove that the lcm is found by taking the maximum power of each prime that
+      divides either $a$ or $b$, while the gcd is found by taking the minimum power of
+      each prime that divides both $a$ and $b$.
+    \item Prove that $\gcd(a,b)\times\mathrm{lcm}(a,b)=ab$.
+  \end{itemize}
+\section{Strategies}
+  \begin{itemize}
+    \item Take out the gcd: that is, if you have two integers $a$ and $b$ you
+      can write $a=dx,\ b=dy$ where $x$ and $y$ are coprime.
+    \item Factorisations: two especially useful ones are
+      \begin{align*}
+        axy+bx+cy=d\iff (ax+c)(ay+b)=ad+bc, \\
+        a^k-b^k=(a-b)\left(a^{k-1}+a^{k-2}b+\cdots+b^{k-1}\right).
+      \end{align*}
   \end{itemize}
 \section{Problems}
   \begin{enumerate}
