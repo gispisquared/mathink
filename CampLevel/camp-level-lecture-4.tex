@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[inline]{asymptote}
+\usepackage{enumitem,amsmath,amsfonts,geometry,parskip,amssymb}
+\def\asydir{asy}
+\title{Bounding}
+\author{Andres Buritica}
+\date{July 17, 2022}
+\begin{document}
+\maketitle
+\section{Techniques}
+\begin{itemize}
+  \item WLOG arguments: break symmetry to bound one of the variables.
+  \item If $a$ and $b$ are integers with $a>b$ then $a\ge b+1$.
+  \item If $a$ and $b$ are integers with $b\ne 0$ and $a\mid b$ then
+    $|a|\le|b|$. Thus, try to get big dividing small.
+  \item Look for ``dominant terms'' that grow larger than everything else
+  \item A concave down function on a closed interval
+    achieves its minimum at one of the endpoints.
+  \item Hierarchy of size: let $P(n)$ and $Q(n)$ be polynomials such that $\deg
+    P>\deg Q$, and let $c>1$ be a constant. For sufficiently large $n$,
+    $\ln n<|Q(n)|<|P(n)|<c^n<n!<n^n$.
+  \item Stirling's Approximation: $\left(\frac ne\right)^n<n!<n\left(\frac
+    ne\right)^n$.
+  \item Bernoulli's Inequality: for $r\ge 1$ and $x\ge -1$ we have $(1+x)^r\ge
+    1+rx$.
+\end{itemize}
+\section{Problems}
+\begin{enumerate}
+  \item Find all positive integers $a,b,c$ such that $ab+bc+ca=abc+2$.
+  \item Find all pairs of positive integers $x,y$ such that $x^3+y^3=(x+y)^2$.
+  \item Find all pairs of positive integers $x,y$ such that
+    $1+2^x+2^{2x}=y^2$.
+  \item Find all pairs of positive integers $x,y$ such that $x!+5=y^3$.
+  \item Find all pairs of positive integers $x,y$ such that
+    $1+2^x+2^{2x+1}=y^2$.
+  \item Find all pairs of positive integers $x,y$ such that $x^3-y^3=xy+61$.
+  \item Find all triples of positive integers $a,b,c$ such that $a^2+b+c=abc$.
+  \item Find all positive integers $x,y,n$ such that $\gcd(x,n+1)=1$ and
+    $x^n+1=y^{n+1}$.
+  \item Four positive integers $x,y,z,t$ satisfy $xy-zt=x+y=z+t$. Is it possible
+    that $xy$ and $zt$ are both perfect squares?
+\end{enumerate}
+\newpage
+\section{Homework}
+  \begin{enumerate}
+  \item The powers $2^n$ and $5^n$ start with the same digit. What is this
+    digit?
+    \item Find all pairs of positive integers $x,y$ such that $xy^2+y+7\mid
+      x^2y+x+y$.
+    \item Find all triples $a,b,c$ of positive integers such that
+      $a^3+b^3+c^3=(abc)^2$.
+  \end{enumerate}
+\end{document}
