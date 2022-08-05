@@ -1,0 +1,55 @@
+\documentclass{article}
+\usepackage[inline]{asymptote}
+\usepackage{enumitem,amsmath,amsfonts,geometry,parskip,amssymb}
+\def\asydir{asy}
+\title{Descent and Pell equations}
+\author{Andres Buritica}
+\date{July 24, 2022}
+\begin{document}
+\maketitle
+\section{Techniques}
+  There is really one technique here: assign some positive integer quantity
+  (the ``size'' of a solution, e.g.\ the sum of the absolute valies of the
+  variables) to each solution, take the solution with lowest
+  ``size'' that doesn't fit your claimed pattern and derive a contradiction.
+\section{Problems}
+\begin{enumerate}
+  \item Find all solutions in integers to $a^3+3b^3+9c^3=0$.
+  \item Find all solutions in integers to $a^4+b^4=c^2$.
+  \item Let $a$ and $b$ be positive integers.
+    Prove that if \(\frac{a^2+b^2}{ab+1}\) is an integer, then it is a square.
+  \item Pell Equations:
+    \begin{itemize}
+      \item Let $d$ be a positive integer which is not a perfect square. Prove that
+      there exist positive integers $x_0,y_0$ such that for any pair $x,y$ of
+      positive integers satisfying $x^2-dy^2=1$, there is a positive integer $k$
+      satisfying
+      \[x+y\sqrt d=(x_0+y_0\sqrt d)^k.\]
+      \item Find the recurrence relating a solution $(x_n,y_n)$ to the next
+        solution $(x_{n+1},y_{n+1})$.
+      \item Do the same for $x^2-dy^2=-1$.
+    \end{itemize}
+    In the case where the RHS is 1, it is known that there is always a solution.
+    When the RHS
+    is $-1$, there need not be solutions (eg $x^2-3y^2=-1$ has no solutions).
+  \item Prove that there are infinitely many triples $(a,b,c)$ of positive
+    integers in arithmetic progression
+    such that $ab+1$, $bc+1$ and $ca+1$ are all perfect squares.
+  \item Find all solutions in integers to $x^2+y^2+z^2=2xyz$.
+  \item Let $a$ and $b$ be two positive integers. Prove that
+    \[a^2+\left\lceil\frac{4a^2}b\right\rceil\] is not a square.
+\end{enumerate}
+\newpage
+\section{Homework}
+  \begin{enumerate}
+    \item We call a 5-tuple of integers \emph{arrangeable} if its elements can be
+      labelled $a,b,c,d,e$ in some order such that $a-b+c-d+e=0$. Determine all
+      2022-tuples of integers such that if we place them in order around a
+      circle, then any 5-tuple of numbers in consecutive positions is
+      arrangeable.
+    \item Find all positive integers $n$ such that \[\sqrt{\frac{7^n+1}2}\] is
+      prime.
+    \item Let $a$ and $b$ be positive integers. Show that if $4ab-1$ divides
+      $(4a^2-1)^2$, then $a=b$.
+  \end{enumerate}
+\end{document}
