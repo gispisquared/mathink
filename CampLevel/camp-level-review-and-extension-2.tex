@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[inline]{asymptote}
+\usepackage{enumitem,amsmath,amsfonts,amssymb,geometry,parskip,rotating}
+\def\asydir{asy}
+\title{Review and Extension --- Size Arguments}
+\author{Andres Buritica}
+\date{August 13, 2022}
+\begin{document}
+\maketitle
+\section{Exam review}
+\section{Key concepts for this term}
+  \begin{itemize}
+    \item WLOG
+    \item Big divides small
+    \item Dominant terms
+    \item Graphical reasoning
+    \item Relative growth rates of common functions
+    \item Infinite descent
+    \item Vieta jumping
+    \item Pell equations
+    \item Counting numbers in a range
+    \item Dealing with floor functions
+  \end{itemize}
+\section{Problems}
+\begin{enumerate}
+  \item Find all pairs of positive integers $x,y$ such that
+    $1+2^x+2^{2x+1}=y^2$.
+  \item Find all pairs of positive integers $x,y$ such that $x^3-y^3=xy+61$.
+  \item Find all triples of positive integers $a,b,c$ such that $a^2+b+c=abc$.
+  \item Find all positive integers $x,y,n$ such that $\gcd(x,n+1)=1$ and
+    $x^n+1=y^{n+1}$.
+  \item Four positive integers $x,y,z,t$ satisfy $xy-zt=x+y=z+t$. Is it possible
+    that $xy$ and $zt$ are both perfect squares?
+  \item Prove that there are infinitely many triples $(a,b,c)$ of positive
+    integers in arithmetic progression
+    such that $ab+1$, $bc+1$ and $ca+1$ are all perfect squares.
+  \item Find all solutions in integers to $x^2+y^2+z^2=2xyz$.
+  \item Let $a$ and $b$ be two positive integers. Prove that
+    \[a^2+\left\lceil\frac{4a^2}b\right\rceil\] is not a square.
+  \item Let $p$ and $q$ be coprime. Prove that
+    \[\sum_{i=1}^{q-1}\left\lfloor\frac{ip}{q}\right\rfloor=\frac{(p-1)(q-1)}2.\]
+  \item Find all positive integers $n$ such that $1+\lfloor\sqrt n\rfloor$
+    divides $n$.
+  \item Let $r$ be an irrational root of a polynomial $P(x)$ of degree $d$ with
+    integer coefficients. Prove that there is a real number $C$ such that for
+    any integer $q$ we have $\{qr\}\ge \frac C{q^{d-1}}$.
+  \item Let $x$ be an irrational number.
+    \begin{enumerate}
+      \item Prove that for each positive integer $n$ there is a positive integer
+        $m$ such that $\{mx\}<\frac 1n$.
+      \item Prove that there are infinitely many positive integers $n$ such
+        that $\{nx\}<\frac 1n$.
+    \end{enumerate}
+  \item Prove that the sequence $a_i=\left\lfloor(\sqrt 2+1)^i\right\rfloor$
+    alternates between even and odd integers.
+  \item Find all positive integers $x$ and $y$ such that if $z=\gcd(x,y)$, then
+    $x+y^2+z^3=xyz$.
+  \item For each positive integer $n$, let
+    \[f(n)=\frac1n\sum_{i=1}^n \left\lfloor\frac ni\right\rfloor.\]
+    \begin{enumerate}
+      \item Prove that $f(n+1)>f(n)$ for infinitely many $n$.
+      \item Prove that $f(n+1)<f(n)$ for infinitely many $n$.
+    \end{enumerate}
+  \item Is there a positive integer $m$ for which the equation
+    \[\frac1a+\frac1b+\frac1c+\frac1{abc}=\frac m{a+b+c}\]
+    has infinitely many solutions in positive integers $a,b,c$?
+\end{enumerate}
+\section{Homework}
+Solve and submit any three problems from Section 3.
+\newpage
+\section{Extension: density of the primes}
+\begin{enumerate}
+  \item
+    Let $n$ be a positive integer larger than 1.
+    \begin{enumerate}
+      \item Prove that the product of all primes between $\left\lceil\frac
+        n2\right\rceil$ and $n$
+        (including $n$, not including $\left\lceil\frac n2\right\rceil$)
+        is less than
+        $2^n$.\footnote{\begin{turn}{180}Hint: binomial coefficients are
+        integers.\end{turn}}
+      \item Prove that the product of all primes between 1 and $n$ is at most
+        $4^{n-1}$.
+      \item Find some real number $c$ independent of $n$ such that there are at
+        most $\frac{cn}{\log_2 n}$ primes that are at most $n$.
+    \end{enumerate}
+  \item 
+    Let $n$ be a positive integer larger than $2^{2^{2^2}}$.
+    \begin{enumerate}
+      \item Let $p$ be a prime.
+        \begin{itemize}
+          \item Prove that if $p^k\mid\binom{2n}n$ then $p^k<
+            2n$.
+          \item Prove that if $2p\le 2n< 3p$ then $p\nmid\binom{2n}n$.
+        \end{itemize}
+      \item Prove that 
+        \[\prod_{\substack{p^k\|\binom{2n}n\\ p\le n}}p^k<\binom{2n}n.\]
+      \item Find some real number $c$ independent of $n$ such that there are at
+        least $\frac{cn}{\log_2 n}$ primes that are at most $n$.
+    \end{enumerate} 
+\end{enumerate}
+\end{document}

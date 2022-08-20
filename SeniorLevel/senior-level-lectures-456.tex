@@ -1,0 +1,181 @@
+\documentclass{article}
+\usepackage[inline]{asymptote}
+\usepackage{enumitem,amsmath,amsfonts,amssymb,geometry,parskip}
+\def\asydir{asy}
+\title{Modular arithmetic}
+\author{Andres Buritica}
+\begin{document}
+\maketitle
+\section{Residue Classes}
+  Let $n$ be a nonzero integer. For integers $a$ and $b$, we say that
+  \[a\equiv b\pmod n\iff n\mid b-a.\]
+  Notice that for fixed values of $a$ and $n$, infinitely many values of $b$
+  satisfy $a\equiv b\pmod n$.
+  \begin{itemize}
+    \item Prove that $a\equiv a\pmod n$.
+    \item Prove that if $a\equiv b\pmod n$ then $b\equiv a\pmod n$.
+    \item Prove that if $a\equiv b\pmod n$ and $b\equiv c\pmod n$ then $a\equiv
+      c\pmod n$.
+  \end{itemize}
+  We may divide the integers into $n$ sets (the \emph{residue classes mod $n$}),
+  such that two integers are in the same residue class if and only if they are
+  congruent mod $n$. The sets are as follows:
+  \begin{align*}
+    [0]_n&=\{\ldots,-2n,-n,0,n,2n,\ldots\} \\
+    [1]_n&=\{\ldots,1-2n,1-n,1,1+n,1+2n,\ldots\} \\
+    [2]_n&=\{\ldots,2-2n,2-n,2,2+n,2+2n,\ldots\} \\
+         &\vdots \\
+    [n-1]_n&=\{\ldots,-1-n,-1,n-1,2n-1,3n-1,\ldots\} \\
+  \end{align*}
+  The numbers $0,1,\ldots,n-1$ are called the \emph{least residues mod $n$}. The
+  set of least residues mod $n$ is called the \emph{integers mod $n$}, denoted
+  $\mathbb Z_n$.
+  \begin{itemize}
+    \item Find the least residue of $-1$ mod $2022$.
+  \end{itemize}
+  \newpage
+\section{Operations}
+  \begin{itemize}
+    \item Prove that addition, subtraction, multiplication and exponentiation
+      are consistently defined: that
+      is, if $a,b,c,d$ are integers with $a\equiv b\pmod n$ and $c\equiv d\pmod
+      n$ then \[a+c\equiv b+d\pmod n,\quad a-c\equiv b-d\pmod n,\quad ac\equiv
+        bd\pmod n,\quad a^m\equiv b^m\pmod n.\]
+  \end{itemize}
+  Therefore, it makes sense to define addition, subtraction and multiplication
+  in $\mathbb Z_n$. For each of these operations (we use $\circ$ to denote any
+  of them), we let $a\circ b$ in $\mathbb Z_n$ be the least residue of $a\circ
+  b$ in $\mathbb Z$.
+  \begin{itemize}
+    \item What are $3+2$ and $3\times 2$ in $\mathbb Z_4$?
+  \end{itemize}
+
+  Assume that for some integer $a$ there is a least residue $b$ such that
+  $ab\equiv 1\pmod n$. We call $b$ the \emph{inverse} of $a$ mod $n$.
+
+  We define $\frac ca\equiv cb\pmod n$, for each
+  positive integer $c$.
+  \begin{itemize}
+    \item Prove that if $c$ has an inverse mod $n$, and $cx\equiv cy\pmod n$,
+      then $x\equiv y\pmod n$.
+    \item Prove that each integer has at most one inverse mod $n$.
+    \item Prove that if $b$ and $d$ both have inverses mod $n$, then so does
+      $bd$.
+    \item Prove that
+      \[\frac ab+\frac cd\equiv \frac{ad+bc}{bd}\pmod n,\qquad \frac ab-\frac
+      cd\equiv\frac{ad-bc}{bd}\pmod n,\]\[\frac ab\cdot\frac
+      cd\equiv\frac{ac}{bd}\pmod n,\qquad \frac ab\div\frac
+      cd\equiv\frac{ad}{bc}\pmod n\]
+      assuming all of the denominators have inverses.
+  \end{itemize}
+\section{The integers modulo a prime}
+  Let $p$ be a prime.
+  \begin{itemize}
+    \item Let $a$ be an integer. Prove that $a$ has an inverse mod $p$ if and
+      only if $p\nmid a$.
+    \item Prove that $(p-1)!\equiv -1\pmod p$.
+    \item Let $\mathbb Z_p^*$ be the set of nonzero residues mod $p$, and let $a$ be an
+      element of $\mathbb Z_p^*$. 
+      \begin{itemize}
+        \item 
+          Prove that the function $f(x)=ax$ is a bijection from $\mathbb Z_p^*$
+          to $\mathbb Z_p^*$.
+        \item Deduce that $p\mid a^{p-1}-1$.
+      \end{itemize}
+  \end{itemize}
+  \newpage
+\section{The integers modulo an integer}
+  Let $n$ be an integer.
+  \begin{itemize}
+    \item Let $a$ be an integer. Prove that $a$ has an inverse mod $n$ if and
+      only if $\gcd(n,a)=1$.
+    \item Say $ax\equiv ay\pmod n$, but $\gcd(n,a)\ne 1$. What can we say
+      about $x$ and $y$?
+    \item Let $\mathbb Z_n^*$ be the set of least residues mod $n$ which are
+      coprime to $n$, and let $a$ be an element of $\mathbb Z_n^*$.
+      \begin{itemize}
+        \item 
+          Prove that the function $f(x)=ax$ is a bijection from $\mathbb Z_n^*$
+          to $\mathbb Z_n^*$.
+        \item Deduce that $n\mid a^{\varphi(n)}-1$.
+      \end{itemize}
+  \end{itemize}
+\section{Chinese Remainder Theorem}
+\begin{itemize}
+  \item
+  Let $a$ and $b$ be coprime positive integers, and let $c$ and $d$ be integers.
+  Prove that there is exactly one least residue $x$ mod $ab$ such that
+  \[c\equiv x\pmod a,\qquad d\equiv x\pmod b.\]
+  \item Let $a_1,a_2,\ldots,a_k$ be coprime positive integers, and let
+    $b_1,b_2,\ldots,b_k$ be integers. Prove that there is exactly one least
+    residue $x$ mod $a_1a_2\cdots a_n$ such that for each $i$,
+    \[b_i\equiv x\pmod {a_i}.\]
+  \item Recall that $\varphi(n)$ is the number of positive integers which are at
+    most $n$ and coprime to $n$. Prove that $\varphi$ is multiplicative.
+\end{itemize}
+\section{Choosing good mods}
+  Prove that:
+  \begin{itemize}
+    \item Squares are 0, 1 or 4 mod each of \{5,8\}, and 0 or 1 mod 3.
+    \item Cubes are 0, 1 or $-1$ mod each of \{7,9\}.
+  \end{itemize}
+  Often a problem will be solved by considering it under an appropriate mod.
+  In general, for $n$th powers, try looking mod $m$ where $\varphi(m)$ is a
+  small multiple of $n$.
+
+  Also, of course, try choosing a mod which divides a bunch of terms.
+  \begin{itemize}
+    \item Find all positive integers $a,b$ such that
+      \[a^4+b^4=10a^2b^2-2022.\]
+  \end{itemize}
+
+  However, remember that if you find a single solution to an equation, then that
+  solution is still a solution in every mod so you won't be able to find a
+  contradiction.
+  \begin{itemize}
+    \item Find all positive integers $a,b$ such that
+      \[a^4+b^4=97.\]
+  \end{itemize}
+\newpage
+\section{Problems}
+\begin{enumerate}
+  \item Prove that if $a^m\equiv 1\pmod p$ and $a^n\equiv 1\pmod p$ then
+    $a^{\gcd(m,n)}\equiv 1\pmod p$.
+  \item 
+    We define
+    \[\binom nk=\frac{n!}{k!(n-k)!}.\]
+
+    For each prime $p$ and positive integer $k$, find the least residues of 
+    \[\binom {p-1}k\quad\text{and}\quad\frac1p\binom pk\] in mod $p$.
+  \item Find all primes $p$ such that $29^p+1$ is a multiple of $p$.
+  \item Define the sequence $a_n=2^n+3^n+6^n-1,\ n\in\mathbb N$.
+    Find all primes which do not divide $a_n$ for any $n$.
+  \item Let $p=3k-1$ be a prime. Prove that
+    \[1-\frac12+\frac13-\frac14+\cdots-\frac1{2k-2}+\frac1{2k-1}\equiv 0\pmod
+    p.\]
+  \item Find all positive integers $n$ such that $2^n+7^n$ is a perfect square.
+  \item Show that for any fixed integers $n$ and $a$, the sequence
+    $a,a^a,a^{a^a},\ldots$ is eventually constant mod $n$.
+  \item Prove that for each positive integer $n$ there exist $n$ consecutive
+    positive integers, none of which is a prime power.
+  \item Prove that every positive integer has at least as many divisors which
+    are 1 (mod 4) as divisors which are 3 (mod 4).
+  \item Let $d$ be a positive integer. Prove that at least one of $2d-1,\ 5d-1,\
+    13d-1$ is not a perfect square.
+  \item Find all pairs of positive integers $x,y$ such that $x!+5=y^3$.
+  \item Prove that if $m$ and $n$ are matural numbers, then $3^m+3^n+1$ is not a
+    perfect square.
+  \item Find all primes $p$ and $q$ such that $p+q=(p-q)^3$.
+  \item Find all pairs of positive integers $x,y$ such that
+    $1+2^x+2^{2x+1}=y^2$.
+  \item Find all integers $a,b$ such that
+    \[a^3+(a+1)^3+\cdots+(a+1)^3=b^4+1.\]
+  \item Find all positive integers $a$ for which $1!+2!+\cdots+a!$ is a perfect
+    cube.
+
+
+
+  \item What is the least residue mod $n$ of the product of the elements of
+    $\mathbb Z_n^*$?
+\end{enumerate}
+\end{document}
