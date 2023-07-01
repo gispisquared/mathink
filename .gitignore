@@ -280,3 +280,7 @@ TSWLatexianTemp*
 
 # Lectures
 lecturing/*
+
+Cup/*
+
+*.txt
