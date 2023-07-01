@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[inline]{asymptote}
+\usepackage{enumitem,amsmath,amsfonts,geometry,parskip,amssymb}
+\def\asydir{asy}
+\title{Descent and Floor Functions}
+\author{Andres Buritica}
+\date{}
+\begin{document}
+\maketitle
+\section{Techniques}
+  Descent works like this: assign some positive integer quantity
+  (the ``size'' of a solution, e.g.\ the sum of the absolute values of the
+  variables) to each solution, take the solution with lowest
+  ``size'' that doesn't fit your claimed pattern and derive a contradiction.
+
+  Floor functions: recall $\lfloor x\rfloor$ is the largest integer which is at
+  most $x$. Most often, problems which involve $\lfloor x\rfloor$ will be
+  solved by considering $x-\lfloor x\rfloor$ (also denoted $\{x\}$), or $\lceil
+  x\rceil-x$, and doing inequalities.
+\section{Problems}
+\begin{enumerate}
+  \item Find all solutions in integers to $a^3+2b^3+4c^3=0$.
+  \item Prove that $\lfloor\sqrt n+\sqrt{n+1}\rfloor=\lfloor\sqrt{4n+1}\rfloor$.
+  \item Prove that if $x, y, z$ are integers such that $x^2+y^2+z^2=(xy)^2$,
+      then $x=y=0$.
+  \item Let $a$ and $b$ be irrational numbers such that $\frac 1a+\frac 1b=1$.
+    Let $A=\{\lfloor na\rfloor: n\in\mathbb N\}$, and $B=\{\lfloor nb\rfloor:
+    n\in\mathbb N\}$. Prove that the sets $A$ and $B$ together contain each
+    integer exactly once.
+  \item Find all positive integers $n$ such that $1+\lfloor\sqrt n\rfloor$
+    divides $n$.
+  \item Prove that for any positive integer $n$ which is not a perfect square,
+    there is a positive integer $k$ such that
+    \[n=\left\lfloor n+\sqrt n+\frac12\right\rfloor.\]
+  \item Let $d$ be a positive integer which is not a perfect square. Prove that
+      there exist positive integers $x_0,y_0$ such that for any pair $x,y$ of
+      positive integers satisfying $x^2-dy^2=1$, there is a positive integer $k$
+      satisfying
+      \[x+y\sqrt d=(x_0+y_0\sqrt d)^k.\]
+\end{enumerate}
+\newpage
+\section{Homework}
+  \begin{enumerate}
+    \item Let's say you have a set $S$ of positive rational numbers such that
+      $1\in S$, and if $x\in S$ then both $x+1$ and $\frac 1x$ are in $S$. Prove
+      that $S$ contains all positive rationals.
+    \item Let $p$ and $q$ be coprime. Prove that
+      \[\sum_{i=1}^{q-1}\left\lfloor\frac{ip}{q}\right\rfloor=\frac{(p-1)(q-1)}2.\]
+    \item A list of $2022$ positive integers is given, such that if you remove
+      any one of them, the rest can be split into two groups of equal sum.
+      Prove that all the numbers in the list are equal.
+  \end{enumerate}
+\end{document}

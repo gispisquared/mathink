@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage[inline]{asymptote}
+\usepackage{enumitem,amsmath,amsfonts,geometry,parskip,amssymb}
+\def\asydir{asy}
+\title{Homework Review and Proofwriting}
+\newcommand\Nn{\mathbb{N}}
+\newcommand\Zz{\mathbb{Z}}
+\author{Andres Buritica}
+\date{}
+\begin{document}
+\maketitle
+\section{Lecture 10 Homework}
+\begin{enumerate}
+  \item Prove that for any positive integer $c$ and any prime $p$, there is a
+    positive integer $x$ such that $x^x\equiv c\pmod p$.
+  \item Let $x$ be an irrational number, and let $a$ and $b$ be real numbers
+    such that $0\le a<b\le 1$. Prove that there is an integer $n$ such that
+    $a<\{nx\}<b$. Hence prove that there is a power of $2$ whose decimal
+    representation starts with $2023$.
+  \item Prove that every arithmetic progression $a,a+b,\ldots$ where
+    $\gcd(a,b)=1$ has infinitely many terms which are not divisible by any
+    perfect square larger than $1$.
+\end{enumerate}
+
+\section{Lecture 11 Homework}
+\begin{enumerate}
+  \item Find all functions $f:\Nn\to\Nn$ such that $f(f(m)f(n))=mn$ for all
+    positive integers $m$ and $n$.
+  \item Find all monotonically increasing functions $f:\Nn\to\Zz_{\ge 0}$ such that $f(mn)=f(m)+f(n)$ for
+    all nonnegative integers $m$ and $n$.
+  \item Let $a,b$ be odd positive integers. Define the sequence $c_n$ by
+    choosing $c_1=a,c_2=b$ and for each $i>2$ letting $c_i$ be the largest odd
+    divisor of $c_{i-1}+c_{i-2}$. Prove that this sequence is eventually
+    constant
+    (that is, there is an $m$ such that for any $i,j>m$, $a_i=a_j$).
+\end{enumerate}
+\newpage
+\section{Homework}
+\begin{enumerate}
+  \item The denominators of two irreducible fractions are 600 and 700. Find the
+    minimum value of the denominator of their sum (written as an irreducible
+    fraction).
+  \item We call the \emph{main divisors} of a composite number $n$ the two
+    largest of its divisors other than $n$. Composite numbers $a$ and $b$ are
+    such that their main divisors coincide. Prove that $a=b$.
+  \item Suppose $a_1,a_2, \dots$ is an infinite strictly increasing sequence of
+    positive integers and $p_1, p_2, \dots$ is a sequence of distinct primes
+    such that $p_n \mid a_n$ for all $n \ge 1$. It turned out that
+    $a_n-a_k=p_n-p_k$ for all $n,k \ge 1$. Prove that the sequence $\{a_n\}$
+    consists only of prime numbers.
+\end{enumerate}
+\end{document}

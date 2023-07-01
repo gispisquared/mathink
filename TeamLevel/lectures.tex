@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage[inline]{asymptote}
+\usepackage{enumitem,amsmath,amsfonts,amssymb,geometry,parskip}
+\def\asydir{asy}
+\title{Team Level Lectures}
+\author{Andres Buritica}
+\date{}
+\begin{document}
+\maketitle
+\section{Farey sequences}
+  Let $n$ be a fixed positive integer. Let
+  $\frac{a_1}{b_1},\ldots,\frac{a_k}{b_k}$ be the rational numbers between 0
+  and 1 inclusive with denominators at most $n$, written in increasing order
+  and lowest terms.
+  \begin{itemize}
+    \item Prove that for each $i$, $a_{i+1}b_i-a_i b_{i+1}=1$.
+    \item Prove that the rational number $x$ with smallest denominator such
+      that $\frac{a_i}{b_i}<x<\frac{a_{i+1}}{b_{i+1}}$ is
+      $\frac{a_i+a_{i+1}}{b_i+b_{i+1}}$. 
+    \item Which pairs of numbers appear as consecutive $b_i$s?
+  \end{itemize}
+
+  Suppose that $(a_1,b_1),(a_2,b_2),\ldots,(a_{100},b_{100})$ are distinct
+    ordered pairs of nonnegative integers.
+    Let $N$ denote the number of pairs of integers $(i,j)$ satisfying
+    $1\leq i<j\leq 100$ and $|a_i b_j-a_j b_i|=1$. 
+    Determine the largest possible value of $N$ over all possible choices of the
+    100 ordered pairs.
+\section{Dirichlet Convolution and Mobius Inversion}
+  Let $f:\mathbb N\to\mathbb R$ and $g:\mathbb N\to\mathbb R$ be two functions.
+  We define the \emph{Dirichlet convolution} $f*g$ as
+  \[(f*g)(n)=\sum_{d\mid n}f(d)g\left(\frac nd\right).\]
+
+  We define the functions $d,\ \sigma,\ \varphi$ as before and also define the
+  functions \[\zeta(n)=1,\ \psi(n)=n.\]
+  \begin{itemize}
+    \item Prove that $*$ is associative: that is,
+      $(a*b)*c=a*(b*c)$.
+    \item Prove that if $a$ and $b$ are multiplicative then so is $a*b$.
+    \item Find a function $\delta$ such that $\delta*a=a$ for all functions $a$.
+    \item Find a function $\mu$ such that $\mu*\zeta=\delta$.
+    \item Prove that $g=f*\zeta\iff f=g*\mu$.
+    \item Find $\zeta*\zeta,\ \psi*\zeta$ and $\varphi*\zeta$.
+    \item Prove that
+      \[\sum_{i=1}^n f(i)\left\lfloor\frac
+          ni\right\rfloor=\sum_{j=1}^n(f*\zeta)(j).\]
+  \end{itemize}
+
+  For a positive integer $n$, let $f(n)$ be the number of binary strings of length $n$ that
+      can't be expressed as an $m$-fold repetition of another binary string for
+      any $m>1$.
+
+      For example, $f(6)=54$ since the only strings of length 6 that can be
+      expressed as an $m$-fold repetition of another binary string for some $m>1$
+      are 000000, 001001, 010010, 010101, 011011, 100100, 101010, 101101, 110110,
+      111111.
+       
+      \begin{itemize}
+        \item Find two functions $g$ and $h$, in closed form, such that $f=g*h$.
+        \item 
+          Prove that $n\mid f(n)$.
+        \item Find all $n$ for which $n\mid\displaystyle\sum_{i=1}^n f(i)\left\lfloor\frac
+              ni\right\rfloor$.
+      \end{itemize}
+\section{More theorems about mod $p$}
+\begin{itemize}
+  \item Wolstenholme's Theorem:
+    let $a$ and $b$ be positive integers, and let $p$ be a prime greater
+    than 3. Prove that \[\binom{ap}{bp}\equiv\binom ab\pmod {p^3}.\]
+  \item Lucas' Theorem: let $m=\sum m_i p^i$ and $n=\sum n_i p^i$ be the base-$p$ expansions of
+    $m$ and $n$, where $p$ is prime. Prove that
+    \[\binom mn\equiv\prod{\binom{m_i}{n_i}}\pmod p.\]
+  \item Let $p$ be a prime. What is the sum of all the generators mod $p$?
+  \item Quadratic residues:
+  \begin{itemize}
+    \item Let $p$ be an odd prime. Working in mod $p$, let $S$ be a set such
+      that for any nonzero $a$, $a\in S\iff -a\not\in S$.
+      
+      Prove that for each $x$, $\left|xS\setminus S\right|$ is even if and
+      only if $x$ is a quadratic residue mod $p$.
+    \item Find $\left(\frac 2p\right)$ and $\left(\frac{-1}p\right)$.
+    \item Let $p$ and $q$ be distinct odd primes, such that $p$ is 1 mod 4.
+    
+      Prove that $p$ is a quadratic residue mod $q$ iff $q$ is a quadratic
+      residue mod $p$.
+    \item What if instead both $p$ and $q$ are 3 mod 4?
+  \end{itemize}
+\end{itemize}
+\section{Weak Prime Number Theorem}
+\begin{enumerate}
+  \item Prove that the sum of the reciprocals of the primes diverges.
+  \item
+    Let $n$ be a positive integer larger than 1.
+    \begin{enumerate}
+      \item Prove that the product of all primes between $\left\lceil\frac
+        n2\right\rceil$ and $n$
+        (including $n$, not including $\left\lceil\frac n2\right\rceil$)
+        is less than
+        $2^n$.
+      \item Prove that the product of all primes between 1 and $n$ is at most
+        $4^{n-1}$.
+      \item Find some real number $c$ independent of $n$ such that there are at
+        most $\frac{cn}{\log_2 n}$ primes that are at most $n$.
+    \end{enumerate}
+  \item 
+    Let $n$ be a positive integer larger than $2^{2^{2^2}}$.
+    \begin{enumerate}
+      \item Let $p$ be a prime.
+        \begin{itemize}
+          \item Prove that if $p^k\mid\binom{2n}n$ then $p^k<
+            2n$.
+          \item Prove that if $2p\le 2n< 3p$ then $p\nmid\binom{2n}n$.
+        \end{itemize}
+      \item Prove that 
+        \[\prod_{\substack{p^k\|\binom{2n}n\\ p\le n}}p^k<\binom{2n}n.\]
+      \item Find some real number $c$ independent of $n$ such that there are at
+        least $\frac{cn}{\log_2 n}$ primes that are at most $n$.
+    \end{enumerate} 
+\end{enumerate}
+\end{document}

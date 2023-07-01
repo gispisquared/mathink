@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage[inline]{asymptote}
+\usepackage{enumitem,amsmath,amsfonts,amssymb,geometry,parskip}
+\def\asydir{asy}
+\title{Integer Polynomials}
+\author{Andres Buritica}
+\date{}
+\begin{document}
+\maketitle
+\section{Basic facts}
+For all of these, let $p(x)=\sum_{i=0}^n a_i x^i$ be a polynomial with integer
+coefficients. 
+
+We say that $p(x)$ is \emph{divisible} by a polynomial $q(x)$ if there is a
+polynomial $r(x)$ (not necessarily with integer coefficients) such that
+$p(x)=q(x)r(x)$. We also write $q(x)\mid p(x)$.
+\begin{itemize}
+  \item (Division algorithm) For any polynomial $q$ there are unique
+    polynomials $f$ and $r$ such that $p(x)=q(x)f(x)+r$ and $\deg R<\deg q$.
+
+    If $q$ has integer coefficients, then $f$ and $r$ have rational
+    coefficients. If $q$ has a leading coefficient of $\pm 1$, then $f$ and $r$
+    have integer coefficients.
+  \item Since we proved Euclid's algorithm and B\'ezout's identity from the
+    division algorithm, they still hold for polynomials.
+  \item (Remainder theorem) If $p(a)=c$ then $x-a\mid p(x)-c$.
+  \item (*) If $a$ and $b$ are integers, then $a-b\mid p(a)-p(b)$.
+\end{itemize}
+\section{Primitive polynomials}
+An integer polynomial is \emph{primitive} if its coefficients have gcd $1$.
+\begin{itemize}
+  \item Every nonzero rational polynomial has exactly one primitive multiple
+    with positive leading coefficient.
+  \item (Gauss' Lemma) The product of two primitive polynomials is primitive.
+  \item (Gauss' Lemma, alternate form) If an integer polynomial is the product
+    of two nonconstant rational polynomials then it is the product of two
+    nonconstant integer polynomials.
+  \item (Rational Root Theorem) If $y$ and $z$ are integers with $\gcd(y,z)=1$
+    such that $p(y/z)=0$ then $y\mid a_0$ and $z\mid a_n$.
+\end{itemize}
+\section{Irreducibility}
+An integer polynomial is \emph{irreducible} over $\mathbb Z$ (for the rest of
+this handout, I'll shorten this to irreducible) if it is not the product of two
+nonconstant integer polynomials.
+
+Usually, to prove irreducibility you will assume for contradiction that the
+polynomial is reducible. Modular arithmetic arguments on the coefficients are
+often useful.
+\begin{itemize}
+  \item (Eisenstein's Criterion) If there exists a prime $q$ such that $q^2\nmid
+    a_0$, $q\mid a_i$ for each $i$ from $0$ to $n-1$, and $q\nmid a_n$, then $p$
+    is irreducible.
+\end{itemize}
+\section{Problems}
+\begin{enumerate}
+  \item Prove that every nonconstant integer polynomial has a composite number
+    in its image.
+  \item (Schur's Theorem) Prove that for every nonconstant integer polynomial,
+    the set of primes that divide some element of its image is infinite.
+  \item Let $p$ be an integer polynomial and let $a$ be an integer such that
+    $p(p(\cdots(p(a))\cdots))=a$. Prove that $p(p(a))=a$.
+  \item Let $a,b,c$ be integers such that $a/b+b/c+c/a$ and $a/c+c/b+b/a$ are
+    both integers. Prove that $|a|=|b|=|c|$.
+  \item Prove that if $p$ is prime, then $1+x+x^2+\cdots+x^{p-1}$ is
+    irreducible.
+  \item Let $f$ be a nonconstant integer polynomial and let $n$ and $k$ be
+    positive integers. Prove that there exists a positive integer $a$ such that
+    each of the numbers $f(a),f(a+1),\ldots,f(a+n-1)$ has at least $k$ distinct
+    prime divisors.
+  \item Prove that if $5\nmid a$, then $x^5-x+a$ is irreducible.
+  \item Find all integer polynomials $p$ such that
+    \begin{itemize}
+      \item $p(n)>n$ for all positive integers $n$, and
+      \item for each positive integer $n$ there is a positive integer $k$ such
+        that $p^{(k)}(1)$ ($p$ repeated $k$ times) is divisible by $n$.
+    \end{itemize}
+\end{enumerate}
+\newpage
+\section{Homework}
+\begin{enumerate}
+  \item Find all integer polynomials $p$ such that $n\mid p(2^n)$ for all
+    positive integers $n$.
+  \item Let $p$ be an irreducible integer polynomial. Prove that $p$ does not
+    have multiple roots.
+  \item Find all positive integers $k$ for which the following statement is
+    true: if $p$ is an integer polynomial such that $0\le p(i)\le k$ for each
+    integer $0\le i\le k+1$, then all of these $p(i)$s are equal.
+\end{enumerate}
+\end{document}

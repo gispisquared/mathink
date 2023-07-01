@@ -1,0 +1,254 @@
+\documentclass{article}
+\usepackage[inline]{asymptote}
+\usepackage{enumitem,amsmath,amsfonts,geometry,parskip,amssymb}
+\def\asydir{asy}
+\newcommand\lcm{\mathrm{lcm}}
+\newcommand\Zz{\mathbb{Z}}
+\newcommand\Nn{\mathbb{N}}
+\newcommand\ord{\mathrm{ord}}
+\title{Review and Extension: Constructions, Polynomials, Sequences}
+\author{Andres Buritica}
+\date{}
+\begin{document}
+\maketitle
+\section{Exam review}
+\newpage
+\section{Problems}
+\begin{enumerate}
+  \item What is the maximum possible value of $n$ such that there exists an
+    integer polynomial $P$ such that the equation $P(x)=5$ has $n$
+    distinct integer solutions, and $P(x)=8$ has an integer solution?
+  \item Find all functions $f:\Zz\to\Zz$ such that, for all integers $a,b,c$
+    satsfying $a+b+c=0$, we have
+    \[f(a)^2+f(b)^2+f(c)^2=2f(a)f(b)+2f(a)f(c)+2f(b)f(c).\]
+  \item Let $P(x)$ and $Q(x)$ be polynomials whose coefficients are all equal to
+    $1$ or $7$. If $P(x)$ divides $Q(x)$, prove that $1+\deg P(x)$ divides
+    $1+\deg Q(x)$.
+  \item  Dragos, the early ruler of Moldavia, and Maria the Oracle play the
+    following game. Firstly, Maria chooses a set $S$ of prime numbers. Then
+    Dragos gives an infinite sequence $x_1, x_2, \ldots$ of distinct positive
+    integers. Then Maria picks a positive integer $M$ and a prime number $p$
+    from her set $S$. Finally, Dragos picks a positive integer $N$ and the
+    game ends. Dragos wins if and only if for all integers $n \ge N$ the number
+    $x_n$ is divisible by $p^M$; otherwise, Maria wins. Who has a winning
+    strategy?
+  \item Let $P(x)$ be a polynomial of degree $n>1$ with integer coefficients and
+    let $k$ be a positive integer. Prove that there are at most $n$ integers $t$
+    such that $P^{(k)}(t)=t$, were $P^{(k)}$ is $P$ repeated $k$ times.
+  \item Does there exist a prime $p$ such that every power of $p$ is a base-10
+    palindrome?
+  \item For a positive integer $n$, let $\varphi(n)$ and $d(n)$ denote the value
+    of the Euler phi function at $n$ and the number of positive divisors of $n$,
+    respectively. Prove that there are infinitely many positive integers $n$
+    such that $\varphi(n)$ and $d(n)$ are both perfect squares.
+  \item For each positive integer $k$, let $S(k)$ the sum of digits of $k$ in
+    decimal system.
+    Show that there is an integer $k$, with no $9$ in it's decimal
+    representation, such that
+    \[S(2^{24^{2017}}k)=S(k).\]
+\end{enumerate}
+\section{Problems from previous handouts}
+\begin{enumerate}
+  \item Find all integers $n$ such that $n^2+1$ divides $n^3+n^2-n-15$.
+  \item Find all right-angled triangles with positive integer sides 
+    such that their area and perimeter are equal.
+  \item Let $a,m,n$ be positive integers with $a>1$.
+    Prove that $\gcd(a^m-1,a^n-1)=a^{\gcd(m,n)}-1$.
+  \item Prove that $1^k+2^k+\cdots+n^k$ is divisible by $1+2+\cdots+n$ for
+    all positive integers $n$ and odd positive integers $k$.
+  \item Let $a,b,c,d$ be positive integers with $ab=cd$. Prove that there
+    exist positive integers $p,q,r,s$ such that \(a=pq,b=rs,a=pr,d=qs\).
+  \item Let $p$ be a prime with $p>3$. Prove that there are positive integers
+    $a<b<\sqrt p$ such that $p-b^2\mid p-a^2$.
+  \item Find all pairs of positive integers $a,b$ such that \[b^2-a\mid
+      a^2+b\quad\text{and}\quad a^2-b\mid b^2+a.\]
+  \item Prove that for any nonnegative integer $n$, the number $7^{7^n}+1$ is
+    the product of at least $2n+3$ (not necessarily distinct) primes.
+  \item For any positive integer $n$, prove that $\displaystyle\sum_{d\mid
+    n}\varphi(d)=n$.
+  \item Let $x$ and $y$ be positive integers and let $p$ be prime. Assume there
+    are coprime positive integers $m$ and $n$ such that $x^m\equiv y^n\pmod p$.
+    Prove that there is a unique positive integer $z$ with $0\le z<p$ such that
+    \[x\equiv z^n\pmod p,\qquad y\equiv z^m\pmod p.\]
+  \item Let $a$ and $b$ be positive integers such that $a^n+n\mid b^n+n$ for all
+    positive integers $n$. Prove that $a=b$.
+  \item Let $n$ and $k$ be positive integers such that $\varphi^k(n)=1$ (that
+    is, $\varphi$ iterated $k$ times). Prove that
+    $n\le 3^k$.
+  \item Prove that for each positive integer $n$ there exist $n$ consecutive
+    positive integers, none of which is a prime power.
+  \item Let $m$ and $n$ be positive integers. Show that $4mn-m-n$ can never be a
+    perfect square.
+  \item Find all positive integer solutions to $3^x+4^y=5^z$.
+  \item Let $n>1$ be a positive integer and let $p$ be a prime. Given that
+    $n\mid p-1$ and $p\mid n^3-1$, prove that $4p-3$ is a perfect square.
+  \item 
+  Let $n$ be a fixed positive integer. Let
+  $\frac{a_1}{b_1},\ldots,\frac{a_k}{b_k}$ be the rational numbers between 0
+  and 1 inclusive with denominators at most $n$, written in increasing order
+  and lowest terms.
+  \begin{itemize}
+    \item Prove that for each $i$, $a_{i+1}b_i-a_i b_{i+1}=1$.
+    \item Prove that the rational number $x$ with smallest denominator such
+      that $\frac{a_i}{b_i}<x<\frac{a_{i+1}}{b_{i+1}}$ is
+      $\frac{a_i+a_{i+1}}{b_i+b_{i+1}}$. 
+    \item Which pairs of numbers appear as consecutive $b_i$s?
+  \end{itemize}
+  \item Suppose that $(a_1,b_1),(a_2,b_2),\ldots,(a_{100},b_{100})$ are distinct
+    ordered pairs of nonnegative integers.
+    Let $N$ denote the number of pairs of integers $(i,j)$ satisfying
+    $1\leq i<j\leq 100$ and $|a_i b_j-a_j b_i|=1$. 
+    Determine the largest possible value of $N$ over all possible choices of the
+    100 ordered pairs.
+  \item For a positive integer $n$, let $f(n)$ be the number of binary strings of length $n$ that
+      can't be expressed as an $m$-fold repetition of another binary string for
+      any $m>1$.
+
+      For example, $f(6)=54$ since the only strings of length 6 that can be
+      expressed as an $m$-fold repetition of another binary string for some $m>1$
+      are 000000, 001001, 010010, 010101, 011011, 100100, 101010, 101101, 110110,
+      111111.
+       
+      \begin{enumerate}
+        \item Find two functions $g$ and $h$, in closed form, such that $f=g*h$.
+        \item 
+          Prove that $n\mid f(n)$.
+        \item Find all $n$ for which $n\mid\displaystyle\sum_{i=1}^n f(i)\left\lfloor\frac
+              ni\right\rfloor$.
+      \end{enumerate}
+  \item Find all pairs of positive integers $x,y$ such that
+    $1+2^x+2^{2x+1}=y^2$.
+  \item Find all pairs of positive integers $x,y$ such that $x^3-y^3=xy+61$.
+  \item Find all triples of positive integers $a,b,c$ such that $a^2+b+c=abc$.
+  \item Find all positive integers $x,y,n$ such that $\gcd(x,n+1)=1$ and
+    $x^n+1=y^{n+1}$.
+  \item Four positive integers $x,y,z,t$ satisfy $xy-zt=x+y=z+t$. Is it possible
+    that $xy$ and $zt$ are both perfect squares?
+  \item Prove that there are infinitely many triples $(a,b,c)$ of positive
+    integers in arithmetic progression
+    such that $ab+1$, $bc+1$ and $ca+1$ are all perfect squares.
+  \item Find all solutions in integers to $x^2+y^2+z^2=2xyz$.
+  \item Let $a$ and $b$ be two positive integers. Prove that
+    \[a^2+\left\lceil\frac{4a^2}b\right\rceil\] is not a square.
+  \item Let $p$ and $q$ be coprime. Prove that
+    \[\sum_{i=1}^{q-1}\left\lfloor\frac{ip}{q}\right\rfloor=\frac{(p-1)(q-1)}2.\]
+  \item Find all positive integers $n$ such that $1+\lfloor\sqrt n\rfloor$
+    divides $n$.
+  \item Let $r$ be an irrational root of a polynomial $P(x)$ of degree $d$ with
+    integer coefficients. Prove that there is a real number $C$ such that for
+    any integer $q$ we have $\{qr\}\ge \frac C{q^{d-1}}$.
+  \item Let $x$ be an irrational number.
+    \begin{enumerate}
+      \item Prove that for each positive integer $n$ there is a positive integer
+        $m$ such that $\{mx\}<\frac 1n$.
+      \item Prove that there are infinitely many positive integers $n$ such
+        that $\{nx\}<\frac 1n$.
+    \end{enumerate}
+  \item Prove that the sequence $a_i=\left\lfloor(\sqrt 2+1)^i\right\rfloor$
+    alternates between even and odd integers.
+  \item Find all positive integers $x$ and $y$ such that if $z=\gcd(x,y)$, then
+    $x+y^2+z^3=xyz$.
+  \item For each positive integer $n$, let
+    \[f(n)=\frac1n\sum_{i=1}^n \left\lfloor\frac ni\right\rfloor.\]
+    \begin{enumerate}
+      \item Prove that $f(n+1)>f(n)$ for infinitely many $n$.
+      \item Prove that $f(n+1)<f(n)$ for infinitely many $n$.
+    \end{enumerate}
+  \item Is there a positive integer $m$ for which the equation
+    \[\frac1a+\frac1b+\frac1c+\frac1{abc}=\frac m{a+b+c}\]
+    has infinitely many solutions in positive integers $a,b,c$?
+  \item Let $p$ be an odd prime. Prove that
+    \[p^2\mid 1^p+2^p+\cdots+p^p.\]
+  \item Let $a,b,c$ be positive integers such that $c\mid a^c-b^c$. Prove that
+    $c(a-b)\mid a^c-b^c$.
+  \item Prove that for all positive integers $n$,
+    \[\binom{2n}n\mid\lcm(1,2,\ldots,2n).\]
+  \item Find all pairs of positive integers $x,p$ such that $p$ is prime, $x\le
+    2p$, and $x^{p-1}\mid (p-1)^x+1$.
+  \item Let $a,b,n$ be positive integers such that $a>b>1$ and $b$ is odd. If
+    $b^n\mid a^n-1$, prove that $na^b>3^n$.
+  \item Find all natural numbers $n$ such that $n^2\mid 2^n+1$.
+  \item Find all positive integers $n$ such that $n\mid 2^n-1$.
+  \item Prove that if $\sigma(n)=2n+1$, then $n$ is a perfect square.
+  \item Find all positive integers $n$ such that $n\mid 2^{n-1}+1$.
+  \item Find all primes $p,q,r$ such that $p\mid q^r+1,\ q\mid r^p+1,\ r\mid
+    p^q+1$.
+  \item Let $n$ and $m$ be nonnegative integers, and let $p$ be prime. Prove
+    that
+    \[\binom nm\equiv\prod_{i=0}^k\binom{n_i}{m_i}\pmod p,\]
+    where $n=\sum n_i p^i$ and $m=\sum m_i p^i$.
+  \item Find all positive integers $n$ for which there exists a function
+    $g:\Zz_n\to\Zz_n$ such that all the functions
+    \[g(x),g(x)+x,\ldots,g(x)+100x\]
+    are bijections $\Zz_n\to\Zz_n$.
+  \item Let $k$ and $n$ be positive integers such that $n$ is odd. Prove that
+    there is an integer $a$ such that $a^{32}\equiv(n+1)^3\pmod{n^k}$.
+  \item Prove that for any prime $p$ and positive integer $a$ with $p\nmid a$
+    there are at least $p-1$ solutions in $\Zz_p$ to $x^2+y^2\equiv a\pmod p$.
+  \item Let $p$ be prime and let $a$ and $b$ be positive integers such that
+    $p\nmid b$. Prove that there exists a positive integer $n$ such that
+    $p^a\mid n^n-b$.
+  \item If $p>3$ is a prime such that $\varphi(p-1)>\frac{p-1}3$, prove that
+    there are two consecutive generators mod $p$.
+  \item Let $p$ be a prime and let $n$ be a positive integer with $p\nmid n$.
+    Find \[\sum_{i=1}^p\left(\frac{i^2+n}p\right).\]
+  \item Let $p>3$ be a prime and let $a,b,c$ be integers with $a\ne 0$. Suppose
+    that $ax^2+bx+c$ is a perfect square for $p$ consecutive integers $x$. Prove
+    that $p\mid b^2-4ac$.
+  \item Let $P$ be a nonconstant polynomial with integer coefficients. Prove that for any
+    integer $m$ there exist an integer $n$ and a prime $p$ such that $p^m\mid
+    P(n)$.
+  \item Let $a_1,a_2,a_3,\ldots$ be a sequence of integers, such that for any
+    positive integers $n$ and $k$, the quantity
+    \[\frac{a_n+a_{n+1}+\cdots+a_{n+k-1}}k\]
+    is always the square of an integer. Prove that all $a_i$s are equal.
+  \item Let $a$ and $b$ be positive integers. Prove that there are infinitely
+    many positive integers $n$ such that $n^b-1\nmid a^n+1$.
+  \item Prove that there are infinitely many pairs $a$ and $b$ of perfect
+    squares such that they have the same number of digits in decimal, and their
+    concatenation is also a square.
+  \item Prove that there exist infinitely many positive integers $n$ such that
+    $n^2+1\mid n!$.
+  \item For which positive integers $r$ and $s$ does there exist a positive
+    integer $n$ such that $nr$ and $ns$ have the same number of divisors?
+  \item Let $p$ be an integer polynomial and let $a$ be an integer such that
+    $p(p(\cdots(p(a))\cdots))=a$. Prove that $p(p(a))=a$.
+  \item Let $a,b,c$ be integers such that $a/b+b/c+c/a$ and $a/c+c/b+b/a$ are
+    both integers. Prove that $|a|=|b|=|c|$.
+  \item Prove that if $p$ is prime, then $1+x+x^2+\cdots+x^{p-1}$ is
+    irreducible.
+  \item Let $f$ be a nonconstant integer polynomial and let $n$ and $k$ be
+    positive integers. Prove that there exists a positive integer $a$ such that
+    each of the numbers $f(a),f(a+1),\ldots,f(a+n-1)$ has at least $k$ distinct
+    prime divisors.
+  \item Prove that if $5\nmid a$, then $x^5-x+a$ is irreducible.
+  \item Find all integer polynomials $p$ such that
+    \begin{itemize}
+      \item $p(n)>n$ for all positive integers $n$, and
+      \item for each positive integer $n$ there is a positive integer $k$ such
+        that $p^{(k)}(1)$ ($p$ repeated $k$ times) is divisible by $n$.
+    \end{itemize}
+  \item Find all functions $f:\Nn\to\Nn$ such that $f(n+1)>f(f(n))$ for all
+    positive integers $n$.
+  \item Does there exist a strictly increasing function $f:\Nn\to\Nn$ such that
+    $f(1)=2$ and $f(f(n))=f(n)+n$ for all positive integers $n$?
+  \item Prove that all terms of the sequence $a_1=a_2=a_3=1,\
+    a_{n+1}=(1+a_{n-1}a_n)/a_{n+2}$ are integers.
+  \item Does there exist a strictly increasing function $f:\Nn\to\Nn$ such that
+    $f(mn)=f(m)+f(n)$ for all positive integers $m$ and $n$?
+  \item Let $f:\Zz\to\Nn$ be a function such that for any integers $m$ and $n$,
+    $f(m-n)\mid f(m)-f(n)$. Prove that for all integers $m$ and $n$, if $f(m)\le
+    f(n)$ then $f(m)\mid f(n)$.
+  \item Let $P(n)$ be the product of the digits of a positive integer $n$.
+    Let $n_1$ be a positive integer, and define $n_{i+1}=n_i+P(n_i)$ for each
+    $i\ge 1$. Prove that this sequence is eventually constant.
+  \item Find all functions $f:\Zz_{\ge 0}\to \Zz_{\ge 0}$ such that
+    $f(f(f(n)))=f(n+1)+1$ for all $n\in\Zz_{\ge 0}$.
+  \item Let $a_1,a_2,\ldots$ be a sequence of integers such that the average of
+    every consecutive group of $a_i$s is a perfect square. Prove that the
+    sequence is constant.
+  \item  Find all functions $f:\mathbb Z_{>0}\to \mathbb Z_{>0}$ such that
+    $a+f(b)$ divides $a^2+bf(a)$ for all positive integers $a$ and $b$ with
+    $a+b>2019$.
+\end{enumerate}
+\end{document}

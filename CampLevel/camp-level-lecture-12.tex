@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage[inline]{asymptote}
+\usepackage{enumitem,amsmath,amsfonts,amssymb,geometry,parskip}
+\def\asydir{asy}
+\newcommand\Nn{\mathbb{N}}
+\newcommand\Zz{\mathbb{Z}}
+\newcommand\Rr{\mathbb{R}}
+\title{Sequences, Integer Functions}
+\author{Andres Buritica}
+\date{}
+\begin{document}
+\maketitle
+\section{Comments}
+Even though sequence problems and integer function problems look cosmetically
+different, a sequence is just a function from $\Nn$ to (some subset of) $\Rr$.
+
+For divisibility problems, try to make one side of the divisibility prime.
+
+If you can find infinitely many values, often you can sub a small unknown number
+and a large known one, and this gives you the small number.
+\section{Problems}
+\begin{enumerate}
+  \item Find all completely multiplicative functions $f:\mathbb N\to\mathbb R$
+    such that for all $a,b\in\mathbb N$, at least two of $f(a),f(b),f(a+b)$ are
+    equal.
+  \item Find all functions $f:\Nn\to\Nn$ such that $f(n+1)>f(f(n))$ for all
+    positive integers $n$.
+  \item Does there exist a strictly increasing function $f:\Nn\to\Nn$ such that
+    $f(1)=2$ and $f(f(n))=f(n)+n$ for all positive integers $n$?
+  \item Prove that all terms of the sequence $a_1=a_2=a_3=1,\
+    a_{n+1}=(1+a_{n-1}a_n)/a_{n+2}$ are integers.
+  \item Does there exist a strictly increasing function $f:\Nn\to\Nn$ such that
+    $f(mn)=f(m)+f(n)$ for all positive integers $m$ and $n$?
+  \item Let $f:\Zz\to\Nn$ be a function such that for any integers $m$ and $n$,
+    $f(m-n)\mid f(m)-f(n)$. Prove that for all integers $m$ and $n$, if $f(m)\le
+    f(n)$ then $f(m)\mid f(n)$.
+  \item Let $P(n)$ be the product of the digits of a positive integer $n$.
+    Let $n_1$ be a positive integer, and define $n_{i+1}=n_i+P(n_i)$ for each
+    $i\ge 1$. Prove that this sequence is eventually constant.
+  \item Find all functions $f:\Zz_{\ge 0}\to \Zz_{\ge 0}$ such that
+    $f(f(f(n)))=f(n+1)+1$ for all $n\in\Zz_{\ge 0}$.
+  \item Let $a_1,a_2,\ldots$ be a sequence of integers such that the average of
+    every consecutive group of $a_i$s is a perfect square. Prove that the
+    sequence is constant.
+\end{enumerate}
+\newpage
+\section{Homework}
+\begin{enumerate}
+  \item Is there a sequence $a_1,\ldots,a_n$ of primes such that for each $i$ we
+    have $10 a_i\le a_{i+1}<10a_i+9$?
+  \item Find all functions $f:\Nn\to\Nn$ such that $m^2+f(n)\mid
+    mf(m)+n$ for all positive integers $m$ and $n$.
+  \item Is there a function $f:\Nn\to\Nn$ of positive integers such that
+    $\gcd(a_m,a_n)=1\iff |m-n|=1$?
+\end{enumerate}
+\end{document}
