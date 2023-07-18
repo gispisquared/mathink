@@ -3,7 +3,10 @@
 \usepackage{enumitem,amsmath,amsfonts,amssymb,geometry,parskip}
 \def\asydir{asy}
 \title{Team Level Lectures}
-\author{Andres Buritica}
+\newcommand\lcm{\mathrm{lcm}}
+\newcommand\Zz{\mathbb{Z}}
+\newcommand\ord{\mathrm{ord}}
+\author{Andres Buritica Monroy}
 \date{}
 \begin{document}
 \maketitle
@@ -20,12 +23,24 @@
     \item Which pairs of numbers appear as consecutive $b_i$s?
   \end{itemize}
 
-  Suppose that $(a_1,b_1),(a_2,b_2),\ldots,(a_{100},b_{100})$ are distinct
-    ordered pairs of nonnegative integers.
-    Let $N$ denote the number of pairs of integers $(i,j)$ satisfying
-    $1\leq i<j\leq 100$ and $|a_i b_j-a_j b_i|=1$. 
-    Determine the largest possible value of $N$ over all possible choices of the
-    100 ordered pairs.
+  Example problems:
+  \begin{itemize}
+    \item 
+      Suppose that $(a_1,b_1),(a_2,b_2),\ldots,(a_{100},b_{100})$ are distinct
+        ordered pairs of nonnegative integers.
+        Let $N$ denote the number of pairs of integers $(i,j)$ satisfying
+        $1\leq i<j\leq 100$ and $|a_i b_j-a_j b_i|=1$. 
+        Determine the largest possible value of $N$ over all possible choices of the
+        100 ordered pairs.
+    \item A lattice point in the Cartesian plane is a point whose coordinates
+      are both integers. A lattice polygon is a polygon all of whose vertices
+      are lattice points.
+
+      Let $\Gamma$ be a convex lattice polygon. Prove that $\Gamma$ is contained
+      in a convex lattice polygon $\Omega$ such that the vertices of $\Gamma$
+      all lie on the boundary of $\Omega$, and exactly one vertex of $\Omega$ is
+      not a vertex of $\Gamma$.
+  \end{itemize}
 \section{Dirichlet Convolution and Mobius Inversion}
   Let $f:\mathbb N\to\mathbb R$ and $g:\mathbb N\to\mathbb R$ be two functions.
   We define the \emph{Dirichlet convolution} $f*g$ as
@@ -46,6 +61,8 @@
           ni\right\rfloor=\sum_{j=1}^n(f*\zeta)(j).\]
   \end{itemize}
 
+  Example problems:
+
   For a positive integer $n$, let $f(n)$ be the number of binary strings of length $n$ that
       can't be expressed as an $m$-fold repetition of another binary string for
       any $m>1$.
@@ -62,7 +79,45 @@
         \item Find all $n$ for which $n\mid\displaystyle\sum_{i=1}^n f(i)\left\lfloor\frac
               ni\right\rfloor$.
       \end{itemize}
-\section{More theorems about mod $p$}
+\section{Polynomials mod $p$}
+Let $p$ be prime.
+\begin{itemize}
+  \item Prove that unique factorisation holds for polynomials mod $p$. (This is
+    not true for all integers --- for instance,
+    $(x-1)^2\equiv(x-3)^2\pmod 4$.)
+  \item Prove that for every function $f:\Zz_p\to\Zz_p$ there is a unique polynomial $P$ in
+    $\Zz_p$ of degree less than $p-1$ such that $f(x)=P(x)$ for each
+    $x\in\Zz_p$.
+  \item Let $g$ be a generator mod $p$, and let $ab=p-1$. Prove that
+    \[\prod_{i=1}^a (x-g^{bi})\equiv x^a-1\pmod p.\]
+    What does this tell us about the roots of the cyclotomic polynomials in mod
+    $p$?
+  \item Consider all $\binom{p-1}k$ products of $k$ elements of $\Zz_p$. Prove
+    that their sum is divisible by $p$.
+  \item For any positive integer $n<p-1$, prove that
+    \[\sum_{i=1}^{p-1} i^n\equiv 0\pmod p.\]
+\end{itemize}
+Example problems:
+\begin{itemize}
+  \item Let $p$ be an odd prime. We compute the product of $(4-x)$,
+    where $x$ varies over all residues mod $p$ except the quadratic residues.
+    Find the least residue of this product mod $p$.
+  \item Find the least residue of the sum of all generators mod $p$.
+  \item Let $\mathbb{Z}/n\mathbb{Z}$ denote the set of integers considered
+    modulo $n$ (hence $\mathbb{Z}/n\mathbb{Z}$ has $n$ elements). Find all
+    positive integers $n$ for which there exists a bijective function $g:
+    \mathbb{Z}/n\mathbb{Z} \to \mathbb{Z}/n\mathbb{Z}$, such that the 101
+    functions
+    \[g(x), \quad g(x) + x, \quad g(x) + 2x, \quad \dots, \quad g(x) + 100x\]are
+    all bijections on $\mathbb{Z}/n\mathbb{Z}$.
+  \item Let $p$ be an odd prime. An integer $x$ is called a quadratic
+    non-residue if $p$ does not divide $x-t^2$ for any integer $t$.
+
+    Denote by $A$ the set of all integers $a$ such that $1\le a<p$, and both $a$
+    and $4-a$ are quadratic non-residues. Calculate the remainder when the
+    product of the elements of $A$ is divided by $p$.
+\end{itemize}
+\section{Binomial coefficients mod $p$}
 \begin{itemize}
   \item Wolstenholme's Theorem:
     let $a$ and $b$ be positive integers, and let $p$ be a prime greater
@@ -70,21 +125,6 @@
   \item Lucas' Theorem: let $m=\sum m_i p^i$ and $n=\sum n_i p^i$ be the base-$p$ expansions of
     $m$ and $n$, where $p$ is prime. Prove that
     \[\binom mn\equiv\prod{\binom{m_i}{n_i}}\pmod p.\]
-  \item Let $p$ be a prime. What is the sum of all the generators mod $p$?
-  \item Quadratic residues:
-  \begin{itemize}
-    \item Let $p$ be an odd prime. Working in mod $p$, let $S$ be a set such
-      that for any nonzero $a$, $a\in S\iff -a\not\in S$.
-      
-      Prove that for each $x$, $\left|xS\setminus S\right|$ is even if and
-      only if $x$ is a quadratic residue mod $p$.
-    \item Find $\left(\frac 2p\right)$ and $\left(\frac{-1}p\right)$.
-    \item Let $p$ and $q$ be distinct odd primes, such that $p$ is 1 mod 4.
-    
-      Prove that $p$ is a quadratic residue mod $q$ iff $q$ is a quadratic
-      residue mod $p$.
-    \item What if instead both $p$ and $q$ are 3 mod 4?
-  \end{itemize}
 \end{itemize}
 \section{Weak Prime Number Theorem}
 \begin{enumerate}

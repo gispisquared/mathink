@@ -4,7 +4,7 @@
 \def\asydir{asy}
 \newcommand\lcm{\text{lcm}}
 \title{Prime factorisations and Arithmetic Functions}
-\author{Andres Buritica}
+\author{Andres Buritica Monroy}
 \date{}
 \begin{document}
 \maketitle
@@ -36,7 +36,6 @@
       each prime that divides both $a$ and $b$.
     \item $\gcd(a,b)\times\lcm(a,b)=ab$.
   \end{itemize}
-  \newpage
 \section{Arithmetic functions}
   We define:
   \begin{itemize}
@@ -45,25 +44,11 @@
     \item The totient function $\varphi(n)$: the number of positive integers
       which are at most $n$ and coprime to $n$.
   \end{itemize}
-  A function $f:\mathbb N\to\mathbb R$ is called multiplicative if for any
-  coprime positive integers $a$ and $b$, we have
-  \[f(a)f(b)=f(ab).\]
-  It's called completely multiplicative if this equation holds for \emph{any}
-  positive integers $a$ and $b$
-  \begin{itemize}
-    \item Prove that the values at the primes of a completely multiplicative
-      function completely define the function (unless these values are all 0, in
-      which case $f(1)$ can be 0 or 1).
-    \item Prove that the values at prime powers of a multiplicative function
-      completely define it (once again, unless these values are all 0).
-    \item Prove that $d$ and $\sigma$ are multiplicative. ($\varphi$ is also
-      multiplicative, but we will prove this next term.)
-    \item
-      Find formulae for $d(n),\sigma(n),\varphi(n)$ where
-      $n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}$.
-  \end{itemize}
 \section{Problems}
 \begin{enumerate}
+  \item We call the \emph{main divisors} of a composite number $n$ the two
+    largest of its divisors other than $n$. Composite numbers $a$ and $b$ are
+    such that their main divisors coincide. Prove that $a=b$.
   \item Prove that $d(n)\le 2\sqrt n$.
   \item Let $a,b,p$ be positive integers such that $p$ is prime and
     $\lcm(a,a+p)=\lcm(b,b+p)$. Prove that $a=b$.
@@ -73,10 +58,12 @@
       $\frac b{\gcd(a,b)}$.
   \item Prove that for all composite $n$ apart from 6,
     \[\sqrt n\le\varphi(n)\le n-\sqrt n.\]
+  \item Determine all composite integers $n>1$ that satisfy the following
+    property: if $d_1, d_2, \ldots, d_k$ are all the positive divisors of $n$
+    with $1=d_1<d_2<\cdots<d_k=n$, then $d_i$ divides $d_{i+1}+d_{i+2}$ for
+    every $1 \leq i \leq k-2$.
   \item Let $n$ be an even positive integer such that $\sigma(n)=2n$. Prove that
     $n=2^{p-1}\left(2^p-1\right)$, where $p$ is a prime.
-  \item For any positive integer $n$, prove that $\displaystyle\sum_{d\mid
-    n}\varphi(d)=n$.
 \end{enumerate}
 \newpage
 \section{Homework}

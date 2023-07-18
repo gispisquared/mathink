@@ -5,8 +5,8 @@
 \newcommand\lcm{\mathrm{lcm}}
 \newcommand\Zz{\mathbb{Z}}
 \newcommand\ord{\mathrm{ord}}
-\title{Polynomials mod $p$, orders, generators}
-\author{Andres Buritica}
+\title{Orders, generators}
+\author{Andres Buritica Monroy}
 \date{}
 \begin{document}
 \maketitle
@@ -14,8 +14,7 @@
   Let $p$ be a prime and $n$ be a positive integer throughout.
 
   Recall that $\Zz_n$ denotes the integers mod $n$, and $\Zz_n^*$ denotes the
-  subset of $\Zz_n$ containing the invertible elements. A \emph{polynomial in
-  $\Zz_n$} is a polynomial with coefficients in $\Zz_n$.
+  subset of $\Zz_n$ containing the invertible elements.
 
   The \emph{order} of an invertible element $a$ of $\Zz_n$, denoted $\ord_n(a)$,
   is the smallest positive integer $n$ such that $a^n\equiv 1\pmod n$.
@@ -24,18 +23,14 @@
 
   There is always a generator mod $p$; we prove this in section 3, but assume it for
   now.
-
-  If a polynomial of degree $d$ in $\Zz_p$ has more than $d$ roots mod
-  $p$, then it is the zero polynomial. (The proof is the same as the
-  proof for polynomials with real coefficients.)
 \section{Exercises}
 \begin{itemize}
-  \item $a^k\equiv 1\pmod n \iff \ord_n(a)\mid n$.
+  \item $a^k\equiv 1\pmod n \iff \ord_n(a)\mid k$.
   \item $\ord_n(a)\mid\varphi(n)$.
   \item If $q\mid 2^p-1$, then $q>p$.
   \item Every prime factor of $2^{2^n}+1$ is congruent to $1$ mod $2^{n+1}$.
-  \item If $g$ is a generator mod $n$, then $\{g^1,g^2,\ldots,g^{\varphi(n)}\}$
-    contains all nonzero residues mod $n$ exactly once.
+  \item If $g$ is a generator mod $n$, then
+    $\{g^1,g^2,\ldots,g^{\varphi(n)}\}=\mathbb Z_n^*$.
   \item If $g$ is a generator mod $n$, and $\varphi(n)=2k$, then
     \[g^k\equiv -1\pmod n.\]
   \item There are either $0$ or $\varphi(\varphi(n))$ generators mod $n$.
@@ -45,18 +40,6 @@
     $\Zz_n^*$ is $-1$ mod $n$.
   \item For any positive integer $n<p-1$,
     \[\sum_{i=1}^{p-1} i^n\equiv 0\pmod p.\]
-  \item For every function $f:\Zz_p\to\Zz_p$ there is a unique polynomial $P$ in
-    $\Zz_p$ of degree less than $p-1$ such that $f(x)=P(x)$ for each
-    $x\in\Zz_p$.
-  \item Let $g$ be a generator mod $p$, and let $ab=p-1$. Then,
-    \[\prod_{i=1}^a (x-g^{bi})\equiv x^a-1\pmod p.\]
-    What does this tell us about the roots of the cyclotomic polynomials in mod
-    $p$?
-  \item Consider all $\binom{p-1}k$ products of $k$ elements of $\Zz_p$. Their
-    sum is divisible by $p$.
-  \item For any positive integer $n<p-1$, 
-    \[\sum_{i=1}^{p-1} i^n\equiv 0\pmod p.\] (Give a proof involving
-    polynomials.)
   \item Assume there exists a generator mod $n$.
     An element $x\in\Zz_n^*$ can be written as $y^k$ for $y\in\Zz_n^*$ iff
     $\ord_p(x)\gcd(\varphi(n),k)\mid \varphi(n)$.
@@ -71,23 +54,26 @@ Let $p$ be an odd prime.
   \item If $n=xy$, where $x$ and $y$ are coprime and larger than $2$, then there
     does not exist a generator mod $n$.
 \end{itemize}
-\newpage
 \section{Problems}
 \begin{enumerate}
+  \item Let $p>10$ be a prime. Prove that there are positive integers $m,n$ with
+    $m+n<p$ such that $p$ divides $5^m7^n-1$.
   \item Find all positive integers $n$ such that $n\mid 2^n-1$.
   \item Prove that if $\sigma(n)=2n+1$, then $n$ is a perfect square.
+  \item Let $p$ be a prime. Find all nonempty sets $S$ of residues mod $p$ such
+    that if the least residues of $a$ and $b$ are not in $S$, then \[\prod_{i\in S}(a-i)\equiv\prod_{i\in S}(b-i)\pmod
+    p.\]
+  \item Let $p$ be an odd prime and $r$ an odd natural number. Show that $pr+1$
+    does not divide $p^p-1$.
+  \item Let $p$ be an odd prime and let $m$ and $n$ be natural numbers not
+    divisible by $p$. Prove that if there is some integer $s$ such that $p\mid
+    m^{2^s}+n^{2^s}$, then $p\equiv 1\pmod{2^{s+1}}$.
   \item Find all positive integers $n$ such that $n\mid 2^{n-1}+1$.
+  \item Find all positive integers $n$ that satisfy the following property:
+    for all positive integers $m$, relatively prime to $n$, we have
+    $2n^2$ divides $m^n-1$.
   \item Find all primes $p,q,r$ such that $p\mid q^r+1,\ q\mid r^p+1,\ r\mid
     p^q-1$.
-  \item Find the sum of all generators mod $p$.
-  \item Let $n$ and $m$ be nonnegative integers, and let $p$ be prime. Prove
-    that
-    \[\binom nm\equiv\prod_{i=0}^k\binom{n_i}{m_i}\pmod p,\]
-    where $n=\sum n_i p^i$ and $m=\sum m_i p^i$.
-  \item Find all positive integers $n$ for which there exists a function
-    $g:\Zz_n\to\Zz_n$ such that all the functions
-    \[g(x),g(x)+x,\ldots,g(x)+100x\]
-    are bijections $\Zz_n\to\Zz_n$.
 \end{enumerate}
 \newpage
 \section{Homework}

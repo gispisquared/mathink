@@ -5,7 +5,7 @@
 \newcommand\lcm{\mathrm{lcm}}
 \def\asydir{asy}
 \title{Review and Extension --- Divisibility}
-\author{Andres Buritica}
+\author{Andres Buritica Monroy}
 \date{}
 \begin{document}
 \maketitle
@@ -33,69 +33,10 @@
   \begin{itemize}
     \item The number of positive divisors function $d(n)$.
     \item The sum of positive divisors function $\sigma(n)$.
-    \item The totient function $\varphi(n)$: the number of positive integers
-      which are at most $n$ and coprime to $n$.
   \end{itemize}
   Find formulae for $d(n)$ and $\sigma(n)$ where
     $n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}$.
-\section{Problems}
-\begin{enumerate}
-  \item Given positive integers $n>1$ and $k$, prove that there are unique
-    nonnegative integers $m,a_0,a_1,\ldots,a_m$ such that $a_m>0,\ 0\le
-    a_i<n$ for all $i$, and
-    \[k=a_0 n^0+a_1 n^1+\cdots+a_m n^m.\]
-  \item Prove that $1^k+2^k+\cdots+n^k$ is divisible by $1+2+\cdots+n$ for
-    all positive integers $n$ and odd positive integers $k$.
-  \item Prove that if $2^n+1$ is prime for a positive integer $n$, then $n$ is
-    a power of 2.
-  \item Let $m$ and $n$ be positive integers. Prove that $\sqrt[m]n$ is an
-    integer or irrational.
-  \item Let $a,b,c$ be positive integers such that $a^3+b^3=2^c$. Prove that
-    $a=b$.
-  \item Let $a$ and $b$ be positive integers such that $a\mid b^2\mid a^3\mid
-    b^4\mid\cdots$
-
-    Prove that $a=b$.
-  \item Prove that every positive integer is a sum of one or more numbers of
-    the form $2^r3^s$, where $r$ and $s$ are nonnegative integers and no
-    summand divides another.
-  \item Prove that for positive integers $m,n>2$ we cannot have \[2^m-1\mid
-      2^n+1.\]
-  \item Find all positive integers $n$ such that $3^{n-1}+5^{n-1}\mid
-    3^n+5^n$.
-  \item Let $n$ be a composite positive integer. Calculate
-    \[\gcd((n-1)!+1,n!).\]
-  \item Let $S$ be a nonempty set of integers such that if $a$ and $b$ are in $S$, then
-    so is $2a-b$.
-
-    Prove that $S$ is an arithmetic
-    progression. (That is, there are integers $a$ and $d$ such that $n\in S$ if
-    and only if 
-    $n=a+kd$ for some integer $k$.)
-  \item Find all pairs of positive integers $a,b$ such that \[b^2-a\mid
-      a^2+b\quad\text{and}\quad a^2-b\mid b^2+a.\]
-  \item Let $m$ and $n$ be positive integers. Prove that
-    \[m\mid\gcd(m,n)\binom mn.\]
-  \item Find all pairs of positive integers $x,y$ such that $xy^2+y+7\mid
-    x^2y+x+y$.
-  \item Prove that $d(n)\le 2\sqrt n$ for all $n$.
-  \item Let $a,b,p$ be positive integers such that $p$ is prime and
-    $\lcm(a,a+p)=\lcm(b,b+p)$. Prove that $a=b$.
-  \item Prove that for all $n$,
-    \[\sigma(1)+\sigma(2)+\cdots+\sigma(n)\le n^2.\]
-  \item Prove that if $ab$ is a perfect square, then so are $\frac a{\gcd(a,b)}$ and
-      $\frac b{\gcd(a,b)}$.
-  \item Prove that for all composite $n$ apart from 6,
-    \[\sqrt n\le\varphi(n)\le n-\sqrt n.\]
-  \item Let $n$ be an even positive integer such that $\sigma(n)=2n$. Prove that
-    $n=2^{p-1}\left(2^p-1\right)$, where $p$ is a prime.
-  \item For any positive integer $n$, prove that $\displaystyle\sum_{d\mid
-    n}\varphi(d)=n$.
-\end{enumerate}
 \section{Homework}
-\begin{itemize}
-  \item Complete the survey:
-    \href{https://forms.gle/RYsmy3SBhQa9y4Yh9}{https://forms.gle/RYsmy3SBhQa9y4Yh9}
-  \item Solve and submit any three problems from the previous section.
-\end{itemize} 
+Solve and submit any three problems from the Problems sections of this
+    term's handouts that weren't covered in class.
 \end{document}

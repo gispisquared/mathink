@@ -3,7 +3,7 @@
 \usepackage{enumitem,amsmath,amsfonts,amssymb,geometry,parskip}
 \def\asydir{asy}
 \title{Review and Extension --- Divisibility and Congruences}
-\author{Andres Buritica}
+\author{Andres Buritica Monroy}
 \date{}
 \begin{document}
 \maketitle
@@ -32,60 +32,4 @@
   Solve and submit any three problems from the problems sections of this term's
   lectures.
 \newpage
-%\section{Extension: Farey sequences}
-  %Let $n$ be a fixed positive integer. Let
-  %$\frac{a_1}{b_1},\ldots,\frac{a_k}{b_k}$ be the rational numbers between 0
-  %and 1 inclusive with denominators at most $n$, written in increasing order
-  %and lowest terms.
-  %\begin{itemize}
-    %\item Prove that for each $i$, $a_{i+1}b_i-a_i b_{i+1}=1$.
-    %\item Prove that the rational number $x$ with smallest denominator such
-      %that $\frac{a_i}{b_i}<x<\frac{a_{i+1}}{b_{i+1}}$ is
-      %$\frac{a_i+a_{i+1}}{b_i+b_{i+1}}$. 
-    %\item Which pairs of numbers appear as consecutive $b_i$s?
-  %\end{itemize}
-%\section{Extension: Dirichlet Convolution and Mobius Inversion}
-  %Let $f:\mathbb N\to\mathbb R$ and $g:\mathbb N\to\mathbb R$ be two functions.
-  %We define the \emph{Dirichlet convolution} $f*g$ as
-  %\[(f*g)(n)=\sum_{d\mid n}f(d)g\left(\frac nd\right).\]
-
-  %We define the functions $d,\ \sigma,\ \varphi$ as before and also define the
-  %functions \[\zeta(n)=1,\ \psi(n)=n.\]
-  %\begin{itemize}
-    %\item Prove that $*$ is associative: that is,
-      %$(a*b)*c=a*(b*c)$.
-    %\item Prove that if $a$ and $b$ are multiplicative then so is $a*b$.
-    %\item Find a function $\delta$ such that $\delta*a=a$ for all functions $a$.
-    %\item Find a function $\mu$ such that $\mu*\zeta=\delta$.
-    %\item Prove that $g=f*\zeta\iff f=g*\mu$.
-    %\item Find $\zeta*\zeta,\ \psi*\zeta$ and $\varphi*\zeta$.
-    %\item Prove that
-      %\[\sum_{i=1}^n f(i)\left\lfloor\frac
-          %ni\right\rfloor=\sum_{j=1}^n(f*\zeta)(j).\]
-  %\end{itemize}
-%\section{Extension: Problems}
-%\begin{enumerate}
-  %\item Suppose that $(a_1,b_1),(a_2,b_2),\ldots,(a_{100},b_{100})$ are distinct
-    %ordered pairs of nonnegative integers.
-    %Let $N$ denote the number of pairs of integers $(i,j)$ satisfying
-    %$1\leq i<j\leq 100$ and $|a_i b_j-a_j b_i|=1$. 
-    %Determine the largest possible value of $N$ over all possible choices of the
-    %100 ordered pairs.
-  %\item For a positive integer $n$, let $f(n)$ be the number of binary strings of length $n$ that
-      %can't be expressed as an $m$-fold repetition of another binary string for
-      %any $m>1$.
-
-      %For example, $f(6)=54$ since the only strings of length 6 that can be
-      %expressed as an $m$-fold repetition of another binary string for some $m>1$
-      %are 000000, 001001, 010010, 010101, 011011, 100100, 101010, 101101, 110110,
-      %111111.
-       
-      %\begin{enumerate}
-        %\item Find two functions $g$ and $h$, in closed form, such that $f=g*h$.
-        %\item 
-          %Prove that $n\mid f(n)$.
-        %\item Find all $n$ for which $n\mid\displaystyle\sum_{i=1}^n f(i)\left\lfloor\frac
-              %ni\right\rfloor$.
-      %\end{enumerate}
-%\end{enumerate}
 \end{document}

@@ -2,51 +2,72 @@
 \usepackage[inline]{asymptote}
 \usepackage{enumitem,amsmath,amsfonts,geometry,parskip,amssymb}
 \def\asydir{asy}
-\title{Homework Review and Proofwriting}
+\title{Integer Polynomials}
 \newcommand\Nn{\mathbb{N}}
 \newcommand\Zz{\mathbb{Z}}
-\author{Andres Buritica}
+\author{Andres Buritica Monroy}
 \date{}
 \begin{document}
 \maketitle
-\section{Lecture 10 Homework}
-\begin{enumerate}
-  \item Prove that for any positive integer $c$ and any prime $p$, there is a
-    positive integer $x$ such that $x^x\equiv c\pmod p$.
-  \item Let $x$ be an irrational number, and let $a$ and $b$ be real numbers
-    such that $0\le a<b\le 1$. Prove that there is an integer $n$ such that
-    $a<\{nx\}<b$. Hence prove that there is a power of $2$ whose decimal
-    representation starts with $2023$.
-  \item Prove that every arithmetic progression $a,a+b,\ldots$ where
-    $\gcd(a,b)=1$ has infinitely many terms which are not divisible by any
-    perfect square larger than $1$.
-\end{enumerate}
+\section{Basic facts}
+For all of these, let $p(x)=\sum_{i=0}^n a_i x^i$ be a polynomial with integer
+coefficients. 
 
-\section{Lecture 11 Homework}
+We say that $p(x)$ is \emph{divisible} by a polynomial $q(x)$ if there is a
+polynomial $r(x)$ (not necessarily with integer coefficients) such that
+$p(x)=q(x)r(x)$. We also write $q(x)\mid p(x)$.
+\begin{itemize}
+  \item (Division algorithm) For any polynomial $q$ there are unique
+    polynomials $f$ and $r$ such that $p(x)=q(x)f(x)+r$ and $\deg R<\deg q$.
+
+    If $q$ has integer coefficients, then $f$ and $r$ have rational
+    coefficients. If $q$ has a leading coefficient of $\pm 1$, then $f$ and $r$
+    have integer coefficients.
+  \item (Factor theorem) If $a$ is a root of $p$, then $x-a\mid p(x)$.
+  \item (Remainder theorem) If $p(a)=c$ then $x-a\mid p(x)-c$.
+  \item (*) If $a$ and $b$ are integers, then $a-b\mid p(a)-p(b)$.
+  \item (Finite differences) If $c$ is a constant and $p$ is a polynomial with
+    leading coefficient $ax^n$, then $p(x)-p(x-c)$ is a polynomial with
+    leading coefficient $nax^{n-1}$.
+  \item (Rational Root Theorem) If $y$ and $z$ are integers with $\gcd(y,z)=1$
+    such that $p(y/z)=0$ then $y\mid a_0$ and $z\mid a_n$.
+\end{itemize}
+\section{Problems}
 \begin{enumerate}
-  \item Find all functions $f:\Nn\to\Nn$ such that $f(f(m)f(n))=mn$ for all
-    positive integers $m$ and $n$.
-  \item Find all monotonically increasing functions $f:\Nn\to\Zz_{\ge 0}$ such that $f(mn)=f(m)+f(n)$ for
-    all nonnegative integers $m$ and $n$.
-  \item Let $a,b$ be odd positive integers. Define the sequence $c_n$ by
-    choosing $c_1=a,c_2=b$ and for each $i>2$ letting $c_i$ be the largest odd
-    divisor of $c_{i-1}+c_{i-2}$. Prove that this sequence is eventually
-    constant
-    (that is, there is an $m$ such that for any $i,j>m$, $a_i=a_j$).
+  \item Prove that every nonconstant integer polynomial has a composite number
+    in its image.
+  \item Do there exist two quadratics $ax^2+bx+c$ and $(a+1)x^2+(b+1)x+(c+1)$
+    which both have two integer roots?
+  \item Let $P$ be an integer polynomial such that if $P(x)$ is an integer then
+    $x$ is rational. Prove that $P$ is linear.
+  \item Find all polynomials $P(x)$ with integer coefficients such that if
+    $m\mid n$ then $P(m)\mid P(n)$.
+  \item Prove that for any two distinct polynomials $P$ and $Q$ with coefficients in
+    $\{0,1,\ldots,9\}$, either $P(-2)\ne Q(-2)$ or $P(-5)\ne Q(-5)$.
+  \item Let $P(x)$ and $Q(x)$ be polynomials with integer coefficients such that the
+    leading coefficient of $P(x)$ is 1. Suppose that $P(n)^n$ divides $Q(n)^{n+1}$ for infinitely
+    many positive integers $n$.
+    Prove that $P(n)$ divides $Q(n)$ for infinitely many positive integers $n$.
+  \item Let $n\ge 2$ be an integer and
+    $P(x)$ be a polynomial with nonnegative integer coefficients satisfying
+    $P(1)=1$ and $x^n P(1/x)=P(x)$ for all $x$.
+    Prove that there exist infinitely many
+    pairs $x, y$ of positive integers such that $x|P(y)$ and $y|P(x)$.
+  \item  Given are positive integers $a, b$ satisfying $a \geq 2b$. Does there
+    exist a polynomial $P(x)$ of degree at least $1$ with coefficients from the
+    set $\{0, 1, 2, \ldots, b-1 \}$ such that $P(b) \mid P(a)$?
 \end{enumerate}
 \newpage
 \section{Homework}
 \begin{enumerate}
-  \item The denominators of two irreducible fractions are 600 and 700. Find the
-    minimum value of the denominator of their sum (written as an irreducible
-    fraction).
-  \item We call the \emph{main divisors} of a composite number $n$ the two
-    largest of its divisors other than $n$. Composite numbers $a$ and $b$ are
-    such that their main divisors coincide. Prove that $a=b$.
-  \item Suppose $a_1,a_2, \dots$ is an infinite strictly increasing sequence of
-    positive integers and $p_1, p_2, \dots$ is a sequence of distinct primes
-    such that $p_n \mid a_n$ for all $n \ge 1$. It turned out that
-    $a_n-a_k=p_n-p_k$ for all $n,k \ge 1$. Prove that the sequence $\{a_n\}$
-    consists only of prime numbers.
+  \item Prove that if $P$ is a polynomial with integer coefficients and leading term $a_0n^k$ such
+    that $m\mid P(n)$ for all $n$, then $m\mid k!a_0$.
+  \item Prove that for every polynomial $P(x)$ of degree at least 2 with integer
+    coefficients, there is an infinite arithmetic
+    progression of integers which does not contain $P(k)$ for any integer $k$.
+  \item Is there a polynomial $f$ of degree $2023$ with integer
+    coefficients such that \[f(n), f(f(n)), f(f(f(n))), \cdots\] are pairwise
+    relatively prime for any integer $n$?
 \end{enumerate}
+\maketitle
 \end{document}

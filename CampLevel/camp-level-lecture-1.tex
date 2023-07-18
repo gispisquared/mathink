@@ -3,7 +3,7 @@
 \usepackage{enumitem,amsmath,amsfonts,geometry,parskip,amssymb}
 \def\asydir{asy}
 \title{Induction and Divisibility}
-\author{Andres Buritica}
+\author{Andres Buritica Monroy}
 \date{}
 \begin{document}
 \maketitle
@@ -107,23 +107,18 @@
   \end{itemize}
 \section{Problems}
   \begin{enumerate}
-    \item Given positive integers $n>1$ and $k$, prove that there are unique
-      nonnegative integers $m,a_0,a_1,\ldots,a_m$ such that $a_m>0,\ 0\le
-      a_i<n$ for all $i$, and
-      \[k=\sum_{i=0}^m a_i n^i.\]
     \item Find all integers $n$ such that $n^2+1$ divides $n^3+n^2-n-15$.
-    \item Find all right-angled triangles with positive integer sides 
-      such that their area and perimeter are equal.
-    \item Let $a,m,n$ be positive integers with $a>1$.
-      Prove that $\gcd(a^m-1,a^n-1)=a^{\gcd(m,n)}-1$.
-    \item Prove that $1^k+2^k+\cdots+n^k$ is divisible by $1+2+\cdots+n$ for
-      all positive integers $n$ and odd positive integers $k$.
-    \item Let $a,b,c,d$ be positive integers with $ab=cd$. Prove that there
-      exist positive integers $p,q,r,s$ such that \(a=pq,b=rs,a=pr,d=qs\).
     \item Given three distinct natural numbers $a,b,c$, show that
       \[\gcd(ab+1,bc+1,ca+1)\le\frac{a+b+c}3.\]
     \item Let $p$ be a prime with $p>3$. Prove that there are positive integers
       $a<b<\sqrt p$ such that $p-b^2\mid p-a^2$.
+    \item Let $S$ be the set of ordered pairs of integers. We say that two
+      elements $(a,b)$ and $(c,d)$ of $S$ are friends if there is an element
+      $(e,f)$ of $S$ such that the area of the triangle formed by these three
+      points is $k$.\footnote{The \emph{shoelace formula} states that the area
+      of this triangle is $\frac12(ad-bc+cf-de+eb-af)$.}
+      Find the smallest positive integer $k$ such that there exists a set of
+      $200$ elements of $S$ such that any pair of them are $k$-friends.
     \item Find all pairs of positive integers $a,b$ such that \[b^2-a\mid
         a^2+b\quad\text{and}\quad a^2-b\mid b^2+a.\]
     \item Prove that for any nonnegative integer $n$, the number $7^{7^n}+1$ is

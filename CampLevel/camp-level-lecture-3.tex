@@ -2,8 +2,9 @@
 \usepackage[inline]{asymptote}
 \usepackage{enumitem,amsmath,amsfonts,amssymb,geometry,parskip}
 \def\asydir{asy}
+\newcommand\lcm{\mathrm{lcm}}
 \title{$\mathbb Z_n$ and Diophantine equations}
-\author{Andres Buritica}
+\author{Andres Buritica Monroy}
 \date{}
 \begin{document}
 \maketitle
@@ -67,13 +68,21 @@
   \end{itemize}
 \section{Problems}
 \begin{enumerate}
-  \item Find all positive integers $n$ such that $2^n+7^n$ is a perfect square.
+  \item Find the minimum possible value of $m+n$, where $m$ and $n$ are distinct
+    positive integers such that $1000\mid 1978^m-1978^n$.
   \item Show that for any fixed integers $n$ and $a$, the sequence
     $a,a^a,a^{a^a},\ldots$ is eventually constant mod $n$.
-  \item Prove that for each positive integer $n$ there exist $n$ consecutive
-    positive integers, none of which is a prime power.
-  \item Let $m$ and $n$ be positive integers. Show that $4mn-m-n$ can never be a
+  \item An infinite arithmetic progression contains a perfect $a$th power and a
+    perfect $b$th power. Prove that it contains a perfect $\lcm(a,b)$th power.
+  \item Prove that if $a$ and $b$ are positive integers, then $4ab-a-b$ is not a
     perfect square.
+  \item Let $n$ be a positive integer, and let $S$ be a set of $n$ positive
+    integers all at most $n^2$. Prove that there is a set $T$ of $n$ positive
+    integers such that the set $\{s+t:s\in S,t\in T\}$ covers at least half of
+    the residues mod $n^2$.
+  \item Let $n$ and $z$ be integers greater than $1$ such that $\gcd(n,z)=1$.
+    Prove that there is some nonnegative integer $i<n$ such that
+    $1+z+z^2+\cdots+z^i$ is divisible by $n$.
   \item Find all positive integer solutions to $3^x+4^y=5^z$.
   \item Let $n>1$ be a positive integer and let $p$ be a prime. Given that
     $n\mid p-1$ and $p\mid n^3-1$, prove that $4p-3$ is a perfect square.

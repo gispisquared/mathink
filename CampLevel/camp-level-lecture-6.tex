@@ -3,7 +3,7 @@
 \usepackage{enumitem,amsmath,amsfonts,geometry,parskip,amssymb}
 \def\asydir{asy}
 \title{Density Arguments, Floor Functions}
-\author{Andres Buritica}
+\author{Andres Buritica Monroy}
 \date{}
 \begin{document}
 \maketitle
@@ -20,22 +20,22 @@
 \begin{enumerate}
   \item Is there a positive integer which can be written as the sum of 2023
     distinct 2022nd powers in at least 2021 different ways?
-  \item Let $a$ and $b$ be irrational numbers such that $\frac 1a+\frac 1b=1$.
-    Let $A=\{\lfloor na\rfloor: n\in\mathbb N\}$, and $B=\{\lfloor nb\rfloor:
-    n\in\mathbb N\}$. Prove that $A\cap B=\emptyset$ and $A\cup B=\mathbb N$.
-  \item Prove that every positive integer is the root of a polynomial all of whose
-    coefficients are of the form $2^a-2^b$ for positive integers $a$ and $b$.
-  \item Let $p$ and $q$ be coprime. Prove that
-    \[\sum_{i=1}^{q-1}\left\lfloor\frac{ip}{q}\right\rfloor=\frac{(p-1)(q-1)}2.\]
-  \item Find all positive integers $n$ such that $1+\lfloor\sqrt n\rfloor$
-    divides $n$.
+  \item Prove that the sequence $a_i=\left\lfloor(\sqrt 2+1)^i\right\rfloor$
+    alternates between even and odd integers.
   \item Let $r$ be an irrational root of a polynomial $P(x)$ of degree $d$ with
     integer coefficients. Prove that there is a real number $C$ such that for
     any integer $q$ we have $\{qr\}\ge \frac C{q^{d-1}}$.
+  \item Define
+    \[q(n)=\left\lfloor\frac n{\lfloor\sqrt n\rfloor}\right\rfloor.\]
+    Determine all positive integers $n$ for which $q(n)>q(n+1)$.
   \item Let $x$ be an irrational number. Prove that there are infinitely many
     positive integers $n$ such that $\{nx\}<\frac 1n$.
-  \item Prove that the sequence $a_i=\left\lfloor(\sqrt 2+1)^i\right\rfloor$
-    alternates between even and odd integers.
+  \item Prove that for some constant $C>0$, the following statement holds:
+
+    Let $m\ge 2$ be an integer, $A$ a finite set of integers (not
+    necessarily positive), and $B_1,B_2,\ldots,B_m$ subsets of $A$. Suppose
+    that for every $k=1,2,\ldots,m$, the sum of the elements of $B_k$ is
+    $2^k$. Then $A$ contains at least $\frac {Cm}{\log_2 m}$ elements.
 \end{enumerate}
 \newpage
 \section{Homework}
@@ -46,11 +46,7 @@
     \item Let $n>1$ be an integer, and let $a$ be an integer coprime to $n$. Prove
       that there exist integers $x,y$ with $0<|x|<\sqrt n$, $0<|y|<\sqrt n$ and
       $ay\equiv x\pmod n$.
-    \item Prove that for some constant $C>0$, the following statement holds:
-
-      Let $m\ge 2$ be an integer, $A$ a finite set of integers (not
-      necessarily positive), and $B_1,B_2,\ldots,B_m$ subsets of $A$. Suppose
-      that for every $k=1,2,\ldots,m$, the sum of the elements of $B_k$ is
-      $2^k$. Then $A$ contains at least $\frac {Cm}{\log_2 m}$ elements.
+    \item Prove that every positive integer is the root of a polynomial all of whose
+      coefficients are of the form $2^a-2^b$ for positive integers $a$ and $b$.
   \end{enumerate}
 \end{document}
