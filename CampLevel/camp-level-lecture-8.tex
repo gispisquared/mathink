@@ -17,7 +17,7 @@
   subset of $\Zz_n$ containing the invertible elements.
 
   The \emph{order} of an invertible element $a$ of $\Zz_n$, denoted $\ord_n(a)$,
-  is the smallest positive integer $n$ such that $a^n\equiv 1\pmod n$.
+  is the smallest positive integer $m$ such that $a^m\equiv 1\pmod n$.
 
   If $\ord_n(a)=|Z_n^*|$, then $a$ is said to be a \emph{generator} mod $n$.
 
@@ -29,13 +29,13 @@
   \item $\ord_n(a)\mid\varphi(n)$.
   \item If $q\mid 2^p-1$, then $q>p$.
   \item Every prime factor of $2^{2^n}+1$ is congruent to $1$ mod $2^{n+1}$.
-  \item If $g$ is a generator mod $n$, then
-    $\{g^1,g^2,\ldots,g^{\varphi(n)}\}=\mathbb Z_n^*$.
+  \item If $g$ is a generator mod $n$, then the least residues of
+    $\{g^1,g^2,\ldots,g^{\varphi(n)}\}$ are $\Zz_n^*$.
   \item If $g$ is a generator mod $n$, and $\varphi(n)=2k$, then
     \[g^k\equiv -1\pmod n.\]
   \item There are either $0$ or $\varphi(\varphi(n))$ generators mod $n$.
-  \item There are $\varphi(a)$ residues $x$ mod $p$
-    such that $x^a\equiv 1\pmod p$ but $x^k\not\equiv 1\pmod p$ for any $k<a$.
+  \item If $a\mid\varphi(n)$ and there exists a generator mod $n$, then 
+    there are $\varphi(a)$ residues $x$ mod $n$ such that $\ord_n(x)=a$.
   \item If there exists a generator mod $n$, then the product of the elements of
     $\Zz_n^*$ is $-1$ mod $n$.
   \item For any positive integer $n<p-1$,

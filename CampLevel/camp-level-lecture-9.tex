@@ -13,9 +13,10 @@
 Once again, $p$ is a prime and $n$ is a positive integer throughout.
 \section{Hensel's Lemma}
 Let
-\[P(x)=a_0x^0+\cdots+a_n x^n\] be a polynomial. We define the \emph{derivative}
+\[P(x)=a_0x^0+\cdots+a_n x^n\] be a polynomial with integer coefficients.
+We define the \emph{derivative}
 \[P'(x)=a_1 x^0+2a_2 x^1+3a_3 x^3+\cdots+na_n x^{n-1}.\]
-Let $r$ be an integer such that $P(r)\equiv 0\pmod n$ but $\gcd(P'(r),n)\ne 0$.
+Let $r$ be an integer such that $P(r)\equiv 0\pmod n$ but $\gcd(P'(r),n)=1$.
 Prove that for any positive integer $m$, there is a unique $s$ mod $n^m$ such
 that $s\equiv r\pmod n$ and $P(s)\equiv 0\pmod {n^m}$.
 

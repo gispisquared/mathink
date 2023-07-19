@@ -52,9 +52,12 @@
   \end{itemize}
 Also look for factorisations when trying problems: e.g.
 \begin{align*}
-  axy+bx+cy=d\iff (ax+c)(ay+b)=ad+bc \\
-  a^k-b^k=(a-b)\left(a^{k-1}+a^{k-2}b+\cdots+b^{k-1}\right)
+  axy+bx+cy=d&\iff (ax+c)(ay+b)=ad+bc \\
+  a^k-b^k&=(a-b)\left(a^{k-1}+a^{k-2}b+\cdots+b^{k-1}\right) \\
+  a^k+b^k&=a^k-(-b)^k=(a-(-b))(a^{k-1}+a^{k-2}(-b)+\cdots+(-b)^{k-1}) \\
+  &=(a+b)(a^{k-1}-a^{k-2}b+\cdots+b^{k-1}),
 \end{align*}
+where the last factorisation is true when $k$ is odd.
 \section{Problems}
   \begin{enumerate}
     \item Given positive integers $n>1$ and $k$, prove that there are unique
