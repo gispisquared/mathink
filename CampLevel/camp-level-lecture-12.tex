@@ -22,18 +22,19 @@ and a large known one, and this gives you the small number.
 \begin{enumerate}
   \item Find all functions $f:\Nn\to\Nn$ such that $f(n+1)>f(f(n))$ for all
     positive integers $n$.
-  \item Prove that if a sequence $\{a_n\}_0^\infty$ of integers satisfies
+  \item Let $P(n)$ be the product of the digits of a positive integer $n$.
+    Let $n_1$ be a positive integer, and define $n_{i+1}=n_i+P(n_i)$ for each
+    $i\ge 1$. Prove that this sequence is eventually constant.
+  \item Prove that if a sequence $\{a_n\}_0^\infty$ of nonnegative integers satisfies
     $a_0=0$ and $a_n=n-a_{a_n}$ for all $n$, then $a_{n+2}>a_n$ for all $n$.
-  \item Given an integer $k\geq 2$, determine all functions $f$ from the
-    positive integers into themselves such that $f(x_1)!+f(x_2)!+\cdots f(x_k)!$
-    is divisible by $x_1!+x_2!+\cdots x_k!$ for all positive integers
-    $x_1,x_2,\cdots x_k$.
   \item Does there exist a strictly increasing function $f:\Nn\to\Nn$ such that
     $f(1)=2$ and $f(f(n))=f(n)+n$ for all positive integers $n$?
-  \item Prove that all terms of the sequence $a_1=a_2=a_3=1,\
-    a_{n+1}=(1+a_{n-1}a_n)/a_{n+2}$ are integers.
   \item Find all functions $f:\Nn\to\Nn$ such that $f(f(m)f(n))=mn$ for all
     positive integers $m$ and $n$.
+  \item Given an integer $k\geq 2$, determine all functions $f:\Nn\to\Nn$
+    such that $f(x_1)!+f(x_2)!+\cdots f(x_k)!$
+    is divisible by $x_1!+x_2!+\cdots x_k!$ for all positive integers
+    $x_1,x_2,\cdots x_k$.
   \item Let $f:\Zz\to\Nn$ be a function such that for any integers $m$ and $n$,
     $f(m-n)\mid f(m)-f(n)$. Prove that for all integers $m$ and $n$, if $f(m)\le
     f(n)$ then $f(m)\mid f(n)$.
@@ -48,13 +49,10 @@ and a large known one, and this gives you the small number.
         $\frac{a_i+a_{i+1}}{b_i+b_{i+1}}$. 
       \item Which pairs of numbers appear as consecutive $b_i$s?
     \end{itemize}
-  \item Find all functions $f:\Nn\to\Nn$ such that for all $m, n\in\Nn$ we have
-    $m^2+f(n)\mid mf(m)+n$.
-  \item Let $P(n)$ be the product of the digits of a positive integer $n$.
-    Let $n_1$ be a positive integer, and define $n_{i+1}=n_i+P(n_i)$ for each
-    $i\ge 1$. Prove that this sequence is eventually constant.
   \item Find all functions $f:\Zz_{\ge 0}\to \Zz_{\ge 0}$ such that
     $f(f(f(n)))=f(n+1)+1$ for all $n\in\Zz_{\ge 0}$.
+  \item Prove that all terms of the sequence $a_1=a_2=a_3=1,\
+    a_{n+1}=(1+a_{n-1}a_n)/a_{n+2}$ are integers.
   \item Find all functions $f:\mathbb N\to\mathbb N$ satisfying 
     \[f(n)+f(n+1)=f(n+2)f(n+3)-2023\]
     for all $n\in\mathbb N$.
