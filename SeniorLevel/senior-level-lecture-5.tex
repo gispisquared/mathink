@@ -15,21 +15,21 @@
     \item Use this fact to give another proof that if $ax\equiv ay\pmod n$, then
       $x\equiv y\pmod n$.
   \end{itemize}
-  The least residue $a^{-1}$ such that $ax\equiv 1\pmod n$ is called the \emph{inverse} of
+  The least residue $a^{-1}$ such that $aa^{-1}\equiv 1\pmod n$ is called the \emph{inverse} of
   $a$ mod $n$.
 
   Let $a,b,c,d,k,n$ be positive integers such that
       $\gcd(b,n)=\gcd(d,n)=1$. Prove that
   \begin{itemize}
     \item $b^{-1}d^{-1}\equiv (bd)^{-1}\pmod n$
-    \item $b^{-k}\equiv (b^{-1})^k\pmod n$
+    \item $(b^k)^{-1}\equiv (b^{-1})^k\pmod n$
     \item $ab^{-1}+cd^{-1}\equiv (ad+bc)(bd)^{-1}\pmod n$
   \end{itemize}
 \section{More Theorems}
 \begin{itemize}
   \item (Wilson's Theorem) Prove that $(n-1)!\equiv -1\pmod n$ if and only if $n$ is prime.
-  \item (GCD Trick) Prove that if $a^m\equiv 1\pmod p$ and $a^n\equiv 1\pmod p$ then
-    $a^{\gcd(m,n)}\equiv 1\pmod p$.
+  \item (GCD Trick) Prove that if $a^x\equiv 1\pmod n$ and $a^y\equiv 1\pmod n$ then
+    $a^{\gcd(x,y)}\equiv 1\pmod n$.
   \item (Chinese Remainder Theorem) Let $a_1,a_2,\ldots,a_k$ be pairwise coprime positive integers, and let
     $b_1,b_2,\ldots,b_k$ be integers. Prove that there is exactly one least
     residue $x$ mod $a_1a_2\cdots a_n$ such that for each $i$,
@@ -54,8 +54,6 @@
     and $d_{i+1}$ is the twist of $d_i$ for each positive integer $i$.
     Prove that this sequence contains $1$ if and only if the remainder when $n$
     is divided by $s^2-1$ is either $1$ or $s$.
-  \item Let $p$ be a prime and let $c$ be a positive integer. Prove that there
-    exists a positive integer $x$ such that $x^x\equiv c\pmod p$.
   \item Let $p>3$ be prime. Define $m=(4^p-1)/3$. Prove that $2^{m-1}\equiv
     1\pmod m$.
   \item Define a sequence by $a_1=n$ and $a_{i+1}=\frac{a_i(a_i-1)}2$ for each
