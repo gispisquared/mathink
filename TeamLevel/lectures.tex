@@ -192,10 +192,7 @@ Example problems:
             \item
                 Each pile contains two pebbles of each colour.
         \end{itemize}
-    \item Let $k, m, n$ be integers satisfying $1 < n \le m-1 \le k$. Determine 
-        the maximum size of a subset $S$ of the set $\{1, 2, \ldots, k\}$ such that 
-        no $n$ distinct elements of $S$ add up to $m$.
-    \item Let n be an even positive integer. Show that there is a permutation 
+    \item Let $n$ be an even positive integer. Show that there is a permutation 
         $(x_1, x_2, \ldots, x_n)$ of $(1, 2, \ldots, n)$ such that for every $i \in (1, 2, \ldots,
         n)$,
         the 
@@ -227,4 +224,34 @@ Example problems:
     such that any arithmetic progression with 10 terms in the set M is not
     monochromatic.
 \end{enumerate}
+\section{Rational Approximations}
+Let $x$ be irrational. We say that $\frac ab$ is a \emph{best rational
+approximation} of $x$ if $|bx-a|$ is less than $b'x-a'$ for any other integers
+$a',b'$ with $0<b'\le b$.
+\begin{itemize}
+    \item Prove that every irrational number has infinitely many best rational
+        approximations.
+    \item Prove that if $\frac ab$ is a best rational approximation of $x$, then
+        $|bx-a|<\frac 1{b+1}$.
+    \item Prove that if $\gcd(a,b)=1$ and $|bx-a|<\frac 1{2b}$, then $\frac ab$
+        is a best rational approximation of $x$.
+    \item Prove that the best rational approximations of $x$ alternate between
+        being larger than $x$ and smaller than it.
+    \item Prove that if $\frac{a_1}{b_1}$, $\frac{a_2}{b_2}$ and
+        $\frac{a_3}{b_3}$ are consecutive best rational approximations of $x$,
+        then
+        \begin{itemize}
+            \item $\frac{a_2}{b_2}=\frac{a_3-a_1}{b_3-b_1}$.
+            \item $|a_1b_2-a_2b_1|=1$.
+            \item At least one of $|b_i^2 x-a_i b_i|(i=1,2,3)$ is less than $\frac
+                1{\sqrt 5}$.
+        \end{itemize}
+    \item Prove that if $D<\frac 1{\sqrt 5}$, then there exists some $x$ such
+        that only finitely many best rational approximations of $x$ satisfy
+        $|bx-a|<\frac Db$.
+    \item Prove that if $P(x)=0$ for an integer polynomial $P$ of degree $d>1$,
+        then there exists a positive real $k$ such that for any rational
+        approximation of $x$ we have
+        \[\left|x-\frac pq\right|>\frac k{q^d}.\]
+\end{itemize}
 \end{document}

@@ -8,49 +8,87 @@
 \begin{document}
 \maketitle
 \section{Techniques}
-  There is really one technique here: assign some positive integer quantity
-  (the ``size'' of a solution, e.g.\ the sum of the absolute valies of the
-  variables) to each solution, take the solution with lowest
-  ``size'' that doesn't fit your claimed pattern and derive a contradiction.
+Vieta jumping and Pell equations are two special cases of the technique of
+\emph{infinite descent}. As we know, this technique involves assigning some
+notion of \emph{size} to every set of positive integers satisfying a certain
+property, and then proving that if a certain condition is not satisfied, one can
+always get from one set to another set of smaller size.
+
+In Vieta jumping, the way we get from one solution to the next is by considering
+the second root of a quadratic which we know has one integer root; then, Vieta's
+formulas provide us with information that allows us to prove the new solution
+has smaller size.
+
+In Pell equations, the key step is provided by \emph{Brahmagupta's
+Identity}:
+\[(a^2-nb^2)(c^2-nd^2)=(ac\pm nbd)^2-n(ad\pm bc)^2.\]
+\section{Pell Equations}
+We consider the equation $a^2-nb^2=\pm 1$ over positive integers $a,b$, where
+$n$ is not a square. In homework question 3, you will prove that a solution
+always exists.
+
+If we consider a solution $(a_0,b_0)$, then we may find more
+solutions by repeatedly applying Brahmagupta's Identity. More explicitly, if
+$(a,b)$ is a solution then we get the bigger solution $(a_0 a+nb_0 b,a_0 b+b_0
+a)$.
+
+Note that if $a_0^2-nb_0^2=1$, then all solutions thus generated satisfy
+$a^2-nb^2=1$. Otherwise, the RHSs alternate between $1$ and $-1$.
+
+I claim that this process yields all solutions, assuming we begin with the
+smallest solution $(a_0,b_0)$. Consider the descent step
+\[(a,b)\to (|a_0 a-nb_0 b|,|a_0 b-b_0 a|).\]
+\begin{itemize}
+    \item Prove that this step inverts the previous type of step.
+    \item Prove that this step gets us from a solution to a smaller solution,
+        unless $(a,b)=(a_0,b_0)$.
+\end{itemize}
+
+When we instead have an equation of the form $a^2-nb^2=\pm k$, we may use the
+same descent step. The descent
+can only finish when $a_0 b-b_0 a=0$ or $|a_0 b-b_0 a|\ge b$. In the second case 
+we may deduce
+$b^2<\frac{b_0^2|k|}{2(a_0-1)}$,
+which leaves us with a finite set of solutions from which all solutions are
+generated.
+\newpage
 \section{Problems}
 \begin{enumerate}
-  \item Find all solutions in integers to $a^4+b^4=c^2$.
   \item Let $a$ and $b$ be positive integers.
     Prove that if \(\frac{a^2+b^2}{ab+1}\) is an integer, then it is a square.
-  \item Pell Equations:
-    \begin{itemize}
-      \item Let $d$ be a positive integer which is not a perfect square. Prove that
-      there exist positive integers $x_0,y_0$ such that for any pair $x,y$ of
-      positive integers satisfying $x^2-dy^2=1$, there is a positive integer $k$
-      satisfying
-      \[x+y\sqrt d=(x_0+y_0\sqrt d)^k.\]
-      \item Find the recurrence relating a solution $(x_n,y_n)$ to the next
-        solution $(x_{n+1},y_{n+1})$.
-      \item Do the same for $x^2-dy^2=-1$.
-    \end{itemize}
-    In the case where the RHS is 1, it is known that there is always a solution.
-    When the RHS
-    is $-1$, there need not be solutions (eg $x^2-3y^2=-1$ has no solutions).
+  \item Prove that infinitely many triangular numbers are squares.
+  \item Find all solutions in integers to $x^2+y^2+z^2=2xyz$.
   \item Prove that there are infinitely many triples $(a,b,c)$ of positive
     integers in arithmetic progression
     such that $ab+1$, $bc+1$ and $ca+1$ are all perfect squares.
-  \item Find all solutions in integers to $x^2+y^2+z^2=2xyz$.
   \item Prove that there are infinitely many pairs of positive integers $a,b$
     such that $a\mid b^2+1$ and $b\mid a^2+1$.
+\item Prove that if $2+\sqrt{28n^2+1}$ is an integer, then it is a perfect
+    square.
   \item Let $a$ and $b$ be two positive integers. Prove that
     \[a^2+\left\lceil\frac{4a^2}b\right\rceil\] is not a square.
 \end{enumerate}
 \newpage
 \section{Homework}
   \begin{enumerate}
-    \item We call a 5-tuple of integers \emph{arrangeable} if its elements can be
-      labelled $a,b,c,d,e$ in some order such that $a-b+c-d+e=0$. Determine all
-      2022-tuples of integers such that if we place them in order around a
-      circle, then any 5-tuple of numbers in consecutive positions is
-      arrangeable.
     \item Find all positive integers $n$ such that \[\sqrt{\frac{7^n+1}2}\] is
       prime.
     \item Let $a$ and $b$ be positive integers. Show that if $4ab-1$ divides
       $(4a^2-1)^2$, then $a=b$.
+    \item Let $n$ be a positive integer.
+    \begin{enumerate}
+        \item Prove that there are infinitely many pairs $(a,b)$ of positive
+            integers such that
+            \[
+                \left|b\sqrt n-a\right|<\frac 1b.
+            \]
+        \item Prove that there are infinitely many pairs $(a,b)$ of positive
+            integers such that $a^2-nb^2$ equals the same value for each such pair.
+        \item Prove that there are positive integers $a_1,b_1,a_2,b_2$
+            such that $a_1^2-nb_1^2=a_2^2-nb_2^2=d$, $a_1\equiv a_2\pmod d$, and
+            $b_1\equiv b_2\pmod d$.
+        \item Prove that there are positive integers $a_0,b_0$ such that
+            $a_0^2-nb_0^2=1$.
+    \end{enumerate}
   \end{enumerate}
 \end{document}
