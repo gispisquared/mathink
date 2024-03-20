@@ -8,7 +8,7 @@
 \begin{document}
 \maketitle
 \section{Definitions}
-Let $b>1$ be an integer. For any integer $n>1$ there are unique nonnegative
+Let $b>1$ be an integer. For any integer $n\ge 1$ there are unique nonnegative
 integers $k,a_0,\ldots,a_k$ such that each $a_i$ is less than $b$,
 $a_k\ne 0$, and \[n=\sum a_i b^i.\]
 
@@ -35,11 +35,11 @@ Using the language of modular arithmetic, we can generalise these statements to
 arbitrary bases.
 \begin{itemize}
 	\item Let $l<k$. Then,
-	      $\overline{a_0a_1\ldots a_k}_{(b)}\equiv \overline{a_0a_1\ldots
-			      a_l}_{(b)}\pmod{b^l}$. In particular, this congruence is still true
+	      $\overline{a_k a_{k-1}\ldots a_0}_{(b)}\equiv \overline{a_{l-1}\ldots
+			      a_0}_{(b)}\pmod{b^l}$. In particular, this congruence is still true
 	      $\pmod{d^l}$ for any $d\mid b$.
 	\item $n\equiv s_b(n)\pmod{b-1}$.
-	\item $n\equiv a_0-a_1+a_2-\cdots+(-1)^k a_k\pmod{b+1}$.
+	\item $n\equiv a_0-a_1+a_2-\cdots+(-1)^k a_k\pmod {b+1}$.
 \end{itemize}
 For primes $p$ which do not divide any of $b-1,b,b+1$,
 we can create divisibility tests as follows. Let $m$ be

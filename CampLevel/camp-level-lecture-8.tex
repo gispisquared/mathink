@@ -14,7 +14,8 @@
 Let $p$ be a prime and $n$ be a positive integer throughout.
 
 Recall that $\Zz_n$ denotes the integers mod $n$, and $\Zz_n^*$ denotes the
-subset of $\Zz_n$ containing the invertible elements.
+subset of $\Zz_n$ containing the invertible elements. (In other words,
+$a\in\Zz_n^*$ iff $a\in\Zz_n$ and $\gcd(a,n)=1$.)
 
 The \emph{order} of an element $a$ of $\Zz_n^*$, denoted $\ord_n(a)$,
 is the smallest positive integer $m$ such that $a^m\equiv 1\pmod n$.
@@ -28,7 +29,7 @@ now.
 \begin{itemize}
 	\item $a^k\equiv 1\pmod n \iff \ord_n(a)\mid k$.
 	\item $\ord_n(a)\mid\varphi(n)$.
-	\item If $q\mid 2^p-1$, then $q>p$.
+	\item If $q\mid 2^p-1$, where $p$ and $q$ are prime, then $q>p$.
 	\item Every prime factor of $2^{2^n}+1$ is congruent to $1$ mod $2^{n+1}$.
 	\item If $g$ is a generator mod $n$, then the least residues of
 	      $\{g^1,g^2,\ldots,g^{\varphi(n)}\}$ are $\Zz_n^*$.
