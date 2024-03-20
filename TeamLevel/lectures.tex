@@ -11,247 +11,247 @@
 \begin{document}
 \maketitle
 \section{Farey sequences}
-  Let $n$ be a fixed positive integer. Let
-  $\frac{a_1}{b_1},\ldots,\frac{a_k}{b_k}$ be the rational numbers between 0
-  and 1 inclusive with denominators at most $n$, written in increasing order
-  and lowest terms.
-  \begin{itemize}
-    \item Prove that for each $i$, $a_{i+1}b_i-a_i b_{i+1}=1$.
-    \item Prove that the rational number $x$ with smallest denominator such
-      that $\frac{a_i}{b_i}<x<\frac{a_{i+1}}{b_{i+1}}$ is
-      $\frac{a_i+a_{i+1}}{b_i+b_{i+1}}$. 
-    \item Which pairs of numbers appear as consecutive $b_i$s?
-  \end{itemize}
+Let $n$ be a fixed positive integer. Let
+$\frac{a_1}{b_1},\ldots,\frac{a_k}{b_k}$ be the rational numbers between 0
+and 1 inclusive with denominators at most $n$, written in increasing order
+and lowest terms.
+\begin{itemize}
+	\item Prove that for each $i$, $a_{i+1}b_i-a_i b_{i+1}=1$.
+	\item Prove that the rational number $x$ with smallest denominator such
+	      that $\frac{a_i}{b_i}<x<\frac{a_{i+1}}{b_{i+1}}$ is
+	      $\frac{a_i+a_{i+1}}{b_i+b_{i+1}}$.
+	\item Which pairs of numbers appear as consecutive $b_i$s?
+\end{itemize}
 
-  Example problems:
-  \begin{itemize}
-    \item 
-      Suppose that $(a_1,b_1),(a_2,b_2),\ldots,(a_{100},b_{100})$ are distinct
-        ordered pairs of nonnegative integers.
-        Let $N$ denote the number of pairs of integers $(i,j)$ satisfying
-        $1\leq i<j\leq 100$ and $|a_i b_j-a_j b_i|=1$. 
-        Determine the largest possible value of $N$ over all possible choices of the
-        100 ordered pairs.
-    \item A lattice point in the Cartesian plane is a point whose coordinates
-      are both integers. A lattice polygon is a polygon all of whose vertices
-      are lattice points.
+Example problems:
+\begin{itemize}
+	\item
+	      Suppose that $(a_1,b_1),(a_2,b_2),\ldots,(a_{100},b_{100})$ are distinct
+	      ordered pairs of nonnegative integers.
+	      Let $N$ denote the number of pairs of integers $(i,j)$ satisfying
+	      $1\leq i<j\leq 100$ and $|a_i b_j-a_j b_i|=1$.
+	      Determine the largest possible value of $N$ over all possible choices of the
+	      100 ordered pairs.
+	\item A lattice point in the Cartesian plane is a point whose coordinates
+	      are both integers. A lattice polygon is a polygon all of whose vertices
+	      are lattice points.
 
-      Let $\Gamma$ be a convex lattice polygon. Prove that $\Gamma$ is contained
-      in a convex lattice polygon $\Omega$ such that the vertices of $\Gamma$
-      all lie on the boundary of $\Omega$, and exactly one vertex of $\Omega$ is
-      not a vertex of $\Gamma$.
-  \end{itemize}
+	      Let $\Gamma$ be a convex lattice polygon. Prove that $\Gamma$ is contained
+	      in a convex lattice polygon $\Omega$ such that the vertices of $\Gamma$
+	      all lie on the boundary of $\Omega$, and exactly one vertex of $\Omega$ is
+	      not a vertex of $\Gamma$.
+\end{itemize}
 \section{Dirichlet Convolution and Mobius Inversion}
-  Let $f:\mathbb N\to\mathbb R$ and $g:\mathbb N\to\mathbb R$ be two functions.
-  We define the \emph{Dirichlet convolution} $f*g$ as
-  \[(f*g)(n)=\sum_{d\mid n}f(d)g\left(\frac nd\right).\]
+Let $f:\mathbb N\to\mathbb R$ and $g:\mathbb N\to\mathbb R$ be two functions.
+We define the \emph{Dirichlet convolution} $f*g$ as
+\[(f*g)(n)=\sum_{d\mid n}f(d)g\left(\frac nd\right).\]
 
-  We define the functions $d,\ \sigma,\ \varphi$ as before and also define the
-  functions \[\zeta(n)=1,\ \psi(n)=n.\]
-  \begin{itemize}
-    \item Prove that $*$ is associative: that is,
-      $(a*b)*c=a*(b*c)$.
-    \item Prove that if $a$ and $b$ are multiplicative then so is $a*b$.
-    \item Find a function $\delta$ such that $\delta*a=a$ for all functions $a$.
-    \item Find a function $\mu$ such that $\mu*\zeta=\delta$.
-    \item Prove that $g=f*\zeta\iff f=g*\mu$.
-    \item Find $\zeta*\zeta,\ \psi*\zeta$ and $\varphi*\zeta$.
-    \item Prove that
-      \[\sum_{i=1}^n f(i)\left\lfloor\frac
-          ni\right\rfloor=\sum_{j=1}^n(f*\zeta)(j).\]
-  \end{itemize}
+We define the functions $d,\ \sigma,\ \varphi$ as before and also define the
+functions \[\zeta(n)=1,\ \psi(n)=n.\]
+\begin{itemize}
+	\item Prove that $*$ is associative: that is,
+	      $(a*b)*c=a*(b*c)$.
+	\item Prove that if $a$ and $b$ are multiplicative then so is $a*b$.
+	\item Find a function $\delta$ such that $\delta*a=a$ for all functions $a$.
+	\item Find a function $\mu$ such that $\mu*\zeta=\delta$.
+	\item Prove that $g=f*\zeta\iff f=g*\mu$.
+	\item Find $\zeta*\zeta,\ \psi*\zeta$ and $\varphi*\zeta$.
+	\item Prove that
+	      \[\sum_{i=1}^n f(i)\left\lfloor\frac
+		      ni\right\rfloor=\sum_{j=1}^n(f*\zeta)(j).\]
+\end{itemize}
 
-  Example problems:
+Example problems:
 
-  For a positive integer $n$, let $f(n)$ be the number of binary strings of length $n$ that
-      can't be expressed as an $m$-fold repetition of another binary string for
-      any $m>1$.
+For a positive integer $n$, let $f(n)$ be the number of binary strings of length $n$ that
+can't be expressed as an $m$-fold repetition of another binary string for
+any $m>1$.
 
-      For example, $f(6)=54$ since the only strings of length 6 that can be
-      expressed as an $m$-fold repetition of another binary string for some $m>1$
-      are 000000, 001001, 010010, 010101, 011011, 100100, 101010, 101101, 110110,
-      111111.
-       
-      \begin{itemize}
-        \item Find two functions $g$ and $h$, in closed form, such that $f=g*h$.
-        \item Prove that $n\mid f(n)$.
-        \item Find all $n$ for which $n\mid\displaystyle\sum_{i=1}^n f(i)\left\lfloor\frac
-              ni\right\rfloor$.
-      \end{itemize}
+For example, $f(6)=54$ since the only strings of length 6 that can be
+expressed as an $m$-fold repetition of another binary string for some $m>1$
+are 000000, 001001, 010010, 010101, 011011, 100100, 101010, 101101, 110110,
+111111.
+
+\begin{itemize}
+	\item Find two functions $g$ and $h$, in closed form, such that $f=g*h$.
+	\item Prove that $n\mid f(n)$.
+	\item Find all $n$ for which $n\mid\displaystyle\sum_{i=1}^n f(i)\left\lfloor\frac
+		      ni\right\rfloor$.
+\end{itemize}
 \section{Polynomials mod $p$}
 Let $p$ be prime.
 \begin{itemize}
-  \item Prove that unique factorisation holds for polynomials mod $p$. (This is
-    not true for all integers --- for instance,
-    $(x-1)^2\equiv(x-3)^2\pmod 4$.)
-  \item Prove that for every function $f:\Zz_p\to\Zz_p$ there is a unique polynomial $P$ in
-    $\Zz_p$ of degree less than $p-1$ such that $f(x)=P(x)$ for each
-    $x\in\Zz_p$.
-  \item Let $g$ be a generator mod $p$, and let $ab=p-1$. Prove that
-    \[\prod_{i=1}^a (x-g^{bi})\equiv x^a-1\pmod p.\]
-    What does this tell us about the roots of the cyclotomic polynomials in mod
-    $p$?
-  \item Consider all $\binom{p-1}k$ products of $k$ elements of $\Zz_p$. Prove
-    that their sum is divisible by $p$.
-  \item For any positive integer $n<p-1$, prove that
-    \[\sum_{i=1}^{p-1} i^n\equiv 0\pmod p.\]
+	\item Prove that unique factorisation holds for polynomials mod $p$. (This is
+	      not true for all integers --- for instance,
+	      $(x-1)^2\equiv(x-3)^2\pmod 4$.)
+	\item Prove that for every function $f:\Zz_p\to\Zz_p$ there is a unique polynomial $P$ in
+	      $\Zz_p$ of degree less than $p-1$ such that $f(x)=P(x)$ for each
+	      $x\in\Zz_p$.
+	\item Let $g$ be a generator mod $p$, and let $ab=p-1$. Prove that
+	      \[\prod_{i=1}^a (x-g^{bi})\equiv x^a-1\pmod p.\]
+	      What does this tell us about the roots of the cyclotomic polynomials in mod
+	      $p$?
+	\item Consider all $\binom{p-1}k$ products of $k$ elements of $\Zz_p$. Prove
+	      that their sum is divisible by $p$.
+	\item For any positive integer $n<p-1$, prove that
+	      \[\sum_{i=1}^{p-1} i^n\equiv 0\pmod p.\]
 \end{itemize}
 Example problems:
 \begin{itemize}
-  \item Let $p$ be an odd prime. We compute the product of $(4-x)$,
-    where $x$ varies over all residues mod $p$ except the quadratic residues.
-    Find the least residue of this product mod $p$.
-  \item Find the least residue of the sum of all generators mod $p$.
-  \item Let $\mathbb{Z}/n\mathbb{Z}$ denote the set of integers considered
-    modulo $n$ (hence $\mathbb{Z}/n\mathbb{Z}$ has $n$ elements). Find all
-    positive integers $n$ for which there exists a bijective function $g:
-    \mathbb{Z}/n\mathbb{Z} \to \mathbb{Z}/n\mathbb{Z}$, such that the 101
-    functions
-    \[g(x), \quad g(x) + x, \quad g(x) + 2x, \quad \dots, \quad g(x) + 100x\]are
-    all bijections on $\mathbb{Z}/n\mathbb{Z}$.
-  \item Let $p$ be an odd prime. An integer $x$ is called a quadratic
-    non-residue if $p$ does not divide $x-t^2$ for any integer $t$.
+	\item Let $p$ be an odd prime. We compute the product of $(4-x)$,
+	      where $x$ varies over all residues mod $p$ except the quadratic residues.
+	      Find the least residue of this product mod $p$.
+	\item Find the least residue of the sum of all generators mod $p$.
+	\item Let $\mathbb{Z}/n\mathbb{Z}$ denote the set of integers considered
+	      modulo $n$ (hence $\mathbb{Z}/n\mathbb{Z}$ has $n$ elements). Find all
+	      positive integers $n$ for which there exists a bijective function $g:
+		      \mathbb{Z}/n\mathbb{Z} \to \mathbb{Z}/n\mathbb{Z}$, such that the 101
+	      functions
+	      \[g(x), \quad g(x) + x, \quad g(x) + 2x, \quad \dots, \quad g(x) + 100x\]are
+	      all bijections on $\mathbb{Z}/n\mathbb{Z}$.
+	\item Let $p$ be an odd prime. An integer $x$ is called a quadratic
+	      non-residue if $p$ does not divide $x-t^2$ for any integer $t$.
 
-    Denote by $A$ the set of all integers $a$ such that $1\le a<p$, and both $a$
-    and $4-a$ are quadratic non-residues. Calculate the remainder when the
-    product of the elements of $A$ is divided by $p$.
+	      Denote by $A$ the set of all integers $a$ such that $1\le a<p$, and both $a$
+	      and $4-a$ are quadratic non-residues. Calculate the remainder when the
+	      product of the elements of $A$ is divided by $p$.
 \end{itemize}
 \section{Binomial coefficients mod $p$}
 \begin{itemize}
-  \item Wolstenholme's Theorem:
-    let $a$ and $b$ be positive integers, and let $p$ be a prime greater
-    than 3. Prove that \[\binom{ap}{bp}\equiv\binom ab\pmod {p^3}.\]
-  \item Lucas' Theorem: let $m=\sum m_i p^i$ and $n=\sum n_i p^i$ be the base-$p$ expansions of
-    $m$ and $n$, where $p$ is prime. Prove that
-    \[\binom mn\equiv\prod{\binom{m_i}{n_i}}\pmod p.\]
+	\item Wolstenholme's Theorem:
+	      let $a$ and $b$ be positive integers, and let $p$ be a prime greater
+	      than 3. Prove that \[\binom{ap}{bp}\equiv\binom ab\pmod {p^3}.\]
+	\item Lucas' Theorem: let $m=\sum m_i p^i$ and $n=\sum n_i p^i$ be the base-$p$ expansions of
+	      $m$ and $n$, where $p$ is prime. Prove that
+	      \[\binom mn\equiv\prod{\binom{m_i}{n_i}}\pmod p.\]
 \end{itemize}
 \section{Weak Prime Number Theorem}
 \begin{enumerate}
-  \item Prove that the sum of the reciprocals of the primes diverges.
-  \item
-    Let $n$ be a positive integer larger than 1.
-    \begin{enumerate}
-      \item Prove that the product of all primes between $\left\lceil\frac
-        n2\right\rceil$ and $n$
-        (including $n$, not including $\left\lceil\frac n2\right\rceil$)
-        is less than
-        $2^n$.
-      \item Prove that the product of all primes between 1 and $n$ is at most
-        $4^{n-1}$.
-      \item Find some real number $c$ independent of $n$ such that there are at
-        most $\frac{cn}{\log_2 n}$ primes that are at most $n$.
-    \end{enumerate}
-  \item 
-    Let $n$ be a positive integer larger than $2^{2^{2^2}}$.
-    \begin{enumerate}
-      \item Let $p$ be a prime.
-        \begin{itemize}
-          \item Prove that if $p^k\mid\binom{2n}n$ then $p^k<
-            2n$.
-          \item Prove that if $2p\le 2n< 3p$ then $p\nmid\binom{2n}n$.
-        \end{itemize}
-      \item Prove that 
-        \[\prod_{\substack{p^k\|\binom{2n}n\\ p\le n}}p^k<\binom{2n}n.\]
-      \item Find some real number $c$ independent of $n$ such that there are at
-        least $\frac{cn}{\log_2 n}$ primes that are at most $n$.
-    \end{enumerate} 
+	\item Prove that the sum of the reciprocals of the primes diverges.
+	\item
+	      Let $n$ be a positive integer larger than 1.
+	      \begin{enumerate}
+		      \item Prove that the product of all primes between $\left\lceil\frac
+			            n2\right\rceil$ and $n$
+		            (including $n$, not including $\left\lceil\frac n2\right\rceil$)
+		            is less than
+		            $2^n$.
+		      \item Prove that the product of all primes between 1 and $n$ is at most
+		            $4^{n-1}$.
+		      \item Find some real number $c$ independent of $n$ such that there are at
+		            most $\frac{cn}{\log_2 n}$ primes that are at most $n$.
+	      \end{enumerate}
+	\item
+	      Let $n$ be a positive integer larger than $2^{2^{2^2}}$.
+	      \begin{enumerate}
+		      \item Let $p$ be a prime.
+		            \begin{itemize}
+			            \item Prove that if $p^k\mid\binom{2n}n$ then $p^k<
+				                  2n$.
+			            \item Prove that if $2p\le 2n< 3p$ then $p\nmid\binom{2n}n$.
+		            \end{itemize}
+		      \item Prove that
+		            \[\prod_{\substack{p^k\|\binom{2n}n\\ p\le n}}p^k<\binom{2n}n.\]
+		      \item Find some real number $c$ independent of $n$ such that there are at
+		            least $\frac{cn}{\log_2 n}$ primes that are at most $n$.
+	      \end{enumerate}
 \end{enumerate}
 \section{Build a graph}
 \begin{enumerate}
-    \item Fifty numbers are chosen from the set $\{1,2,\ldots,99\}$, no two of
-        which sum to $99$ or $100$. Prove that the numbers must be
-        $50,51,\ldots,99$.
-    \item Let $p$ be a prime, and let $a_1, \dots, a_p$ be integers. Show that
-        there exists an integer $k$ such that the numbers
-        \[a_1 + k, a_2 + 2k, \dots, a_p + pk\]produce at least $\tfrac{1}{2} p$
-        distinct remainders upon division by $p$.
-    \item An international society has its members from six different
-        countries. The list of members has 1978 names, numbered $1, 2,
-        \ldots, 1978$. Prove that there is at least one member whose
-        number is the sum of the numbers of two (not necessarily
-    distinct) members from his own country. 
-    \item The Fibonacci numbers $F_0, F_1, F_2,\ldots$ are defined inductively
-        by $F_0=0, F_1=1$, and $F_{n+1}=F_n+F_{n-1}$ for $n \ge 1$. Given an
-        integer $n \ge 2$, determine the smallest size of a set $S$ of integers
-        such that for every $k=2, 3, \ldots , n$ there exist some $x, y \in S$
-        such that $x-y=F_k$.
-    \item  There are $4n$ pebbles of weights $1, 2, 3, \dots, 4n$. Each pebble
-        is coloured in one of $n$ colours and there are four pebbles of each
-        colour. Show that we can arrange the pebbles into two piles so that the
-        following two conditions are both satisfied:
+	\item Fifty numbers are chosen from the set $\{1,2,\ldots,99\}$, no two of
+	      which sum to $99$ or $100$. Prove that the numbers must be
+	      $50,51,\ldots,99$.
+	\item Let $p$ be a prime, and let $a_1, \dots, a_p$ be integers. Show that
+	      there exists an integer $k$ such that the numbers
+	      \[a_1 + k, a_2 + 2k, \dots, a_p + pk\]produce at least $\tfrac{1}{2} p$
+	      distinct remainders upon division by $p$.
+	\item An international society has its members from six different
+	      countries. The list of members has 1978 names, numbered $1, 2,
+		      \ldots, 1978$. Prove that there is at least one member whose
+	      number is the sum of the numbers of two (not necessarily
+	      distinct) members from his own country.
+	\item The Fibonacci numbers $F_0, F_1, F_2,\ldots$ are defined inductively
+	      by $F_0=0, F_1=1$, and $F_{n+1}=F_n+F_{n-1}$ for $n \ge 1$. Given an
+	      integer $n \ge 2$, determine the smallest size of a set $S$ of integers
+	      such that for every $k=2, 3, \ldots , n$ there exist some $x, y \in S$
+	      such that $x-y=F_k$.
+	\item  There are $4n$ pebbles of weights $1, 2, 3, \dots, 4n$. Each pebble
+	      is coloured in one of $n$ colours and there are four pebbles of each
+	      colour. Show that we can arrange the pebbles into two piles so that the
+	      following two conditions are both satisfied:
 
-        \begin{itemize}
-            \item 
-            The total weights of both piles are the same.
-            \item
-                Each pile contains two pebbles of each colour.
-        \end{itemize}
-    \item Let $n$ be an even positive integer. Show that there is a permutation 
-        $(x_1, x_2, \ldots, x_n)$ of $(1, 2, \ldots, n)$ such that for every $i \in (1, 2, \ldots,
-        n)$,
-        the 
-        number $x_{i+1}$ is one of the numbers $2x_i, 2x_i-1, 2x_i-n, 2x_i-n-1$. Here 
-        we use the cyclic subscript convention, so that $x_{n+1}$ means $x_1$.  
+	      \begin{itemize}
+		      \item
+		            The total weights of both piles are the same.
+		      \item
+		            Each pile contains two pebbles of each colour.
+	      \end{itemize}
+	\item Let $n$ be an even positive integer. Show that there is a permutation
+	      $(x_1, x_2, \ldots, x_n)$ of $(1, 2, \ldots, n)$ such that for every $i \in (1, 2, \ldots,
+		      n)$,
+	      the
+	      number $x_{i+1}$ is one of the numbers $2x_i, 2x_i-1, 2x_i-n, 2x_i-n-1$. Here
+	      we use the cyclic subscript convention, so that $x_{n+1}$ means $x_1$.
 \end{enumerate}
 \section{Other additive number theory}
 \begin{enumerate}
-    \item Let $n$ be a positive integer and $\{A, B, C\}$ a partition of $(1, 2,
-        3, \ldots, 3n)$ such that $|A| = |B| = |C| = n$. 
-        Prove that there exist $x \in A, y \in B, z \in C$ such that one of $x,
-        y, z$ is the sum of the other two. 
-    \item Suppose that every integer has been given one of the colors 
-    red, blue, green or yellow. Let $x$ and $y$ be odd integers so that 
-    $|x| \ne |y|$. Show that there are two integers of the same color whose difference
-    has one of the following values: $x$, $y$, $(x+y)$ or 
-    $(x-y)$.  
+	\item Let $n$ be a positive integer and $\{A, B, C\}$ a partition of $(1, 2,
+		      3, \ldots, 3n)$ such that $|A| = |B| = |C| = n$.
+	      Prove that there exist $x \in A, y \in B, z \in C$ such that one of $x,
+		      y, z$ is the sum of the other two.
+	\item Suppose that every integer has been given one of the colors
+	      red, blue, green or yellow. Let $x$ and $y$ be odd integers so that
+	      $|x| \ne |y|$. Show that there are two integers of the same color whose difference
+	      has one of the following values: $x$, $y$, $(x+y)$ or
+	      $(x-y)$.
 
-    \item Let $k$, $m$, $n$ be integers satisfying $1 < n \le m-1 \le k$. Determine 
-    the maximum size of a subset $S$ of the set $\{1, 2, \ldots, k\}$ such that 
-    no $n$ distinct elements of $S$ add up to $m$.
+	\item Let $k$, $m$, $n$ be integers satisfying $1 < n \le m-1 \le k$. Determine
+	      the maximum size of a subset $S$ of the set $\{1, 2, \ldots, k\}$ such that
+	      no $n$ distinct elements of $S$ add up to $m$.
 
-    \item A set of positive integers is called \emph{fragrant} if it contains at least two
-    elements and each of its elements has a prime factor in common with at least
-    one of the other elements. Let $P(n)=n^2+n+1$. What is the least possible
-    positive integer value of $b$ such that there exists a non-negative integer
-    $a$ for which the set $\{P(a+1),P(a+2),\ldots,P(a+b)\}$ is fragrant?
+	\item A set of positive integers is called \emph{fragrant} if it contains at least two
+	      elements and each of its elements has a prime factor in common with at least
+	      one of the other elements. Let $P(n)=n^2+n+1$. What is the least possible
+	      positive integer value of $b$ such that there exists a non-negative integer
+	      $a$ for which the set $\{P(a+1),P(a+2),\ldots,P(a+b)\}$ is fragrant?
 
-    \item A set $S$ of distinct integers is called sum-free if there does not 
-    exist a triple $\{x, y, z\}$ of integers in $S$ such that $x + y = z$. Show 
-    that for any set $X$ of distinct integers, $X$ has a sum-free subset 
-    $Y$ such that $|Y| > |X|/3$.
+	\item A set $S$ of distinct integers is called sum-free if there does not
+	      exist a triple $\{x, y, z\}$ of integers in $S$ such that $x + y = z$. Show
+	      that for any set $X$ of distinct integers, $X$ has a sum-free subset
+	      $Y$ such that $|Y| > |X|/3$.
 
-    \item Prove that there exists a four-coloring of the set $M = \{1,2,\ldots,1987\}$
-    such that any arithmetic progression with 10 terms in the set M is not
-    monochromatic.
+	\item Prove that there exists a four-coloring of the set $M = \{1,2,\ldots,1987\}$
+	      such that any arithmetic progression with 10 terms in the set M is not
+	      monochromatic.
 \end{enumerate}
 \section{Rational Approximations}
 Let $x$ be irrational. We say that $\frac ab$ is a \emph{best rational
-approximation} of $x$ if $|bx-a|$ is less than $b'x-a'$ for any other integers
+	approximation} of $x$ if $|bx-a|$ is less than $b'x-a'$ for any other integers
 $a',b'$ with $0<b'\le b$.
 \begin{itemize}
-    \item Prove that every irrational number has infinitely many best rational
-        approximations.
-    \item Prove that if $\frac ab$ is a best rational approximation of $x$, then
-        $|bx-a|<\frac 1{b+1}$.
-    \item Prove that if $\gcd(a,b)=1$ and $|bx-a|<\frac 1{2b}$, then $\frac ab$
-        is a best rational approximation of $x$.
-    \item Prove that the best rational approximations of $x$ alternate between
-        being larger than $x$ and smaller than it.
-    \item Prove that if $\frac{a_1}{b_1}$, $\frac{a_2}{b_2}$ and
-        $\frac{a_3}{b_3}$ are consecutive best rational approximations of $x$,
-        then
-        \begin{itemize}
-            \item $\frac{a_2}{b_2}=\frac{a_3-a_1}{b_3-b_1}$.
-            \item $|a_1b_2-a_2b_1|=1$.
-            \item At least one of $|b_i^2 x-a_i b_i|(i=1,2,3)$ is less than $\frac
-                1{\sqrt 5}$.
-        \end{itemize}
-    \item Prove that if $D<\frac 1{\sqrt 5}$, then there exists some $x$ such
-        that only finitely many best rational approximations of $x$ satisfy
-        $|bx-a|<\frac Db$.
-    \item Prove that if $P(x)=0$ for an integer polynomial $P$ of degree $d>1$,
-        then there exists a positive real $k$ such that for any rational
-        approximation of $x$ we have
-        \[\left|x-\frac pq\right|>\frac k{q^d}.\]
+	\item Prove that every irrational number has infinitely many best rational
+	      approximations.
+	\item Prove that if $\frac ab$ is a best rational approximation of $x$, then
+	      $|bx-a|<\frac 1{b+1}$.
+	\item Prove that if $\gcd(a,b)=1$ and $|bx-a|<\frac 1{2b}$, then $\frac ab$
+	      is a best rational approximation of $x$.
+	\item Prove that the best rational approximations of $x$ alternate between
+	      being larger than $x$ and smaller than it.
+	\item Prove that if $\frac{a_1}{b_1}$, $\frac{a_2}{b_2}$ and
+	      $\frac{a_3}{b_3}$ are consecutive best rational approximations of $x$,
+	      then
+	      \begin{itemize}
+		      \item $\frac{a_2}{b_2}=\frac{a_3-a_1}{b_3-b_1}$.
+		      \item $|a_1b_2-a_2b_1|=1$.
+		      \item At least one of $|b_i^2 x-a_i b_i|(i=1,2,3)$ is less than $\frac
+			            1{\sqrt 5}$.
+	      \end{itemize}
+	\item Prove that if $D<\frac 1{\sqrt 5}$, then there exists some $x$ such
+	      that only finitely many best rational approximations of $x$ satisfy
+	      $|bx-a|<\frac Db$.
+	\item Prove that if $P(x)=0$ for an integer polynomial $P$ of degree $d>1$,
+	      then there exists a positive real $k$ such that for any rational
+	      approximation of $x$ we have
+	      \[\left|x-\frac pq\right|>\frac k{q^d}.\]
 \end{itemize}
 \end{document}

@@ -9,67 +9,67 @@
 \begin{document}
 \maketitle
 \section{Definition}
-  Let $p$ be a prime and let $r$ be a rational number. We let $\nu_p(r)$ be the
-  exponent of $p$ in the prime factorisation of $r$.
+Let $p$ be a prime and let $r$ be a rational number. We let $\nu_p(r)$ be the
+exponent of $p$ in the prime factorisation of $r$.
 \section{Basic properties}
 \begin{itemize}
-  \item $\nu_p(ab)=\nu_p(a)+\nu_p(b)$.
-  \item $\nu_p(a+b)\ge\min(\nu_p(a),\nu_p(b))$.
-  \item $\nu_p(a^n)=n\nu_p(a)$.
-  \item If $a$ is a positive integer, then $\nu_p(a)\le\log_p(a)$.
-  \item If $\nu_p(a+b)>\min(\nu_p(a),\nu_p(b))$ then $\nu_p(a)=\nu_p(b)$.
-  \item $\frac ab$ is an integer iff for all $p$, $\nu_p(a)\ge\nu_p(b)$.
-  \item $a$ is a perfect $k$th power iff for all $p$, $k\mid\nu_p(a)$.
-  \item $\nu_p(\gcd(a,b))=\min(\nu_p(a),\nu_p(b))$.
-  \item $\nu_p(\lcm(a,b))=\max(\nu_p(a),\nu_p(b))$.
+	\item $\nu_p(ab)=\nu_p(a)+\nu_p(b)$.
+	\item $\nu_p(a+b)\ge\min(\nu_p(a),\nu_p(b))$.
+	\item $\nu_p(a^n)=n\nu_p(a)$.
+	\item If $a$ is a positive integer, then $\nu_p(a)\le\log_p(a)$.
+	\item If $\nu_p(a+b)>\min(\nu_p(a),\nu_p(b))$ then $\nu_p(a)=\nu_p(b)$.
+	\item $\frac ab$ is an integer iff for all $p$, $\nu_p(a)\ge\nu_p(b)$.
+	\item $a$ is a perfect $k$th power iff for all $p$, $k\mid\nu_p(a)$.
+	\item $\nu_p(\gcd(a,b))=\min(\nu_p(a),\nu_p(b))$.
+	\item $\nu_p(\lcm(a,b))=\max(\nu_p(a),\nu_p(b))$.
 \end{itemize}
 \section{Less basic properties}
 \begin{itemize}
-  \item Legendre's Formula:
-    \[\nu_p(n!)=\sum_{i=1}^\infty\left\lfloor\frac
-      n{p^i}\right\rfloor=\frac{n-s_p(n)}{p-1}<\frac
-    n{p-1}.\]
-  \item Lifting the Exponent (LTE):
+	\item Legendre's Formula:
+	      \[\nu_p(n!)=\sum_{i=1}^\infty\left\lfloor\frac
+		      n{p^i}\right\rfloor=\frac{n-s_p(n)}{p-1}<\frac
+		      n{p-1}.\]
+	\item Lifting the Exponent (LTE):
 
-    Let $p$ be an odd prime, and let $a$ and $b$ be integers such that $p\mid
-    a-b$ but $p\nmid a$. Let $k$ be a positive integer.
+	      Let $p$ be an odd prime, and let $a$ and $b$ be integers such that $p\mid
+		      a-b$ but $p\nmid a$. Let $k$ be a positive integer.
 
-    Then, $\nu_p\left(a^k-b^k\right)=\nu_p(a-b)+\nu_p(k)$.
-  \item LTE for $p=2$:
+	      Then, $\nu_p\left(a^k-b^k\right)=\nu_p(a-b)+\nu_p(k)$.
+	\item LTE for $p=2$:
 
-    Let $a$ and $b$ be odd integers, and let $k$ be a positive integer.
+	      Let $a$ and $b$ be odd integers, and let $k$ be a positive integer.
 
-    If $k$ is even, we have $\nu_2(a^k-b^k)=\nu_2(a-b)+\nu_2(a+b)+\nu_2(k)-1$.
+	      If $k$ is even, we have $\nu_2(a^k-b^k)=\nu_2(a-b)+\nu_2(a+b)+\nu_2(k)-1$.
 
-    If $k$ is odd, we have $\nu_2(a^k-b^k)=\nu_2(a-b)$.
+	      If $k$ is odd, we have $\nu_2(a^k-b^k)=\nu_2(a-b)$.
 \end{itemize}
 \section{Problems}
 \begin{enumerate}
-  \item Let $x,y,z$ be rational numbers such that $xy,\ yz,\ zx,\ x+y+z$ are all
-    integers.
+	\item Let $x,y,z$ be rational numbers such that $xy,\ yz,\ zx,\ x+y+z$ are all
+	      integers.
 
-    Prove that $x,\ y,\ z$ are all integers.
-  \item Let $p$ be an odd prime. Prove that
-    \[p^2\mid 1^p+2^p+\cdots+p^p.\]
-  \item Let $a,b,c$ be positive integers such that $c\mid a^c-b^c$. Prove that
-    $c(a-b)\mid a^c-b^c$.
-  \item Prove that for all positive integers $n$,
-    \[\binom{2n}n\mid\lcm(1,2,\ldots,2n).\]
-  \item Find all pairs of positive integers $x,p$ such that $p$ is prime, $x\le
-    2p$, and $x^{p-1}\mid (p-1)^x+1$.
-  \item Let $a,b,n$ be positive integers such that $a>b>1$ and $b$ is odd. If
-    $b^n\mid a^n-1$, prove that $na^b>3^n$.
-  \item Find all natural numbers $n$ such that $n^2\mid 2^n+1$.
+	      Prove that $x,\ y,\ z$ are all integers.
+	\item Let $p$ be an odd prime. Prove that
+	      \[p^2\mid 1^p+2^p+\cdots+p^p.\]
+	\item Let $a,b,c$ be positive integers such that $c\mid a^c-b^c$. Prove that
+	      $c(a-b)\mid a^c-b^c$.
+	\item Prove that for all positive integers $n$,
+	      \[\binom{2n}n\mid\lcm(1,2,\ldots,2n).\]
+	\item Find all pairs of positive integers $x,p$ such that $p$ is prime, $x\le
+		      2p$, and $x^{p-1}\mid (p-1)^x+1$.
+	\item Let $a,b,n$ be positive integers such that $a>b>1$ and $b$ is odd. If
+	      $b^n\mid a^n-1$, prove that $na^b>3^n$.
+	\item Find all natural numbers $n$ such that $n^2\mid 2^n+1$.
 \end{enumerate}
 \newpage
 \section{Homework}
-  \begin{enumerate}
-    \item Let $a$ be a positive integer such that $4(a^n+1)$ is a perfect
-      cube for all positive integers $n$. Prove that $a=1$.
-    \item Let $n$ and $k$ be positive integers. Assume that for each positive
-      integer $m$, there exists a positive integer $a$ such that $a^k\equiv
-      n\pmod m$. Prove that $n$ is a perfect $k$th power.
-    \item Find all positive integers $n$ and $k$ such that
-      \[k!=(2^n-1)(2^n-2)(2^n-4)\cdots(2^n-2^{n-1}).\]
-  \end{enumerate}
+\begin{enumerate}
+	\item Let $a$ be a positive integer such that $4(a^n+1)$ is a perfect
+	      cube for all positive integers $n$. Prove that $a=1$.
+	\item Let $n$ and $k$ be positive integers. Assume that for each positive
+	      integer $m$, there exists a positive integer $a$ such that $a^k\equiv
+		      n\pmod m$. Prove that $n$ is a perfect $k$th power.
+	\item Find all positive integers $n$ and $k$ such that
+	      \[k!=(2^n-1)(2^n-2)(2^n-4)\cdots(2^n-2^{n-1}).\]
+\end{enumerate}
 \end{document}

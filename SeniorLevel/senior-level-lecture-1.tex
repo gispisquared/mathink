@@ -8,93 +8,93 @@
 \begin{document}
 \maketitle
 \section{Induction and variants}
-  Arguably, the defining property of the integers is the \textbf{Principle of
-    Mathematical Induction}: if we have a set $S\subseteq\mathbb N$ such that
-    $\forall a\in S,\ a+1\in S$ then $S=\mathbb N$.
-  
-  To prove that some sentence $P(n)$ is true for all positive integers $n$, we
-  follow the following structure.
-  \begin{itemize}
-    \item Prove that $P(1)$ is true.
-    \item Prove that if $P(n)$ is true, then $P(n+1)$ is true.
-  \end{itemize}
-  If we've done both of those things, why can we conclude that $P(a)$ is true
-  for all $a\in\mathbb N$?
+Arguably, the defining property of the integers is the \textbf{Principle of
+	Mathematical Induction}: if we have a set $S\subseteq\mathbb N$ such that
+$\forall a\in S,\ a+1\in S$ then $S=\mathbb N$.
 
-  We may use induction to prove some foundational results about the integers:
-  \begin{itemize}
-    \item For all positive integers $n$, $n\ge 1$.
-    \item If $S$ is a nonempty set of positive integers, there is some $a\in
-      S$ such that for any $b\in S$ we have $a\le b$.
-    This is known as the \textbf{Well-Ordering Principle}.
-  \end{itemize}
+To prove that some sentence $P(n)$ is true for all positive integers $n$, we
+follow the following structure.
+\begin{itemize}
+	\item Prove that $P(1)$ is true.
+	\item Prove that if $P(n)$ is true, then $P(n+1)$ is true.
+\end{itemize}
+If we've done both of those things, why can we conclude that $P(a)$ is true
+for all $a\in\mathbb N$?
 
-  The final addition to our induction toolkit will be \textbf{strong induction}:
-  if $S$ is a set of positive integers such that $1\in S$ and
-      \[\forall a\in \mathbb N,\ (\forall b\in\mathbb N,\ b\le a\implies b\in
-        S)\implies a+1\in S,\]
-        then $\mathbb N=S$.
+We may use induction to prove some foundational results about the integers:
+\begin{itemize}
+	\item For all positive integers $n$, $n\ge 1$.
+	\item If $S$ is a nonempty set of positive integers, there is some $a\in
+		      S$ such that for any $b\in S$ we have $a\le b$.
+	      This is known as the \textbf{Well-Ordering Principle}.
+\end{itemize}
+
+The final addition to our induction toolkit will be \textbf{strong induction}:
+if $S$ is a set of positive integers such that $1\in S$ and
+\[\forall a\in \mathbb N,\ (\forall b\in\mathbb N,\ b\le a\implies b\in
+	S)\implies a+1\in S,\]
+then $\mathbb N=S$.
 \section{Divisibility}
-  For integers $a$ and $b$, we say $a\mid b$ (read ``$a$ divides
-  $b$'') if there is some integer $c$ with $b=a\times c$.
-  \begin{itemize}
-    \item Prove that if $a$ and $b$ are positive integers with $a\mid b$ then
-      $a\le b$.
-    \item Prove that if $a\mid b$ and $a\mid c$ then $a\mid bx+cy$ for all
-      integers $x$ and $y$.
-  \end{itemize}
+For integers $a$ and $b$, we say $a\mid b$ (read ``$a$ divides
+$b$'') if there is some integer $c$ with $b=a\times c$.
+\begin{itemize}
+	\item Prove that if $a$ and $b$ are positive integers with $a\mid b$ then
+	      $a\le b$.
+	\item Prove that if $a\mid b$ and $a\mid c$ then $a\mid bx+cy$ for all
+	      integers $x$ and $y$.
+\end{itemize}
 
-  We define a \emph{prime} as a positive integer larger than 1 which is not
-  divisible by any positive integer other than 1 and itself.
-  \begin{itemize}
-    \item Prove that every positive integer larger than 1 can be written as a
-      product of primes.
-    \item Prove that there are infinitely many primes.
-  \end{itemize}
+We define a \emph{prime} as a positive integer larger than 1 which is not
+divisible by any positive integer other than 1 and itself.
+\begin{itemize}
+	\item Prove that every positive integer larger than 1 can be written as a
+	      product of primes.
+	\item Prove that there are infinitely many primes.
+\end{itemize}
 Also look for factorisations when trying problems: e.g.
 \begin{align*}
-  axy+bx+cy=d&\iff (ax+c)(ay+b)=ad+bc \\
-  a^k-b^k&=(a-b)\left(a^{k-1}+a^{k-2}b+\cdots+b^{k-1}\right) \\
-  a^k+b^k&=a^k-(-b)^k=(a-(-b))(a^{k-1}+a^{k-2}(-b)+\cdots+(-b)^{k-1}) \\
-  &=(a+b)(a^{k-1}-a^{k-2}b+\cdots+b^{k-1}),
+	axy+bx+cy=d & \iff (ax+c)(ay+b)=ad+bc                                     \\
+	a^k-b^k     & =(a-b)\left(a^{k-1}+a^{k-2}b+\cdots+b^{k-1}\right)          \\
+	a^k+b^k     & =a^k-(-b)^k=(a-(-b))(a^{k-1}+a^{k-2}(-b)+\cdots+(-b)^{k-1}) \\
+	            & =(a+b)(a^{k-1}-a^{k-2}b+\cdots+b^{k-1}),
 \end{align*}
 where the last factorisation is true when $k$ is odd.
 \section{Problems}
-  \begin{enumerate}
-    \item Given positive integers $n>1$ and $k$, prove that there are unique
-      nonnegative integers $m,a_0,a_1,\ldots,a_m$ such that $a_m>0,\ 0\le
-      a_i<n$ for all $i$, and
-      \[k=a_0 n^0+a_1 n^1+\cdots+a_m n^m.\]
-    \item Find all right-angled triangles with positive integer sides 
-      such that their area and perimeter are equal.
-    \item Prove that $1^k+2^k+\cdots+n^k$ is divisible by $1+2+\cdots+n$ for
-      all positive integers $n$ and odd positive integers $k$.
-    \item Prove that if $2^n+1$ is prime for a positive integer $n$, then $n$ is
-      a power of 2.
-    \item Prove that if $a$ is an integer and $b$ is a positive integer, there
-      is a unique pair $(q,r)$ of integers such that $0\le r<b$ and $a=qb+r$.
-    \item Let $m$ and $n$ be positive integers. Prove that $\sqrt[m]n$ is an
-      integer or irrational.
-    \item Let $a,b,c$ be positive integers such that $a^3+b^3=2^c$. Prove that
-      $a=b$.
-    \item Let $a$ and $b$ be positive integers such that $a\mid b^2\mid a^3\mid
-      b^4\mid\cdots$
+\begin{enumerate}
+	\item Given positive integers $n>1$ and $k$, prove that there are unique
+	      nonnegative integers $m,a_0,a_1,\ldots,a_m$ such that $a_m>0,\ 0\le
+		      a_i<n$ for all $i$, and
+	      \[k=a_0 n^0+a_1 n^1+\cdots+a_m n^m.\]
+	\item Find all right-angled triangles with positive integer sides
+	      such that their area and perimeter are equal.
+	\item Prove that $1^k+2^k+\cdots+n^k$ is divisible by $1+2+\cdots+n$ for
+	      all positive integers $n$ and odd positive integers $k$.
+	\item Prove that if $2^n+1$ is prime for a positive integer $n$, then $n$ is
+	      a power of 2.
+	\item Prove that if $a$ is an integer and $b$ is a positive integer, there
+	      is a unique pair $(q,r)$ of integers such that $0\le r<b$ and $a=qb+r$.
+	\item Let $m$ and $n$ be positive integers. Prove that $\sqrt[m]n$ is an
+	      integer or irrational.
+	\item Let $a,b,c$ be positive integers such that $a^3+b^3=2^c$. Prove that
+	      $a=b$.
+	\item Let $a$ and $b$ be positive integers such that $a\mid b^2\mid a^3\mid
+		      b^4\mid\cdots$
 
-      Prove that $a=b$.
-    \item Prove that every positive integer is a sum of one or more numbers of
-      the form $2^r3^s$, where $r$ and $s$ are nonnegative integers and no
-      summand divides another.
-  \end{enumerate}
+	      Prove that $a=b$.
+	\item Prove that every positive integer is a sum of one or more numbers of
+	      the form $2^r3^s$, where $r$ and $s$ are nonnegative integers and no
+	      summand divides another.
+\end{enumerate}
 \newpage
 \section{Homework}
-  \begin{enumerate}
-    \item Prove that for any natural number $n$, the fraction
-      \[\frac{21n+4}{14n+3}\]
-      is irreducible.
-    \item Determine all pairs $(a,b)$ of non-negative integers such that
-      \[\frac{a+b}2-\sqrt{ab}=1.\]
-    \item Prove that if there are two terms of an arithmetic progression which are
-      coprime integers, then there is an infinite subset of that
-      progression such that any two elements of that subset are coprime.
-  \end{enumerate}
+\begin{enumerate}
+	\item Prove that for any natural number $n$, the fraction
+	      \[\frac{21n+4}{14n+3}\]
+	      is irreducible.
+	\item Determine all pairs $(a,b)$ of non-negative integers such that
+	      \[\frac{a+b}2-\sqrt{ab}=1.\]
+	\item Prove that if there are two terms of an arithmetic progression which are
+	      coprime integers, then there is an infinite subset of that
+	      progression such that any two elements of that subset are coprime.
+\end{enumerate}
 \end{document}

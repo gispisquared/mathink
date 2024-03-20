@@ -11,83 +11,83 @@
 \begin{document}
 \maketitle
 \section{Introduction}
-  Let $p$ be a prime and $n$ be a positive integer throughout.
+Let $p$ be a prime and $n$ be a positive integer throughout.
 
-  Recall that $\Zz_n$ denotes the integers mod $n$, and $\Zz_n^*$ denotes the
-  subset of $\Zz_n$ containing the invertible elements.
+Recall that $\Zz_n$ denotes the integers mod $n$, and $\Zz_n^*$ denotes the
+subset of $\Zz_n$ containing the invertible elements.
 
-  The \emph{order} of an element $a$ of $\Zz_n^*$, denoted $\ord_n(a)$,
-  is the smallest positive integer $m$ such that $a^m\equiv 1\pmod n$.
+The \emph{order} of an element $a$ of $\Zz_n^*$, denoted $\ord_n(a)$,
+is the smallest positive integer $m$ such that $a^m\equiv 1\pmod n$.
 
-  If $\ord_n(a)=|\mathbb Z_n^*|=\varphi(n)$, then $a$ is said to be a
-  \emph{generator} mod $n$.
+If $\ord_n(a)=|\mathbb Z_n^*|=\varphi(n)$, then $a$ is said to be a
+\emph{generator} mod $n$.
 
-  There is always a generator mod $p$; we prove this in section 3, but assume it for
-  now.
+There is always a generator mod $p$; we prove this in section 3, but assume it for
+now.
 \section{Exercises}
 \begin{itemize}
-  \item $a^k\equiv 1\pmod n \iff \ord_n(a)\mid k$.
-  \item $\ord_n(a)\mid\varphi(n)$.
-  \item If $q\mid 2^p-1$, then $q>p$.
-  \item Every prime factor of $2^{2^n}+1$ is congruent to $1$ mod $2^{n+1}$.
-  \item If $g$ is a generator mod $n$, then the least residues of
-    $\{g^1,g^2,\ldots,g^{\varphi(n)}\}$ are $\Zz_n^*$.
-  \item If $g$ is a generator mod $n$, and $\varphi(n)=2k$, then
-    \[g^k\equiv -1\pmod n.\]
-  \item There are either $0$ or $\varphi(\varphi(n))$ generators mod $n$.
-  \item If $a\mid\varphi(n)$ and there exists a generator mod $n$, then 
-    there are $\varphi(a)$ residues $x$ mod $n$ such that $\ord_n(x)=a$.
-  \item If there exists a generator mod $n$, then the product of the elements of
-    $\Zz_n^*$ is $-1$ mod $n$.
-  \item For any positive integer $n<p-1$,
-    \[\sum_{i=1}^{p-1} i^n\equiv 0\pmod p.\]
-  \item Assume there exists a generator mod $n$.
-    An element $x\in\Zz_n^*$ can be written as $y^k$ for $y\in\Zz_n^*$ iff
-    $\ord_p(x)\gcd(\varphi(n),k)\mid \varphi(n)$.
+	\item $a^k\equiv 1\pmod n \iff \ord_n(a)\mid k$.
+	\item $\ord_n(a)\mid\varphi(n)$.
+	\item If $q\mid 2^p-1$, then $q>p$.
+	\item Every prime factor of $2^{2^n}+1$ is congruent to $1$ mod $2^{n+1}$.
+	\item If $g$ is a generator mod $n$, then the least residues of
+	      $\{g^1,g^2,\ldots,g^{\varphi(n)}\}$ are $\Zz_n^*$.
+	\item If $g$ is a generator mod $n$, and $\varphi(n)=2k$, then
+	      \[g^k\equiv -1\pmod n.\]
+	\item There are either $0$ or $\varphi(\varphi(n))$ generators mod $n$.
+	\item If $a\mid\varphi(n)$ and there exists a generator mod $n$, then
+	      there are $\varphi(a)$ residues $x$ mod $n$ such that $\ord_n(x)=a$.
+	\item If there exists a generator mod $n$, then the product of the elements of
+	      $\Zz_n^*$ is $-1$ mod $n$.
+	\item For any positive integer $n<p-1$,
+	      \[\sum_{i=1}^{p-1} i^n\equiv 0\pmod p.\]
+	\item Assume there exists a generator mod $n$.
+	      An element $x\in\Zz_n^*$ can be written as $y^k$ for $y\in\Zz_n^*$ iff
+	      $\ord_p(x)\gcd(\varphi(n),k)\mid \varphi(n)$.
 \end{itemize}
 \section{Existence of generators}
 Let $p$ be an odd prime.
 \begin{itemize}
-  \item There exists a generator mod $p$.
-  \item There exists a generator mod $p^k$ for any positive integer $k$.
-  \item There exists a generator mod $2p^k$ for any positive integer $k$.
-  \item There exists a generator mod $2^k$ iff $k\le 2$.
-  \item If $n=xy$, where $x$ and $y$ are coprime and larger than $2$, then there
-    does not exist a generator mod $n$.
+	\item There exists a generator mod $p$.
+	\item There exists a generator mod $p^k$ for any positive integer $k$.
+	\item There exists a generator mod $2p^k$ for any positive integer $k$.
+	\item There exists a generator mod $2^k$ iff $k\le 2$.
+	\item If $n=xy$, where $x$ and $y$ are coprime and larger than $2$, then there
+	      does not exist a generator mod $n$.
 \end{itemize}
 \section{Problems}
 \begin{enumerate}
-  \item Let $p>10$ be a prime. Prove that there are positive integers $m,n$ with
-    $m+n<p$ such that $p$ divides $5^m7^n-1$.
-  \item Find all positive integers $n$ such that $n\mid 2^n-1$.
-  \item Prove that if $\sigma(n)=2n+1$, then $n$ is a perfect square.
-  \item Let $p$ be a prime. Find all nonempty sets $S$ of residues mod $p$ such
-    that if the least residues of $a$ and $b$ are not in $S$, then \[\prod_{i\in S}(a-i)\equiv\prod_{i\in S}(b-i)\pmod
-    p.\]
-  \item Let $p$ be an odd prime and $r$ an odd natural number. Show that $pr+1$
-    does not divide $p^p-1$.
-  \item Let $p$ be an odd prime and let $m$ and $n$ be natural numbers not
-    divisible by $p$. Prove that if there is some integer $s$ such that $p\mid
-    m^{2^s}+n^{2^s}$, then $p\equiv 1\pmod{2^{s+1}}$.
-  \item Find all positive integers $n$ such that $n\mid 2^{n-1}+1$.
-  \item Find all positive integers $n$ that satisfy the following property:
-    for all positive integers $m$, relatively prime to $n$, we have
-    $2n^2$ divides $m^n-1$.
-  \item Find all primes $p,q,r$ such that $p\mid q^r+1,\ q\mid r^p+1,\ r\mid
-    p^q-1$.
+	\item Let $p>10$ be a prime. Prove that there are positive integers $m,n$ with
+	      $m+n<p$ such that $p$ divides $5^m7^n-1$.
+	\item Find all positive integers $n$ such that $n\mid 2^n-1$.
+	\item Prove that if $\sigma(n)=2n+1$, then $n$ is a perfect square.
+	\item Let $p$ be a prime. Find all nonempty sets $S$ of residues mod $p$ such
+	      that if the least residues of $a$ and $b$ are not in $S$, then \[\prod_{i\in S}(a-i)\equiv\prod_{i\in S}(b-i)\pmod
+		      p.\]
+	\item Let $p$ be an odd prime and $r$ an odd natural number. Show that $pr+1$
+	      does not divide $p^p-1$.
+	\item Let $p$ be an odd prime and let $m$ and $n$ be natural numbers not
+	      divisible by $p$. Prove that if there is some integer $s$ such that $p\mid
+		      m^{2^s}+n^{2^s}$, then $p\equiv 1\pmod{2^{s+1}}$.
+	\item Find all positive integers $n$ such that $n\mid 2^{n-1}+1$.
+	\item Find all positive integers $n$ that satisfy the following property:
+	      for all positive integers $m$, relatively prime to $n$, we have
+	      $2n^2$ divides $m^n-1$.
+	\item Find all primes $p,q,r$ such that $p\mid q^r+1,\ q\mid r^p+1,\ r\mid
+		      p^q-1$.
 \end{enumerate}
 \newpage
 \section{Homework}
 \begin{enumerate}
-  \item Prove that for all positive integers $a>1$ and $n$ we have
-    $n\mid\varphi(a^n-1)$.
-  \item Assume that $g$ is a generator mod $p$ such that $p\mid g^2-g-1$.
-    \begin{enumerate}
-      \item Prove that $g-1$ is a generator mod $p$.
-      \item Prove that if $p\equiv 3\pmod 4$, then $g-2$ is also a generator mod
-        $p$.
-    \end{enumerate}
-  \item Let $p$ and $q$ be primes. Prove that there is an integer $x$ such that
-    $(x+1)^p\equiv x^p\pmod q$ if and only if $q\equiv 1\pmod p$.
+	\item Prove that for all positive integers $a>1$ and $n$ we have
+	      $n\mid\varphi(a^n-1)$.
+	\item Assume that $g$ is a generator mod $p$ such that $p\mid g^2-g-1$.
+	      \begin{enumerate}
+		      \item Prove that $g-1$ is a generator mod $p$.
+		      \item Prove that if $p\equiv 3\pmod 4$, then $g-2$ is also a generator mod
+		            $p$.
+	      \end{enumerate}
+	\item Let $p$ and $q$ be primes. Prove that there is an integer $x$ such that
+	      $(x+1)^p\equiv x^p\pmod q$ if and only if $q\equiv 1\pmod p$.
 \end{enumerate}
 \end{document}

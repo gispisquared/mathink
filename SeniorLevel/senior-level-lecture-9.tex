@@ -22,59 +22,59 @@ Since powers of $b$ have nice properties in modular arithmetic, base-$b$ expansi
 naturally lead to simple divisibility tests. The most familiar of these are in
 base $10$:
 \begin{itemize}
-    \item A number is divisible by $2^n$ iff the number produced by taking its
-        last $n$ digits is divisible by $2^n$.
-    \item The same statement, replacing $2^n$ by $5^n$.
-    \item A number is divisible by $3$ iff the sum of its digits is divisible by
-        $3$.
-    \item The same statement, replacing $3$ by $9$.
-    \item A number is divisible by $11$ iff the alternating sum of its digits
-        (that is, the sum of $(-1)^i a_i$) is divisble by $11$.
+	\item A number is divisible by $2^n$ iff the number produced by taking its
+	      last $n$ digits is divisible by $2^n$.
+	\item The same statement, replacing $2^n$ by $5^n$.
+	\item A number is divisible by $3$ iff the sum of its digits is divisible by
+	      $3$.
+	\item The same statement, replacing $3$ by $9$.
+	\item A number is divisible by $11$ iff the alternating sum of its digits
+	      (that is, the sum of $(-1)^i a_i$) is divisble by $11$.
 \end{itemize}
 Using the language of modular arithmetic, we can generalise these statements to
 arbitrary bases.
 \begin{itemize}
-    \item Let $l<k$. Then,
-        $\overline{a_0a_1\ldots a_k}_{(b)}\equiv \overline{a_0a_1\ldots
-        a_l}_{(b)}\pmod{b^l}$. In particular, this congruence is still true
-        $\pmod{d^l}$ for any $d\mid b$.
-    \item $n\equiv s_b(n)\pmod{b-1}$.
-    \item $n\equiv a_0-a_1+a_2-\cdots+(-1)^k a_k\pmod{b+1}$.
+	\item Let $l<k$. Then,
+	      $\overline{a_0a_1\ldots a_k}_{(b)}\equiv \overline{a_0a_1\ldots
+			      a_l}_{(b)}\pmod{b^l}$. In particular, this congruence is still true
+	      $\pmod{d^l}$ for any $d\mid b$.
+	\item $n\equiv s_b(n)\pmod{b-1}$.
+	\item $n\equiv a_0-a_1+a_2-\cdots+(-1)^k a_k\pmod{b+1}$.
 \end{itemize}
 For primes $p$ which do not divide any of $b-1,b,b+1$,
 we can create divisibility tests as follows. Let $m$ be
 such that $p\mid bm-1$. Then $p\mid bx+y\iff p\mid bmx+my\iff p\mid
-x+my$. For example, $7\mid 10a+b\iff 7\mid a-2b$.
+	x+my$. For example, $7\mid 10a+b\iff 7\mid a-2b$.
 \section{Problems}
 \begin{enumerate}
-    \item Find all $b$ such that $\overline{111}_{(b)}=\overline{212}_{(b-2)}$.
-    \item A faulty car odometer always skips the digit $4$. If the odometer
-        reads $2005$, how many kilometres has the car actually travelled?
-    \item Prove that $s_b(x+y)\le s_b(x)+s_b(y)$ and $s_b(xy)\le s_b(x)s_b(y)$.
-    \item Prove that $\overline{11\ldots1}_{(9)}$ is always a triangular number.
-    \item Can a number consisting of $5$ distinct even digits be a perfect
-        square?
-    \item Prove that for any base $b$, there is a perfect square which ends with
-        $b$ distinct digits when written in base $b$.
-    \item
-    \begin{enumerate}
-      \item Prove that for every positive integer $n$ and any base $b$
-          there is a number divisible by $n$ consisting of only $1$s and $0$s in
-          base $b$.
-      \item Prove that if $b$ is even and $n$ is odd, there is a number divisible by $n$
-          consisting of only odd digits in base $b$.
-    \end{enumerate}
-    \item A sequence $\{x_n\}$ begins with $x_0=0$, and for each $i\ge 1$,
-        $x_{i+1}$ is the smallest positive integer greater than $x_i$ such that
-        the set $\{x_0,\ldots,x_{i+1}\}$ does not contain any 3-term arithmetic
-        progressions. Find $x_{2000}$.
+	\item Find all $b$ such that $\overline{111}_{(b)}=\overline{212}_{(b-2)}$.
+	\item A faulty car odometer always skips the digit $4$. If the odometer
+	      reads $2005$, how many kilometres has the car actually travelled?
+	\item Prove that $s_b(x+y)\le s_b(x)+s_b(y)$ and $s_b(xy)\le s_b(x)s_b(y)$.
+	\item Prove that $\overline{11\ldots1}_{(9)}$ is always a triangular number.
+	\item Can a number consisting of $5$ distinct even digits be a perfect
+	      square?
+	\item Prove that for any base $b$, there is a perfect square which ends with
+	      $b$ distinct digits when written in base $b$.
+	\item
+	      \begin{enumerate}
+		      \item Prove that for every positive integer $n$ and any base $b$
+		            there is a number divisible by $n$ consisting of only $1$s and $0$s in
+		            base $b$.
+		      \item Prove that if $b$ is even and $n$ is odd, there is a number divisible by $n$
+		            consisting of only odd digits in base $b$.
+	      \end{enumerate}
+	\item A sequence $\{x_n\}$ begins with $x_0=0$, and for each $i\ge 1$,
+	      $x_{i+1}$ is the smallest positive integer greater than $x_i$ such that
+	      the set $\{x_0,\ldots,x_{i+1}\}$ does not contain any 3-term arithmetic
+	      progressions. Find $x_{2000}$.
 \end{enumerate}
 \newpage
 \section{Homework}
 \begin{enumerate}
-    \item Find all $b$ such that
-        $\overline{234}_{(b+1)}-\overline{234}_{(b-1)}=70$.
-    \item Find $s_{10}(s_{10}(s_{10}(4444^{4444})))$.
-    \item Find all $b$ such that $\overline{11111}_{(b)}$ is a perfect square.
+	\item Find all $b$ such that
+	      $\overline{234}_{(b+1)}-\overline{234}_{(b-1)}=70$.
+	\item Find $s_{10}(s_{10}(s_{10}(4444^{4444})))$.
+	\item Find all $b$ such that $\overline{11111}_{(b)}$ is a perfect square.
 \end{enumerate}
 \end{document}

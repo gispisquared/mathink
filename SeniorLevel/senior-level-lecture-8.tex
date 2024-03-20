@@ -8,45 +8,45 @@
 \begin{document}
 \maketitle
 \section{Techniques}
-  Descent works like this: assign some positive integer quantity
-  (the ``size'' of a solution, e.g.\ the sum of the absolute values of the
-  variables) to each solution, take the solution with lowest
-  ``size'' that doesn't fit your claimed pattern and derive a contradiction.
+Descent works like this: assign some positive integer quantity
+(the ``size'' of a solution, e.g.\ the sum of the absolute values of the
+variables) to each solution, take the solution with lowest
+``size'' that doesn't fit your claimed pattern and derive a contradiction.
 
-  Floor functions: recall $\lfloor x\rfloor$ is the largest integer which is at
-  most $x$. Most often, problems which involve $\lfloor x\rfloor$ will be
-  solved by considering $x-\lfloor x\rfloor$ (also denoted $\{x\}$), or $\lceil
-  x\rceil-x$, and doing inequalities.
+Floor functions: recall $\lfloor x\rfloor$ is the largest integer which is at
+most $x$. Most often, problems which involve $\lfloor x\rfloor$ will be
+solved by considering $x-\lfloor x\rfloor$ (also denoted $\{x\}$), or $\lceil
+	x\rceil-x$, and doing inequalities.
 \section{Problems}
 \begin{enumerate}
-  \item Prove that $\lfloor\sqrt n+\sqrt{n+1}\rfloor=\lfloor\sqrt{4n+1}\rfloor$ for all
-      positive integers $n$.
-  \item Prove that if $x, y, z$ are integers such that $x^2+y^2+z^2=(xy)^2$,
-      then $x=y=z=0$.
-  \item Let $a$ and $b$ be positive irrational numbers such that $\frac 1a+\frac 1b=1$.
-    Let $A=\{\lfloor na\rfloor: n\in\mathbb N\}$, and $B=\{\lfloor nb\rfloor:
-    n\in\mathbb N\}$. Prove that the sets $A$ and $B$ together contain each
-    posiive integer exactly once.
-  \item Let $f$ be a function defined on the nonnegative integers such that
-    $f(2x)=2f(x)$, $f(4x+1)=4f(x)+3$, and $f(4x-1)=2f(2x-1)-1$. Prove that $f$
-    is injective.
-  \item Find all positive integers $n$ such that $1+\lfloor\sqrt n\rfloor$
-    divides $n$.
-  \item Solve over integers: $6(6a^2 + 3b^2 + c^2) = 5n^2$.
-  \item Prove that for any positive integer $n$ which is not a perfect square,
-    there is a positive integer $k$ such that
-    \[n=\left\lfloor k+\sqrt k+\frac12\right\rfloor.\]
+	\item Prove that $\lfloor\sqrt n+\sqrt{n+1}\rfloor=\lfloor\sqrt{4n+1}\rfloor$ for all
+	      positive integers $n$.
+	\item Prove that if $x, y, z$ are integers such that $x^2+y^2+z^2=(xy)^2$,
+	      then $x=y=z=0$.
+	\item Let $a$ and $b$ be positive irrational numbers such that $\frac 1a+\frac 1b=1$.
+	      Let $A=\{\lfloor na\rfloor: n\in\mathbb N\}$, and $B=\{\lfloor nb\rfloor:
+		      n\in\mathbb N\}$. Prove that the sets $A$ and $B$ together contain each
+	      posiive integer exactly once.
+	\item Let $f$ be a function defined on the nonnegative integers such that
+	      $f(2x)=2f(x)$, $f(4x+1)=4f(x)+3$, and $f(4x-1)=2f(2x-1)-1$. Prove that $f$
+	      is injective.
+	\item Find all positive integers $n$ such that $1+\lfloor\sqrt n\rfloor$
+	      divides $n$.
+	\item Solve over integers: $6(6a^2 + 3b^2 + c^2) = 5n^2$.
+	\item Prove that for any positive integer $n$ which is not a perfect square,
+	      there is a positive integer $k$ such that
+	      \[n=\left\lfloor k+\sqrt k+\frac12\right\rfloor.\]
 \end{enumerate}
 \newpage
 \section{Homework}
-  \begin{enumerate}
-    \item Let's say you have a set $S$ of positive rational numbers such that
-      $1\in S$, and if $x\in S$ then both $x+1$ and $\frac 1x$ are in $S$. Prove
-      that $S$ contains all positive rationals.
-    \item Let $p$ and $q$ be coprime. Prove that
-      \[\sum_{i=1}^{q-1}\left\lfloor\frac{ip}{q}\right\rfloor=\frac{(p-1)(q-1)}2.\]
-    \item Prove that there does not exist a list of $2022$ positive integers
-        such that if you remove any one of them, the rest can be split into two
-        groups of equal sum.
-  \end{enumerate}
+\begin{enumerate}
+	\item Let's say you have a set $S$ of positive rational numbers such that
+	      $1\in S$, and if $x\in S$ then both $x+1$ and $\frac 1x$ are in $S$. Prove
+	      that $S$ contains all positive rationals.
+	\item Let $p$ and $q$ be coprime. Prove that
+	      \[\sum_{i=1}^{q-1}\left\lfloor\frac{ip}{q}\right\rfloor=\frac{(p-1)(q-1)}2.\]
+	\item Prove that there does not exist a list of $2022$ positive integers
+	      such that if you remove any one of them, the rest can be split into two
+	      groups of equal sum.
+\end{enumerate}
 \end{document}
